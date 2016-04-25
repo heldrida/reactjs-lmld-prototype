@@ -4,7 +4,7 @@
   "description": "A prototype, architecture and anim tests,  related with the new lmld website;",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  	"production": "webpack -p"
   },
   "author": "Helder C.",
   "license": "ISC",
