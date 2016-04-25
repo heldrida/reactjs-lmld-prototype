@@ -20,3 +20,5 @@
 		> https://github.com/wesbos/React-For-Beginners-Starter-Files
 		> http://survivejs.com/webpack_react/developing_with_webpack/
 		> http://eng.localytics.com/faster-sass-builds-with-webpack/
+		> https://www.bensmithett.com/smarter-css-builds-with-webpack/
+		> http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/
