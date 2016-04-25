@@ -1,4 +1,4 @@
-require('./main.scss');
+require('./app.scss');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
