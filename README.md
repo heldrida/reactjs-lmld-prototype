@@ -26,3 +26,4 @@
 		> https://github.com/petehunt/react-howto
 		> https://webpack.github.io/docs/stylesheets.html#separate-css-bundle
 		> http://ihaveabackup.net/2015/08/17/sass-with-sourcemaps-webpack-and-live-reload/
+		> http://jarstingstall.github.io/getting-started-with-webpack-part-4/
