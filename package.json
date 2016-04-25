@@ -4,7 +4,8 @@
   "description": "A prototype, architecture and anim tests,  related with the new lmld website;",
   "main": "index.js",
   "scripts": {
-  	"production": "webpack -p"
+  	"production": "webpack -p",
+  	"start": "webpack-dev-server"
   },
   "author": "Helder C.",
   "license": "ISC",
