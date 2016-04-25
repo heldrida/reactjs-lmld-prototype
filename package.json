@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --inline"
   },
   "author": "Helder C.",
   "license": "ISC",
@@ -13,8 +13,6 @@
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.5.0",
-    "browser-sync": "^2.12.4",
-    "browser-sync-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.16.0",
     "webpack": "^1.13.0"
   },
