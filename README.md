@@ -22,3 +22,5 @@
 		> http://eng.localytics.com/faster-sass-builds-with-webpack/
 		> https://www.bensmithett.com/smarter-css-builds-with-webpack/
 		> http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/
+		> http://survivejs.com/webpack/developing-with-webpack/refreshing-css/
+		> https://github.com/petehunt/react-howto

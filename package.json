@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
-    "start": "webpack-dev-server --inline"
+    "start": "webpack-dev-server"
   },
   "author": "Helder C.",
   "license": "ISC",
@@ -14,9 +14,11 @@
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.16.0",
     "node-sass": "^3.5.3",
     "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.0"
   },
   "dependencies": {
