@@ -23,6 +23,6 @@ module.exports = {
 	},
 	plugins: [
 		HtmlWebpackPluginConfig,
-		new ExtractTextPlugin("./dist/app.css")
+		new ExtractTextPlugin("app.css")
 	]
 };
