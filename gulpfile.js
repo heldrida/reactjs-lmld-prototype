@@ -48,6 +48,8 @@ gulp.task("webpack:server", function(callback) {
 
 	// Start a webpack-dev-server
 	var server = new webpackDevServer(webpack(myConfig), {
+		//noInfo: true,
+		//watch: true,
 		contentBase: './build',
 		hot: true,
 		progress: true,

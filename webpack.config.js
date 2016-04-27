@@ -26,6 +26,5 @@ module.exports = {
 			filename: 'index.html',
 			inject: 'body'
 		})
-	],
-	watch: true
+	]
 };
