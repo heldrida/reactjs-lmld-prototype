@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 	inject = require('gulp-inject');
 
 gulp.task('sass', function () {
-    return gulp.src('./src/sass/**/*.scss')
+    return gulp.src('./src/sass/app.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(gulp.dest('./build/css'));

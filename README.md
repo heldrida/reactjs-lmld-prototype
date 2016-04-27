@@ -16,24 +16,33 @@
 		7) Moved the npm task scripts into Gulp instead
 		8) Applied an html injector, as a task on Gulp
 
-	References:
 
-		> https://reactjsnews.com/bring-your-animations-to-life-with-physics
-		> https://reactjsnews.com/an-angular-developers-first-react-app
-		> https://github.com/kriasoft/react-starter-kit
-		> https://github.com/wesbos/React-For-Beginners-Starter-Files
-		> http://survivejs.com/webpack_react/developing_with_webpack/
-		> http://eng.localytics.com/faster-sass-builds-with-webpack/
-		> https://www.bensmithett.com/smarter-css-builds-with-webpack/
-		> http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/
-		> http://survivejs.com/webpack/developing-with-webpack/refreshing-css/
-		> https://github.com/petehunt/react-howto
-		> https://webpack.github.io/docs/stylesheets.html#separate-css-bundle
-		> http://ihaveabackup.net/2015/08/17/sass-with-sourcemaps-webpack-and-live-reload/
-		> http://jarstingstall.github.io/getting-started-with-webpack-part-4/
-		> https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
-		> https://toddmotto.com/react-create-class-versus-component/
-		> http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/
-		> http://jmfurlott.com/tutorial-setting-up-a-single-page-react-web-app-with-react-router-and-webpack/
-		> http://www.hackingwithreact.com/read/1/21/introducing-react-router
-		> http://andrewhfarmer.com/starter-project/
+		> References:
+
+			> https://reactjsnews.com/bring-your-animations-to-life-with-physics
+			> https://reactjsnews.com/an-angular-developers-first-react-app
+			> https://github.com/kriasoft/react-starter-kit
+			> https://github.com/wesbos/React-For-Beginners-Starter-Files
+			> http://survivejs.com/webpack_react/developing_with_webpack/
+			> http://eng.localytics.com/faster-sass-builds-with-webpack/
+			> https://www.bensmithett.com/smarter-css-builds-with-webpack/
+			> http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/
+			> http://survivejs.com/webpack/developing-with-webpack/refreshing-css/
+			> https://github.com/petehunt/react-howto
+			> https://webpack.github.io/docs/stylesheets.html#separate-css-bundle
+			> http://ihaveabackup.net/2015/08/17/sass-with-sourcemaps-webpack-and-live-reload/
+			> http://jarstingstall.github.io/getting-started-with-webpack-part-4/
+			> https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
+			> https://toddmotto.com/react-create-class-versus-component/
+			> http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/
+			> http://jmfurlott.com/tutorial-setting-up-a-single-page-react-web-app-with-react-router-and-webpack/
+			> http://www.hackingwithreact.com/read/1/21/introducing-react-router
+			> http://andrewhfarmer.com/starter-project/
+
+
+	Sass structured:
+
+		> References:
+
+			> https://www.netguru.co/blog/8-rules-improve-css
+			> http://thesassway.com/beginner/how-to-structure-a-sass-project
