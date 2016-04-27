@@ -12,8 +12,19 @@ class Footer extends React.Component {
 		return (
 			<div>
 				<footer>
-					<h6>Get updates from our latest projects</h6>
-					<NewsletterSubscribe />
+					<div className="discover">
+						<span className="icon" />
+						<p>
+							Strategy, UI/UX design, and development<br/>
+							for startups and leading brands ment<br/>
+							for startups and leading brands.
+						</p>
+						<button>discover more</button>
+					</div>
+					<div class="get-updates">
+						<h6>Get updates from our latest projects</h6>
+						<NewsletterSubscribe />
+					</div>
 				</footer>
 			</div>
 		);
