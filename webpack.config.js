@@ -4,6 +4,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: [
+		'webpack-dev-server/client?http://localhost:8888',
+		'webpack/hot/dev-server',
 		'./app/index.js'
 	],
 	output: {
@@ -24,5 +26,6 @@ module.exports = {
 			filename: 'index.html',
 			inject: 'body'
 		})
-	]
+	],
+	watch: true
 };

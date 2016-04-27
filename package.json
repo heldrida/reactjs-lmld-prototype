@@ -4,7 +4,7 @@
   "description": "A prototype, architecture and anim tests,  related with the new lmld website;",
   "main": "app/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --config webpack.config.js --progress --colors",
+    "dev": "webpack-dev-server --inline --hot --config webpack.config.js --progress --colors --host localhost --port 8888 --open",
     "build": "webpack -p --progress --profile --colors"
   },
   "author": "Helder C.",
@@ -22,7 +22,8 @@
     "node-sass": "^3.5.3",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "react": "^15.0.1",
