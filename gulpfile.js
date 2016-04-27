@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	exec = require('child_process').exec,
 	webpack = require("webpack"),
-	WebpackDevServer = require("webpack-dev-server"),
+	webpackDevServer = require("webpack-dev-server"),
 	webpackConfig = require("./webpack.config.js"),
 	gutil = require('gulp-util'),
 	inject = require('gulp-inject');
@@ -47,7 +47,7 @@ gulp.task("webpack:server", function(callback) {
 	myConfig.debug = true;
 
 	// Start a webpack-dev-server
-	var server = new WebpackDevServer(webpack(myConfig), {
+	var server = new webpackDevServer(webpack(myConfig), {
 		contentBase: './build',
 		hot: true,
 		progress: true,
