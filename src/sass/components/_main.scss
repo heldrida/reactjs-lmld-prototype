@@ -1,3 +1,19 @@
 .ns-lmld-2016 {
-	color: black;
+	.main {
+		width: 100vw;
+		height: 100vh;
+		background: #ccc;
+
+		footer {
+			width: 100%;
+			height: auto;
+			background-color: $darkGrey;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 1rem;
+			text-align: center;
+		}
+	}
 }

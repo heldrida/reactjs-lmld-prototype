@@ -11,7 +11,7 @@ class Footer extends React.Component {
 		return (
 			<div>
 				<footer>
-					footer
+					<h6>Get updates from our latest projects</h6>
 				</footer>
 			</div>
 		);
