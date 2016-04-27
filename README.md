@@ -33,3 +33,7 @@
 		> http://jarstingstall.github.io/getting-started-with-webpack-part-4/
 		> https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
 		> https://toddmotto.com/react-create-class-versus-component/
+		> http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/
+		> http://jmfurlott.com/tutorial-setting-up-a-single-page-react-web-app-with-react-router-and-webpack/
+		> http://www.hackingwithreact.com/read/1/21/introducing-react-router
+		> http://andrewhfarmer.com/starter-project/
