@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../containers/Footer';
 
 class Main extends React.Component {
 
@@ -13,13 +14,15 @@ class Main extends React.Component {
 	render () {
 
 		return (
-			<div className='main-container'>
-				Hello from Main!
-				<br/>
+			<div>
+				#Main Section#
+
+				<br />
 				<button onClick={this.expandModule}>ExpandModule fn()</button>
-				<div className="nested">
-					{this.props.children}
-				</div>
+
+				{this.props.children}
+
+				<Footer />
 			</div>
 		);
 
