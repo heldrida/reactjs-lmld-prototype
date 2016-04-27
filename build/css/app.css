@@ -68,5 +68,87 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.ns-lmld-2016 {
-  color: black; }
+.ns-lmld-2016 h6 {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 38px; }
+
+.ns-lmld-2016 .main {
+  width: 100vw;
+  height: 100vh;
+  background: #ccc; }
+  .ns-lmld-2016 .main footer {
+    width: 100%;
+    height: auto;
+    background-color: #1E1E1E;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center; }
+
+.ns-lmld-2016 .newsletter-subscribe form {
+  width: 393px;
+  height: 56px;
+  position: relative;
+  margin: 40px auto; }
+  .ns-lmld-2016 .newsletter-subscribe form input {
+    height: 56px;
+    line-height: 56px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    border: none; }
+  .ns-lmld-2016 .newsletter-subscribe form input[type="email"] {
+    top: 0;
+    left: 0;
+    width: calc(100% - 128px - 20px);
+    padding-left: 20px;
+    z-index: 1;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    color: #C4C4C4; }
+    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]::-webkit-input-placeholder {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #C4C4C4; }
+    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]:-moz-placeholder {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #C4C4C4; }
+    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]::-moz-placeholder {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #C4C4C4; }
+    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]:-ms-input-placeholder {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 26px;
+      color: #C4C4C4; }
+  .ns-lmld-2016 .newsletter-subscribe form input[type="submit"] {
+    top: 0;
+    right: 0;
+    width: 128px;
+    background-color: #FFD000;
+    color: #fff;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.3s;
+    -khtml-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    .ns-lmld-2016 .newsletter-subscribe form input[type="submit"]:hover {
+      opacity: 0.9; }

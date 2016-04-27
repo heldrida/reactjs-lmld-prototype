@@ -25,7 +25,8 @@
 			input[type="email"] {
 				top: 0;
 				left: 0;
-				width: calc(100% - 128px);
+				width: calc(100% - 128px - 20px);
+				padding-left: 20px;
 				z-index: 1;
 				@include emailTextStyle;
 
@@ -44,6 +45,11 @@
 				font-size: 16px;
 				letter-spacing: 1px;
 				line-height: 21px;
+				cursor: pointer;
+				@include transition(opacity 0.3s);
+				&:hover {
+					opacity: 0.9;
+				}
 			}
 		}
 	}
