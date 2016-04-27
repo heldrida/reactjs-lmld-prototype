@@ -6,12 +6,20 @@ class Main extends React.Component {
 		super(props);
 	}
 
+	expandModule () {
+		console.log('fn expandModule!');
+	}
+
 	render () {
 
 		return (
 			<div className='main-container'>
 				Hello from Main!
-				{this.props.children}
+				<br/>
+				<button onClick={this.expandModule}>ExpandModule fn()</button>
+				<div className="nested">
+					{this.props.children}
+				</div>
 			</div>
 		);
 
