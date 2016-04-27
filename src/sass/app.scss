@@ -1,22 +1,23 @@
-// Common
+// Helpers are re-usable functions, variables, etc
 @import "helpers/paths";
 @import "helpers/variables";
 @import "helpers/css3-mixins-lib";
 @import "helpers/mixins";
 @import "helpers/animations";
 
-// Utils
+// Global styles, such as resets, fonts, colors, etc.
 @import "base/reset";
 @import "base/typography";
 @import "base/icons";
 @import "base/default";
 
-// Layout
+// Layout contains styling for larger layout components; e.g. nav, header, footer, etc.
 @import "layout/header";
 @import "layout/content";
 @import "layout/footer";
 
-// Components
+// Components contains each self-contained component in its own partial
 @import "components/main";
 
+// Contains third-party styles.
 @import "vendors/all";

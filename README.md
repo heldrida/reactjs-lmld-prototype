@@ -58,6 +58,8 @@
 				> http://andrewhfarmer.com/starter-project/
 
 
+
+
 		- Sass structure:
 
 			Followed a few standards to separate the different stylesheets, in the context of react components or containers.
@@ -67,3 +69,14 @@
 				> https://www.netguru.co/blog/8-rules-improve-css
 
 				> http://thesassway.com/beginner/how-to-structure-a-sass-project
+
+				> https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization
+
+
+
+
+		- Assets:
+
+			The asset files are stored in the app directory, the build system should copy, process it and save on the build directory.
+
+
