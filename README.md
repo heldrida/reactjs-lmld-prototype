@@ -17,7 +17,12 @@
 			8) Applied an html injector, as a task on Gulp
 
 
+			Note: No actual physical files are written to the fs during the dev build. For performance, all files exist in memory when served from the webpack server. Physical files are only written when you run the build task, see the gulpfile.
+
 			#References:
+
+				The following starter kit follows good conventions:
+				> https://github.com/coryhouse/react-slingshot
 
 				> https://reactjsnews.com/bring-your-animations-to-life-with-physics
 
