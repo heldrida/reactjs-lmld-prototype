@@ -1,4 +1,3 @@
-body {
-  background: #eee; }
-  body p {
-    color: #0F5; }
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+.ns-lmld-2016 {
+  background-color: #ccc; }
