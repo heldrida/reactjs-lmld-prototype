@@ -15,6 +15,10 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./build/css'));
 });
 
+gulp.task('watch', function () {
+	gulp.watch('./src/sass/**/*.scss', ['sass']);
+});
+
 gulp.task("webpack:build", function(callback) {
 	// modify some webpack config options
 	var myConfig = Object.create(webpackConfig);
@@ -59,4 +63,4 @@ gulp.task("webpack:server", function(callback) {
 	});
 });
 
-gulp.task('default', ['webpack:server', 'sass']);
+gulp.task('default', ['webpack:server', 'watch']);
