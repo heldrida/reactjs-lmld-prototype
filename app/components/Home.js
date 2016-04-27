@@ -1,14 +1,22 @@
-var React = require('react');
-var ReactRouter = require('react-router');
+import React from 'react';
+import ReactRouter from 'react-router';
 
-var Home = React.createClass({
-	render: function () {
+class Home extends React.Component {
+
+	constructor (props) {
+		super(props);
+	}
+
+	render () {
+
 		return (
 			<div>
 				<h1>Home.js</h1>
 			</div>
-		)
-	}
-});
+		);
 
-module.exports = Home;
+	}
+
+}
+
+export default Home;
