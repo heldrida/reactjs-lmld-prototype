@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "A prototype, architecture and anim tests,  related with the new lmld website;",
   "main": "app/index.js",
-  "scripts": {
-    "dev": "webpack-dev-server --inline --hot --config webpack.config.js --progress --colors --host localhost --port 8888 --open",
-    "build": "webpack -p --progress --profile --colors"
-  },
+  "scripts": {},
   "author": "Helder C.",
   "license": "ISC",
   "devDependencies": {
