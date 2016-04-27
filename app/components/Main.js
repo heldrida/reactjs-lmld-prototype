@@ -20,7 +20,9 @@ class Main extends React.Component {
 				<br />
 				<button onClick={this.expandModule}>ExpandModule fn()</button>
 
-				{this.props.children}
+				<div className="content">
+					{this.props.children}
+				</div>
 
 				<Footer />
 			</div>
