@@ -2,10 +2,10 @@
   "name": "reactjs-lmld-prototype",
   "version": "1.0.0",
   "description": "A prototype, architecture and anim tests,  related with the new lmld website;",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
-    "production": "webpack -p",
-    "start": "webpack-dev-server --inline --hot"
+    "dev": "webpack-dev-server --inline --hot --config webpack.config.js --progress --colors",
+    "build": "webpack -p --progress --profile --colors"
   },
   "author": "Helder C.",
   "license": "ISC",
