@@ -1,0 +1,50 @@
+@mixin emailTextStyle {
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 26px;
+	color: $greyA;
+}
+
+.ns-lmld-2016 {
+	.newsletter-subscribe {
+		form {
+			width: 393px;
+			height: 56px;
+			position: relative;
+			margin: 40px auto;
+
+			input {
+				height: 56px;
+				line-height: 56px;
+				padding: 0;
+				margin: 0;
+				display: inline-block;
+				position: absolute;
+				border: none;
+			}
+			input[type="email"] {
+				top: 0;
+				left: 0;
+				width: calc(100% - 128px);
+				z-index: 1;
+				@include emailTextStyle;
+
+				@include placeholder {
+					@include emailTextStyle;
+				}
+			}
+			input[type="submit"] {
+				top: 0;
+				right: 0;
+				width: 128px;
+				background-color: $yellowLbtn;
+				color: #fff;
+				z-index: 2;
+				text-transform: uppercase;
+				font-size: 16px;
+				letter-spacing: 1px;
+				line-height: 21px;
+			}
+		}
+	}
+}
