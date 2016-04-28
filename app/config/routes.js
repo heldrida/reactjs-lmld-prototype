@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';

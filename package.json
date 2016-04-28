@@ -28,6 +28,7 @@
   "dependencies": {
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
+    "react-motion": "^0.4.3",
     "react-router": "^2.3.0"
   }
 }

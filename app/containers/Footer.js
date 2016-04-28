@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import NewsletterSubscribe from '../components/NewsletterSubscribe.js';
 

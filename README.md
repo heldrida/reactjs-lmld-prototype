@@ -80,6 +80,9 @@
 
 					> https://muffinresearch.co.uk/back-to-the-future-using-es6-with-react/
 
+				> ES6 Classes
+
+					> http://javascriptplayground.com/blog/2014/07/introduction-to-es6-classes-tutorial/
 
 		- Sass structure:
 
@@ -112,3 +115,18 @@
 				> https://github.com/Yomguithereal/baobab
 
 				> https://github.com/moreartyjs/moreartyjs
+
+
+		- Animation:
+
+			#References:
+
+				> https://medium.com/@nashvail/a-gentle-introduction-to-react-motion-dc50dd9f2459#.q5ulf6228
+
+				> http://michelletilley.net/2016/01/10/react-motion-staggeredmotion.html
+
+				> http://azazdeaz.github.io/react-gsap-enhancer/#/demo/update-and-animate-transform?_k=3snpj7
+
+				> https://github.com/hzdg/gsap-react-plugin
+
+				> https://github.com/chenglou/react-motion

@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import ReactRouter from 'react-router';
 import HomeBlock from '../components/HomeBlock';

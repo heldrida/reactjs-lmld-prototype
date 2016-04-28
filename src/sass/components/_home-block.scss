@@ -8,6 +8,17 @@
 			height: 300px;
 			background: $yellowLmld;
 			margin: 50px;
+			position: relative;
+			.collapsed {
+
+			}
+			.full {
+				background-color: #f00;
+				width: inherit;
+				height: inherit;
+				position: absolute;
+				z-index: 999;
+			}
 		}
 	}
 
