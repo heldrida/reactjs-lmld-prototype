@@ -171,3 +171,21 @@ table {
     transition: opacity 0.3s; }
     .ns-lmld-2016 .newsletter-subscribe form input[type="submit"]:hover {
       opacity: 0.9; }
+
+.ns-lmld-2016 .home-block {
+  width: 100%;
+  height: 400px; }
+  .ns-lmld-2016 .home-block .block {
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+    position: relative; }
+    .ns-lmld-2016 .home-block .block .content {
+      background: #FFD000;
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      z-index: 999;
+      /* temporary: needs to be calc dynamic on the component */
+      min-width: 100%;
+      min-height: 100%; }

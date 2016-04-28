@@ -17,7 +17,33 @@ class HomeBlock extends React.Component {
 		// Component DOM elements
 		this.els = {};
 
-		console.log('this.refs', this.refs);
+		// The default element position
+		this.defaultPosition = {};
+
+	}
+
+	componentDidMount() {
+
+		console.log('HomeBlock Component mounted');
+
+		// Set the default position and everytime the browser resizes
+		setTimeout(() => {
+			this.setBlockDefaults();
+		});
+
+	}
+
+	setBlockDefaults () {
+
+		for (var key in this.els) {
+			this.defaultPosition[key] = this.calcElementPosition(this.els[key]);
+		}
+
+	}
+
+	setBlockSize (el) {
+
+		el.style.width = this.defaultPosition[''] + 'px';
 
 	}
 
@@ -27,6 +53,14 @@ class HomeBlock extends React.Component {
 
 		this.setState({open: !this.state.open});
 
+		if (this.state.open) {
+
+			// Calculate DOM position
+			this.pos = this.calcElementPosition(this.els['block']);
+
+
+		}
+
 	}
 
 	setElement (key, node) {
@@ -35,18 +69,24 @@ class HomeBlock extends React.Component {
 
 	}
 
+	calcElementPosition (el) {
+
+		return el.getBoundingClientRect();
+
+	}
+
 	render () {
 
 		return (
 			<div className="home-block" onClick={this.openBlock.bind(this)}>
 				<div className="block" ref={this.setElement.bind(this, 'block')}>
-					<div className="collapsed">
-					</div>
-					<Motion style={{ percentage: spring(this.state.open ? 100 : 0) }}>
+					<Motion style={{ percentage: spring(this.state.open ? 100 : 0), top: spring(this.state.open ? -this.defaultPosition['block'].top : 0), left: spring(this.state.open ? -this.defaultPosition['block'].left : 0) }}>
 						{style =>
-							<div className="full" style={{
+							<div className="content" style={{
 								width: `${style.percentage}vw`,
-								height: `${style.percentage}vh`
+								height: `${style.percentage}vh`,
+								top: `${style.top}px`,
+								left: `${style.left}px`
 								}}>
 							</div>
 						}

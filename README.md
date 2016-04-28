@@ -80,9 +80,13 @@
 
 					> https://muffinresearch.co.uk/back-to-the-future-using-es6-with-react/
 
-				> ES6 Classes
+				> ES6 Classes:
 
 					> http://javascriptplayground.com/blog/2014/07/introduction-to-es6-classes-tutorial/
+
+				> Reactjs ES6 best practicies:
+
+					> https://blog.risingstack.com/react-js-best-practices-for-2016/
 
 		- Sass structure:
 
