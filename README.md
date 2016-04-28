@@ -64,7 +64,7 @@
 
 				> RHL + HMR: https://github.com/gaearon/react-hot-loader/tree/master/docs#starter-kits
 
-
+				> https://medium.com/@dan_abramov/how-to-use-classes-and-sleep-at-night-9af8de78ccb4#.nh1iemvcj
 
 
 		- Sass structure:
@@ -93,3 +93,8 @@
 			#References:
 
 				> http://reactkungfu.com/2015/09/common-react-dot-js-mistakes-unneeded-state/
+
+
+				> https://github.com/Yomguithereal/baobab
+
+				> https://github.com/moreartyjs/moreartyjs
