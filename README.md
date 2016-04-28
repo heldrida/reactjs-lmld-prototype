@@ -62,6 +62,8 @@
 
 				> http://andrewhfarmer.com/starter-project/
 
+				> RHL + HMR: https://github.com/gaearon/react-hot-loader/tree/master/docs#starter-kits
+
 
 
 
