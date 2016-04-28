@@ -85,3 +85,9 @@
 			The asset files are stored in the app directory, the build system should copy, process it and save on the build directory.
 
 
+		- State management:
+
+
+			#References:
+
+				> http://reactkungfu.com/2015/09/common-react-dot-js-mistakes-unneeded-state/
