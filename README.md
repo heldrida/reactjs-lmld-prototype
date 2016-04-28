@@ -66,6 +66,14 @@
 
 				> https://medium.com/@dan_abramov/how-to-use-classes-and-sleep-at-night-9af8de78ccb4#.nh1iemvcj
 
+			#Questions:
+
+				> About removing the Hashtag from the url requests:
+
+					http://stackoverflow.com/questions/25086832/how-to-stop-in-browser-with-react-router
+
+					https://github.com/reactjs/react-router/issues/2082
+
 
 		- Sass structure:
 

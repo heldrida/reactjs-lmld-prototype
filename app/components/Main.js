@@ -18,9 +18,9 @@ class Main extends React.Component {
 				#Main Section#
 				<br />
 				<br />
-				<a href="/#/">Open `home` component!</a>
+				<a href="#/">Open `home` component!</a>
 				<br />
-				<a href="/#/test">Open `Test` component!</a>
+				<a href="#/test">Open `Test` component!</a>
 				<br />
 				<br />
 				<button onClick={this.expandModule}>ExpandModule fn()</button>
