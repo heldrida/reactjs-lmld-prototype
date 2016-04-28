@@ -18,7 +18,7 @@ class HomeBlock extends React.Component {
 
 		return (
 			<div className="home-block">
-				<div className="block" onClick={this.openBlock}>
+				<div className="block" onClick={this.openBlock.bind(this)}>
 				</div>
 			</div>
 		);
