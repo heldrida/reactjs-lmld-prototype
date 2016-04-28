@@ -74,6 +74,12 @@
 
 					https://github.com/reactjs/react-router/issues/2082
 
+				> React on ES6:
+
+					> https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html
+
+					> https://muffinresearch.co.uk/back-to-the-future-using-es6-with-react/
+
 
 		- Sass structure:
 

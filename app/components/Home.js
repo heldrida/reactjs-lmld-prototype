@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactRouter from 'react-router';
+import HomeBlock from '../components/HomeBlock';
 
 class Home extends React.Component {
 
@@ -12,6 +13,7 @@ class Home extends React.Component {
 		return (
 			<div>
 				<h1>Home.js!</h1>
+				<HomeBlock />
 			</div>
 		);
 
