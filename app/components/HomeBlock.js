@@ -75,16 +75,31 @@ class HomeBlock extends React.Component {
 
 	}
 
+	onRestCallback () {
+		console.log("this.onRestCallback!");
+	}
+
+	motionStyleFromTo () {
+
+		return {
+			width: spring(this.state.open ? window.innerWidth : 500),
+			height: spring(this.state.open ? window.innerHeight : 300),
+			top: spring(this.state.open ? -this.defaultPosition['block'].top : 0),
+			left: spring(this.state.open ? -this.defaultPosition['block'].left : 0)
+		};
+
+	}
+
 	render () {
 
 		return (
 			<div className="home-block" onClick={this.openBlock.bind(this)}>
 				<div className="block" ref={this.setElement.bind(this, 'block')}>
-					<Motion style={{ percentage: spring(this.state.open ? 100 : 0), top: spring(this.state.open ? -this.defaultPosition['block'].top : 0), left: spring(this.state.open ? -this.defaultPosition['block'].left : 0) }}>
+					<Motion onRest={this.onRestCallback} style={this.motionStyleFromTo()}>
 						{style =>
 							<div className="content" style={{
-								width: `${style.percentage}vw`,
-								height: `${style.percentage}vh`,
+								width: `${style.width}px`,
+								height: `${style.height}px`,
 								top: `${style.top}px`,
 								left: `${style.left}px`
 								}}>
