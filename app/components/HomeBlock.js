@@ -31,12 +31,26 @@ class HomeBlock extends React.Component {
 		});
 
 		// Set event listeners
+		this.setEventListeners();
 
 	}
 
 	componentWillUnmount () {
 
 		// Remove event listeners
+
+	}
+
+	setEventListeners () {
+
+		// Scroll event listener
+		window.addEventListener('scroll', e => this.onScrollHandler(e));
+
+	}
+
+	removeEventListeners () {
+
+		window.removeEventListeners('scroll', this.onScrollHandler);
 
 	}
 
@@ -54,6 +68,18 @@ class HomeBlock extends React.Component {
 
 	}
 
+	setElement (key, node) {
+
+		this.els[key] = node;
+
+	}
+
+	calcElementPosition (el) {
+
+		return el.getBoundingClientRect();
+
+	}
+
 	openBlock () {
 
 		this.setState({open: !this.state.open});
@@ -68,19 +94,9 @@ class HomeBlock extends React.Component {
 
 	}
 
-	setElement (key, node) {
-
-		this.els[key] = node;
-
-	}
-
-	calcElementPosition (el) {
-
-		return el.getBoundingClientRect();
-
-	}
-
 	onRestCallback () {
+
+		console.log("onRest!");
 
 		this.state.open ? this.onBlockOpen() : this.onBlockCollapse();
 
@@ -90,11 +106,24 @@ class HomeBlock extends React.Component {
 
 		console.log('onBlockOpen callback');
 
+		// Set block element to fix position
+		this.props.setNoScroll(true);
+
 	}
 
 	onBlockCollapse () {
 
-		console.log('onBlockCollapse callback');
+		// Set block element to fix position
+		this.props.setNoScroll(false);
+
+	}
+
+	onScrollHandler (e) {
+
+		// Update the block Y position
+		if (this.state.open) {
+
+		}
 
 	}
 

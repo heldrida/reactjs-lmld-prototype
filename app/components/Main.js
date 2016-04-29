@@ -6,11 +6,23 @@ import Footer from '../containers/Footer';
 class Main extends React.Component {
 
 	constructor (props) {
+
 		super(props);
+
 	}
 
 	expandModule () {
 		console.log('fn expandModule!');
+	}
+
+	setNoScroll (bool) {
+
+		console.log('setStateScroll fn called!');
+
+		var cl = document.body.classList;
+
+		bool ? cl.add('noscroll') : cl.remove('noscroll');
+
 	}
 
 	render () {
@@ -29,7 +41,7 @@ class Main extends React.Component {
 				<br />
 				<br />
 				<div className="content">
-					{this.props.children}
+					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
 				</div>
 
 				<Footer />
