@@ -134,3 +134,5 @@
 				> https://github.com/hzdg/gsap-react-plugin
 
 				> https://github.com/chenglou/react-motion
+
+				> https://facebook.github.io/react/docs/animation.html
