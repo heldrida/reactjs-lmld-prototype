@@ -91,6 +91,14 @@ class HomeBlock extends React.Component {
 
 	}
 
+	updateHash () {
+
+		// the hash value needs to be passed to props
+		// using hard typed value atm for testing
+		history.pushState(null, null, '/#/case-study-vans');
+
+	}
+
 	openBlock () {
 
 		this.setState({open: !this.state.open});
@@ -100,6 +108,13 @@ class HomeBlock extends React.Component {
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els['block']);
 
+			// this should be moved and treated only for modal elements
+			history.pushState(null, null, '/#/');
+
+		} else {
+
+			// refactor to treat only modal elements
+			this.updateHash();
 
 		}
 

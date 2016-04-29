@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
+import { Router, Route, IndexRoute, Redirect, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 import Main from '../components/Main';
 import Home from '../components/Home';
@@ -14,6 +14,7 @@ var routes = (
 		<Route path='/' component={Main}>
 			<IndexRoute component={Home} />
 			<Route path='test' component={Test} />
+			<Route path="case-study-vans" component={Home} />
 		</Route>
 	</Router>
 );
