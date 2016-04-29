@@ -12,7 +12,8 @@ class HomeBlock extends React.Component {
 
 		// Default state
 		this.state = {
-			open: false
+			open: false,
+			mountContent: false
 		};
 
 		// Component DOM elements
@@ -109,6 +110,11 @@ class HomeBlock extends React.Component {
 		// Set block element to fix position
 		this.props.setNoScroll(true);
 
+		// Update children mount state
+		this.setState({
+			mountContent: true
+		});
+
 	}
 
 	onBlockCollapse () {
@@ -151,6 +157,7 @@ class HomeBlock extends React.Component {
 								top: `${style.top}px`,
 								left: `${style.left}px`
 								}}>
+								{this.state.mountContent ? <this.props.innerComponent /> : null}
 							</div>
 						}
 					</Motion>
