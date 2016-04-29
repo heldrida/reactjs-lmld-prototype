@@ -10,6 +10,7 @@ class HomeBlock extends React.Component {
 
 		super(props);
 
+		// Default state
 		this.state = {
 			open: false
 		};
@@ -22,14 +23,20 @@ class HomeBlock extends React.Component {
 
 	}
 
-	componentDidMount() {
-
-		console.log('HomeBlock Component mounted');
+	componentDidMount () {
 
 		// Set the default position and everytime the browser resizes
 		setTimeout(() => {
 			this.setBlockDefaults();
 		});
+
+		// Set event listeners
+
+	}
+
+	componentWillUnmount () {
+
+		// Remove event listeners
 
 	}
 
@@ -48,8 +55,6 @@ class HomeBlock extends React.Component {
 	}
 
 	openBlock () {
-
-		console.log("this.state.open: ", this.state.open);
 
 		this.setState({open: !this.state.open});
 
@@ -76,7 +81,21 @@ class HomeBlock extends React.Component {
 	}
 
 	onRestCallback () {
-		console.log("this.onRestCallback!");
+
+		this.state.open ? this.onBlockOpen() : this.onBlockCollapse();
+
+	}
+
+	onBlockOpen () {
+
+		console.log('onBlockOpen callback');
+
+	}
+
+	onBlockCollapse () {
+
+		console.log('onBlockCollapse callback');
+
 	}
 
 	motionStyleFromTo () {
@@ -95,7 +114,7 @@ class HomeBlock extends React.Component {
 		return (
 			<div className="home-block" onClick={this.openBlock.bind(this)}>
 				<div className="block" ref={this.setElement.bind(this, 'block')}>
-					<Motion onRest={this.onRestCallback} style={this.motionStyleFromTo()}>
+					<Motion onRest={this.onRestCallback.bind(this)} style={this.motionStyleFromTo()}>
 						{style =>
 							<div className="content" style={{
 								width: `${style.width}px`,
