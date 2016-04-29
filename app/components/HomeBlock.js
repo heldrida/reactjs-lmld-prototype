@@ -122,6 +122,11 @@ class HomeBlock extends React.Component {
 		// Set block element to fix position
 		this.props.setNoScroll(false);
 
+		// Update children mount state
+		this.setState({
+			mountContent: false
+		});
+
 	}
 
 	onScrollHandler (e) {
@@ -147,7 +152,7 @@ class HomeBlock extends React.Component {
 	render () {
 
 		return (
-			<div className="home-block" onClick={this.openBlock.bind(this)}>
+			<div className={"home-block" + " " + this.props.innerComponent.className } onClick={this.openBlock.bind(this)} style={ {zIndex: (this.state.open ? 999 : null) }}>
 				<div className="block" ref={this.setElement.bind(this, 'block')}>
 					<Motion onRest={this.onRestCallback.bind(this)} style={this.motionStyleFromTo()}>
 						{style =>
@@ -157,7 +162,7 @@ class HomeBlock extends React.Component {
 								top: `${style.top}px`,
 								left: `${style.left}px`
 								}}>
-								{this.state.mountContent ? <this.props.innerComponent /> : null}
+								{this.state.mountContent ? <this.props.innerComponent.component /> : null}
 							</div>
 						}
 					</Motion>

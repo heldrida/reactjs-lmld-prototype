@@ -2,7 +2,10 @@
 
 	.home-block {
 		width: 100%;
-		height: 400px;
+		height: auto;
+		position: relative;
+		z-index: 1;
+
 		.block {
 			width: 500px;
 			height: 300px;
@@ -18,6 +21,12 @@
 				/* temporary: needs to be calc dynamic on the component */
 				min-width: 100%;
 				min-height: 100%;
+			}
+		}
+
+		&.case-study-twix {
+			.content {
+				background: #0cf;
 			}
 		}
 	}
