@@ -13,7 +13,8 @@ class HomeBlock extends React.Component {
 		// Default state
 		this.state = {
 			open: false,
-			mountContent: false
+			mountContent: false,
+			zIndex: null
 		};
 
 		// Component DOM elements
@@ -39,6 +40,15 @@ class HomeBlock extends React.Component {
 	componentWillUnmount () {
 
 		// Remove event listeners
+
+	}
+
+	componentDidUpdate () {
+
+		console.log("componentDidUpdate callback");
+
+		// Update the ZIndex
+		//this.setZIndex();
 
 	}
 
@@ -149,10 +159,32 @@ class HomeBlock extends React.Component {
 
 	}
 
+	setZIndex () {
+
+		var zIndex = null;
+
+		if (this.state.open) {
+
+			zIndex = 999;
+
+		} else {
+
+			zIndex = null;
+
+		}
+
+		this.setState({
+			zIndex: zIndex
+		});
+
+		return null;
+
+	}
+
 	render () {
 
 		return (
-			<div className={"home-block" + " " + this.props.innerComponent.className } onClick={this.openBlock.bind(this)} style={ {zIndex: (this.state.open ? 999 : null) }}>
+			<div className={ "home-block" + " " + this.props.innerComponent.className } onClick={this.openBlock.bind(this)} style={{ zIndex: this.state.open ? 999 : '' }}>
 				<div className="block" ref={this.setElement.bind(this, 'block')}>
 					<Motion onRest={this.onRestCallback.bind(this)} style={this.motionStyleFromTo()}>
 						{style =>
