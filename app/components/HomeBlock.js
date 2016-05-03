@@ -30,7 +30,6 @@ class HomeBlock extends React.Component {
 		// Set the default position and everytime the browser resizes
 		setTimeout(() => {
 			this.setBlockDefaults();
-			this.timeline = this.initTimeline();
 		});
 
 		// Set event listeners
@@ -128,6 +127,10 @@ class HomeBlock extends React.Component {
 
 		} else {
 
+			// get updated timeline with correct position
+			// the user may have scrolled
+			this.timeline = this.updateTimeline();
+
 			this.els.block.parentNode.style.zIndex = 999;
 
 			this.timeline.play();
@@ -151,6 +154,7 @@ class HomeBlock extends React.Component {
 			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left, position: 'absolute' } };
 			const onStartCallback = () => {
 				console.log("onStartCallback fn call");
+				this.props.setNoScroll(true);
 			};
 			const onCompleteCallback = () => {
 
@@ -164,7 +168,7 @@ class HomeBlock extends React.Component {
 				// refactor to treat only modal elements
 				this.updateHash();
 
-				this.props.setNoScroll(true);
+				//this.props.setNoScroll(true);
 
 			};
 			const onReverseCompleteCallback = () => {
@@ -186,6 +190,23 @@ class HomeBlock extends React.Component {
 			timeline.pause();
 
 		}
+
+		return timeline;
+
+	}
+
+
+	updateTimeline() {
+
+		let timeline;
+
+		if (this.timeline) {
+			this.timeline.clear();
+			delete this.timeline;
+			this.timeline = null;
+		}
+
+		timeline = this.initTimeline();
 
 		return timeline;
 
