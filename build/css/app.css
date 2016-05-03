@@ -105,13 +105,15 @@ body.noscroll {
   width: 100vw;
   height: 100vh; }
 
-.ns-lmld-2016 .main {
-  width: 100vw;
-  height: auto;
-  background: #fff; }
-  .ns-lmld-2016 .main .content {
-    min-height: 400px;
-    /* dev only */ }
+.ns-lmld-2016 {
+  overflow-x: hidden; }
+  .ns-lmld-2016 .main {
+    width: 100vw;
+    height: auto;
+    background: #fff; }
+    .ns-lmld-2016 .main .content {
+      min-height: 400px;
+      /* dev only */ }
 
 .ns-lmld-2016 .newsletter-subscribe form {
   width: 393px;
