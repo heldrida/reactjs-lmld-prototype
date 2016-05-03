@@ -198,5 +198,7 @@ body.noscroll {
       /* temporary: needs to be calc dynamic on the component */
       min-width: 100%;
       min-height: 100%; }
-  .ns-lmld-2016 .home-block.case-study-twix .content {
-    background: #0cf; }
+  .ns-lmld-2016 .home-block.case-study-twix {
+    left: 25%; }
+    .ns-lmld-2016 .home-block.case-study-twix .content {
+      background: #0cf; }

@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import _ from 'lodash';
 
 class HomeBlock extends React.Component {
 
@@ -22,6 +23,9 @@ class HomeBlock extends React.Component {
 		this.defaultPosition = {};
 
 		this.timeline = false;
+
+		// Create Throttle version of openBlock
+		this.openBlockThrottle = _.throttle(this.openBlock, 200);
 
 	}
 
@@ -320,7 +324,7 @@ class HomeBlock extends React.Component {
 
 		return (
 			<div className={ 'home-block' + ' ' + this.props.innerComponent.className }>
-				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlock.bind(this)}>
+				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
 						<div className='content'>
 							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
 						</div>
