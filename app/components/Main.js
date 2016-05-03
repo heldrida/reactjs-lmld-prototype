@@ -11,10 +11,6 @@ class Main extends React.Component {
 
 	}
 
-	expandModule() {
-		console.log('fn expandModule!');
-	}
-
 	setNoScroll(bool) {
 
 		let cl = document.body.classList;
@@ -27,12 +23,6 @@ class Main extends React.Component {
 
 		return(
 			<div className="main">
-
-				<a href="#/">Open `home` component!</a>
-				<br />
-				<a href="#/test">Open `Test` component!</a>
-				<br />
-				<br />
 
 				<div className="content">
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
