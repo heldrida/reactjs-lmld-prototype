@@ -63,6 +63,10 @@ class HomeBlock extends React.Component {
 		// Scroll event listener
 		window.addEventListener('scroll', e => this.onScrollHandler(e));
 
+
+		// Handle hash change
+		window.addEventListener('hashchange', e => this.onHashChangeHandler(e), false);
+
 	}
 
 	removeEventListeners() {
@@ -106,7 +110,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	openBlock() {
+	openBlock(callback = false) {
 
 		if (this.state.open) {
 
@@ -123,6 +127,10 @@ class HomeBlock extends React.Component {
 
 			// this should be moved and treated only for modal elements
 			history.pushState(null, null, '#/');
+
+			if (typeof callback === 'function') {
+				callback();
+			}
 
 		} else {
 
@@ -236,6 +244,14 @@ class HomeBlock extends React.Component {
 	}
 
 	onScrollHandler() {
+
+	}
+
+	onHashChangeHandler() {
+
+		// When handling case study requests, then close if open,
+		// then callback the case study request handler
+		this.openBlock();
 
 	}
 
