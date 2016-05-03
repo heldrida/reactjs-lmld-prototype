@@ -5,27 +5,27 @@ import Footer from '../containers/Footer';
 
 class Main extends React.Component {
 
-	constructor (props) {
+	constructor(props) {
 
 		super(props);
 
 	}
 
-	expandModule () {
+	expandModule() {
 		console.log('fn expandModule!');
 	}
 
-	setNoScroll (bool) {
+	setNoScroll(bool) {
 
-		var cl = document.body.classList;
+		let cl = document.body.classList;
 
 		bool ? cl.add('noscroll') : cl.remove('noscroll');
 
 	}
 
-	render () {
+	render() {
 
-		return (
+		return(
 			<div className="main">
 
 				<a href="#/">Open `home` component!</a>

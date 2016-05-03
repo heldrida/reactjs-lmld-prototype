@@ -19,14 +19,17 @@ class Home extends React.Component {
 
 	constructor(props) {
 		super(props);
+
+		console.log('this.refs', this.refs);
+
 	}
 
 	render() {
 
 		return (
 			<div>
-				<HomeBlock urlHash={'case-study-vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } />
-				<HomeBlock urlHash={'case-study-twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } />
+				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } />
+				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } />
 			</div>
 		);
 

@@ -25,11 +25,17 @@ class HomeBlock extends React.Component {
 
 	}
 
+	componentWillMount () {
+
+
+	}
+
 	componentDidMount() {
 
 		// Set the default position and everytime the browser resizes
 		setTimeout(() => {
 			this.setBlockDefaults();
+			this.caseStudyRequestHandler();
 		});
 
 		// Set event listeners
@@ -96,21 +102,18 @@ class HomeBlock extends React.Component {
 	updateHash() {
 
 		// the hash value needs to be passed to props
-		history.pushState(null, null, '#/' + this.props.urlHash);
+		history.pushState(null, null, '#/case-study/' + this.props.urlHash);
 
 	}
 
 	openBlock() {
 
-		this.setState({
-			open: !this.state.open
-		});
+		if (this.state.open) {
 
-			if (this.state.open) {
-
-				// before the reverse animation starts
+			// before the reverse animation starts
 			// the component needs to be dismounted
 			this.setState({
+				open: false,
 				mountContent: false
 			});
 
@@ -122,6 +125,10 @@ class HomeBlock extends React.Component {
 			history.pushState(null, null, '#/');
 
 		} else {
+
+			this.setState({
+				open: true
+			});
 
 			// get updated timeline with correct position
 			// the user may have scrolled
@@ -251,6 +258,23 @@ class HomeBlock extends React.Component {
 		});
 
 		return null;
+
+	}
+
+	caseStudyRequestHandler() {
+
+		let location = this.props.location;
+
+		if (location.pathname && location.pathname.indexOf('case-study')) {
+
+			let arr = location.pathname.split('/');
+			let name = arr[2];
+
+			if (this.props.urlHash === name) {
+				this.openBlock();
+			}
+
+		}
 
 	}
 
