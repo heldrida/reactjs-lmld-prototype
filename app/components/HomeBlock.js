@@ -55,10 +55,6 @@ class HomeBlock extends React.Component {
 
 	componentDidUpdate() {
 
-		console.log("componentDidUpdate callback");
-
-		// Update the ZIndex
-		//this.setZIndex();
 
 	}
 
