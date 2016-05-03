@@ -114,8 +114,6 @@ class HomeBlock extends React.Component {
 
 		if (this.state.open) {
 
-			this.els.block.style.zIndex = '';
-
 			// before the reverse animation starts
 			// the component needs to be dismounted
 			this.setState({
@@ -131,7 +129,7 @@ class HomeBlock extends React.Component {
 
 		} else {
 
-			this.els.block.style.zIndex = 999;
+			this.els.block.parentNode.style.zIndex = 999;
 
 			this.timeline.play();
 
@@ -171,6 +169,7 @@ class HomeBlock extends React.Component {
 
 			};
 			const onReverseCompleteCallback = () => {
+				this.els.block.parentNode.style.zIndex = '';
 				this.props.setNoScroll(false);
 				this.setState({
 					open: false,
