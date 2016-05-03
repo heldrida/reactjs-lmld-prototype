@@ -1,4 +1,5 @@
-var gulp = require('gulp'),
+var config = require('./config'),
+	gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	plumber = require('gulp-plumber'),
 	exec = require('child_process').exec,
@@ -6,7 +7,9 @@ var gulp = require('gulp'),
 	webpackDevServer = require("webpack-dev-server"),
 	webpackConfig = require("./webpack.config.js"),
 	gutil = require('gulp-util'),
-	inject = require('gulp-inject');
+	inject = require('gulp-inject'),
+	DiffDeployer = require('ftp-diff-deployer');
+
 
 gulp.task('sass', function () {
     return gulp.src('./src/sass/app.scss')
@@ -71,6 +74,31 @@ gulp.task("inject", function () {
 	return gulp.src('./build/index.html')
 			.pipe(inject(gulp.src('./build/css/**/*.css', {read: false}), {relative: true}))
 			.pipe(gulp.dest('./build'));
+
+});
+
+gulp.task('deploy', ['webpack:build'], function () {
+
+	var deployer = new DiffDeployer({
+		host: '216.70.112.70',
+		auth: {
+			username: config.ftp.username,
+			password: config.ftp.password
+		},
+		src: 'build',
+		dest: '/lamoulade_reactjs_v4',
+		memory: 'ftp-diff-deployer-memory-file.json',
+		exclude: ['node_modules']
+	});
+
+	deployer.deploy(function (err) {
+		if (err) {
+			console.error('Something went wrong!');
+			console.error(err);
+		} else {
+			console.log('Everything went fine!');
+		}
+	});
 
 });
 
