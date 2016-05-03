@@ -138,3 +138,11 @@
 				> https://github.com/chenglou/react-motion
 
 				> https://facebook.github.io/react/docs/animation.html
+
+
+		- Deployment:
+
+			Before trying to run this command, copy and create a config.js with the correct credentials to the ftp server; Run the command `gulp deploy` from the command line for deployment; check for any erros in the console;
+
+
+			
