@@ -114,23 +114,7 @@ class HomeBlock extends React.Component {
 
 		if (this.state.open) {
 
-			// before the reverse animation starts
-			// the component needs to be dismounted
-			this.setState({
-				open: false,
-				mountContent: false
-			});
-
-			setTimeout(() => {
-				this.timeline.reverse();
-			});
-
-			// this should be moved and treated only for modal elements
-			history.pushState(null, null, '#/');
-
-			if (typeof callback === 'function') {
-				callback();
-			}
+			this.closeBlock();
 
 		} else {
 
@@ -148,6 +132,26 @@ class HomeBlock extends React.Component {
 
 		}
 
+	}
+
+	closeBlock() {
+		// before the reverse animation starts
+		// the component needs to be dismounted
+		this.setState({
+			open: false,
+			mountContent: false
+		});
+
+		setTimeout(() => {
+			this.timeline.reverse();
+		});
+
+		// this should be moved and treated only for modal elements
+		history.pushState(null, null, '#/');
+
+		if (typeof callback === 'function') {
+			callback();
+		}
 	}
 
 	initTimeline() {
@@ -247,11 +251,29 @@ class HomeBlock extends React.Component {
 
 	}
 
-	onHashChangeHandler() {
+	onHashChangeHandler(e) {
 
-		// When handling case study requests, then close if open,
+		// When handling case study requests, close if state open,
 		// then callback the case study request handler
-		this.openBlock();
+		if (this.state.open && e.oldURL && e.oldURL.indexOf('case-study') > -1 && e.newURL && e.newURL.indexOf('case-study') > -1) {
+
+			this.openBlock();
+
+		} else if(this.state.open && e.oldURL && e.oldURL.indexOf('case-study') > -1) {
+
+			this.closeBlock();
+
+		} else if (this.state.open && e.newURL && e.newURL.indexOf('case-study') > -1) {
+
+			this.openBlock();
+
+		} else if (!this.state.open && e.newURL && e.newURL.indexOf('case-study') > -1) {
+
+			this.caseStudyRequestHandler();
+
+		}
+
+		return null;
 
 	}
 
@@ -281,7 +303,7 @@ class HomeBlock extends React.Component {
 
 		let location = this.props.location;
 
-		if (location.pathname && location.pathname.indexOf('case-study')) {
+		if (location.pathname && location.pathname.indexOf('case-study') > -1) {
 
 			let arr = location.pathname.split('/');
 			let name = arr[2];
