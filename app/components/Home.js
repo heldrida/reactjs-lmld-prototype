@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import ReactRouter from 'react-router';
 import HomeBlock from '../components/HomeBlock';
 import HomeBlockCaseStudyVans from '../components/HomeBlockCaseStudyVans';
 import HomeBlockCaseStudyTwix from '../components/HomeBlockCaseStudyTwix';
@@ -18,11 +17,11 @@ const homeBlockTwix = {
 
 class Home extends React.Component {
 
-	constructor (props) {
+	constructor(props) {
 		super(props);
 	}
 
-	render () {
+	render() {
 
 		return (
 			<div>
