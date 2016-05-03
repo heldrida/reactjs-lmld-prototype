@@ -21,6 +21,8 @@ class HomeBlock extends React.Component {
 		// The default element position
 		this.defaultPosition = {};
 
+		this.timeline = false;
+
 	}
 
 	componentDidMount() {
@@ -28,6 +30,7 @@ class HomeBlock extends React.Component {
 		// Set the default position and everytime the browser resizes
 		setTimeout(() => {
 			this.setBlockDefaults();
+			this.timeline = this.initTimeline();
 		});
 
 		// Set event listeners
@@ -101,22 +104,67 @@ class HomeBlock extends React.Component {
 
 	openBlock() {
 
+		console.log("openBlock");
+
 		this.setState({open: !this.state.open});
+		
+		console.log('this.state.open', this.state.open);
 
 		if (this.state.open) {
 
-			// Calculate DOM position
-			this.pos = this.calcElementPosition(this.els.block);
+			this.timeline.reverse();
 
 			// this should be moved and treated only for modal elements
 			history.pushState(null, null, '/#/');
 
 		} else {
 
-			// refactor to treat only modal elements
-			this.updateHash();
+			this.timeline.play();
 
 		}
+
+	}
+
+	initTimeline() {
+
+		let timeline;
+
+		// Initialise the timeline if not declared yet to cache it
+		if (!this.timeline) {
+
+			// Calculate DOM position
+			this.pos = this.calcElementPosition(this.els.block);
+
+			// Open the Modal
+			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, top: 0, left: 0 } };
+			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left} };
+			const onStartCallback = () => {
+				console.log("onStartCallback fn call");
+			};
+			const onCompleteCallback = () => {
+
+				console.log("onCompleteCallback fn call");
+
+				this.setState({
+					open: true
+				});
+
+				// refactor to treat only modal elements
+				this.updateHash();
+			};
+			timeline = new window.TimelineLite({
+				onStart: onStartCallback,
+				onComplete: onCompleteCallback,
+				onReverseComplete: null
+			});
+
+			timeline.fromTo(this.els.block, 0.3, cssBefore, cssAfter);
+
+			timeline.pause();
+
+		}
+
+		return timeline;
 
 	}
 
