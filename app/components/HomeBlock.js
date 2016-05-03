@@ -255,9 +255,8 @@ class HomeBlock extends React.Component {
 	render() {
 
 		return (
-			<div className={ 'home-block' + ' ' + this.props.innerComponent.className } onClick={this.openBlock.bind(this)}>
-				<div className='block' ref={this.setElement.bind(this, 'block')}>
-
+			<div className={ 'home-block' + ' ' + this.props.innerComponent.className }>
+				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlock.bind(this)}>
 						<div className='content'>
 							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
 						</div>
