@@ -1,12 +1,10 @@
 'use strict';
 
 import React from 'react';
-import ReactRouter from 'react-router';
-import {Motion, spring} from 'react-motion';
 
 class HomeBlock extends React.Component {
 
-	constructor (props) {
+	constructor(props) {
 
 		super(props);
 
@@ -25,7 +23,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	componentDidMount () {
+	componentDidMount() {
 
 		// Set the default position and everytime the browser resizes
 		setTimeout(() => {
@@ -37,13 +35,13 @@ class HomeBlock extends React.Component {
 
 	}
 
-	componentWillUnmount () {
+	componentWillUnmount() {
 
 		// Remove event listeners
 
 	}
 
-	componentDidUpdate () {
+	componentDidUpdate() {
 
 		console.log("componentDidUpdate callback");
 
@@ -52,46 +50,48 @@ class HomeBlock extends React.Component {
 
 	}
 
-	setEventListeners () {
+	setEventListeners() {
 
 		// Scroll event listener
 		window.addEventListener('scroll', e => this.onScrollHandler(e));
 
 	}
 
-	removeEventListeners () {
+	removeEventListeners() {
 
 		window.removeEventListeners('scroll', this.onScrollHandler);
 
 	}
 
-	setBlockDefaults () {
+	setBlockDefaults() {
 
-		for (var key in this.els) {
-			this.defaultPosition[key] = this.calcElementPosition(this.els[key]);
+		for (const key in this.els) {
+			if (this.defaultPosition[key]) {
+				this.defaultPosition[key] = this.calcElementPosition(this.els[key]);
+			}
 		}
 
 	}
 
-	setBlockSize (el) {
+	setBlockSize(el) {
 
 		el.style.width = this.defaultPosition[''] + 'px';
 
 	}
 
-	setElement (key, node) {
+	setElement(key, node) {
 
 		this.els[key] = node;
 
 	}
 
-	calcElementPosition (el) {
+	calcElementPosition(el) {
 
 		return el.getBoundingClientRect();
 
 	}
 
-	updateHash () {
+	updateHash() {
 
 		// the hash value needs to be passed to props
 		// using hard typed value atm for testing
@@ -99,14 +99,14 @@ class HomeBlock extends React.Component {
 
 	}
 
-	openBlock () {
+	openBlock() {
 
 		this.setState({open: !this.state.open});
 
 		if (this.state.open) {
 
 			// Calculate DOM position
-			this.pos = this.calcElementPosition(this.els['block']);
+			this.pos = this.calcElementPosition(this.els.block);
 
 			// this should be moved and treated only for modal elements
 			history.pushState(null, null, '/#/');
@@ -120,7 +120,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	onRestCallback () {
+	onRestCallback() {
 
 		console.log("onRest!");
 
@@ -128,7 +128,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	onBlockOpen () {
+	onBlockOpen() {
 
 		console.log('onBlockOpen callback');
 
@@ -142,7 +142,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	onBlockCollapse () {
+	onBlockCollapse() {
 
 		// Set block element to fix position
 		this.props.setNoScroll(false);
@@ -154,29 +154,13 @@ class HomeBlock extends React.Component {
 
 	}
 
-	onScrollHandler (e) {
-
-		// Update the block Y position
-		if (this.state.open) {
-
-		}
+	onScrollHandler() {
 
 	}
 
-	motionStyleFromTo () {
+	setZIndex() {
 
-		return {
-			width: spring(this.state.open ? window.innerWidth : 500),
-			height: spring(this.state.open ? window.innerHeight : 300),
-			top: spring(this.state.open ? -this.defaultPosition['block'].top : 0),
-			left: spring(this.state.open ? -this.defaultPosition['block'].left : 0)
-		};
-
-	}
-
-	setZIndex () {
-
-		var zIndex = null;
+		let zIndex = null;
 
 		if (this.state.open) {
 
@@ -196,23 +180,15 @@ class HomeBlock extends React.Component {
 
 	}
 
-	render () {
+	render() {
 
 		return (
-			<div className={ "home-block" + " " + this.props.innerComponent.className } onClick={this.openBlock.bind(this)} style={{ zIndex: this.state.open ? 999 : '' }}>
-				<div className="block" ref={this.setElement.bind(this, 'block')}>
-					<Motion onRest={this.onRestCallback.bind(this)} style={this.motionStyleFromTo()}>
-						{style =>
-							<div className="content" style={{
-								width: `${style.width}px`,
-								height: `${style.height}px`,
-								top: `${style.top}px`,
-								left: `${style.left}px`
-								}}>
-								{this.state.mountContent ? <this.props.innerComponent.component /> : null}
-							</div>
-						}
-					</Motion>
+			<div className={ 'home-block' + ' ' + this.props.innerComponent.className } onClick={this.openBlock.bind(this)}>
+				<div className='block' ref={this.setElement.bind(this, 'block')}>
+
+						<div className='content'>
+							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
+						</div>
 				</div>
 			</div>
 		);
