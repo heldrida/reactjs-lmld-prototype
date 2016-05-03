@@ -123,6 +123,8 @@
 
 		- Animation:
 
+			The lib React-Motion was used without success, the event onRest takes a bit too long to be triggered because of the time the physics take to settle;
+
 			#References:
 
 				> https://medium.com/@nashvail/a-gentle-introduction-to-react-motion-dc50dd9f2459#.q5ulf6228
