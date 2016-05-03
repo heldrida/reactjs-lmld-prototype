@@ -96,7 +96,7 @@ class HomeBlock extends React.Component {
 	updateHash() {
 
 		// the hash value needs to be passed to props
-		history.pushState(null, null, '/#/' + this.props.urlHash);
+		history.pushState(null, null, '#/' + this.props.urlHash);
 
 	}
 
@@ -106,9 +106,9 @@ class HomeBlock extends React.Component {
 			open: !this.state.open
 		});
 
-		if (this.state.open) {
+			if (this.state.open) {
 
-			// before the reverse animation starts
+				// before the reverse animation starts
 			// the component needs to be dismounted
 			this.setState({
 				mountContent: false
