@@ -102,13 +102,9 @@ class HomeBlock extends React.Component {
 
 	openBlock() {
 
-		console.log("openBlock");
-
 		this.setState({
 			open: !this.state.open
 		});
-
-		console.log('this.state.open', this.state.open);
 
 		if (this.state.open) {
 
@@ -153,12 +149,9 @@ class HomeBlock extends React.Component {
 			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: 0 } };
 			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left, position: 'absolute' } };
 			const onStartCallback = () => {
-				console.log("onStartCallback fn call");
 				this.props.setNoScroll(true);
 			};
 			const onCompleteCallback = () => {
-
-				console.log("onCompleteCallback fn call");
 
 				this.setState({
 					open: true,
@@ -211,17 +204,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	onRestCallback() {
-
-		console.log("onRest!");
-
-		this.state.open ? this.onBlockOpen() : this.onBlockCollapse();
-
-	}
-
 	onBlockOpen() {
-
-		console.log('onBlockOpen callback');
 
 		// Set block element to fix position
 		this.props.setNoScroll(true);
