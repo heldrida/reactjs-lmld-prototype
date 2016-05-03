@@ -106,18 +106,32 @@ class HomeBlock extends React.Component {
 
 		console.log("openBlock");
 
-		this.setState({open: !this.state.open});
-		
+		this.setState({
+			open: !this.state.open
+		});
+
 		console.log('this.state.open', this.state.open);
 
 		if (this.state.open) {
 
-			this.timeline.reverse();
+			this.els.block.style.zIndex = '';
+
+			// before the reverse animation starts
+			// the component needs to be dismounted
+			this.setState({
+				mountContent: false
+			});
+
+			setTimeout(() => {
+				this.timeline.reverse();
+			});
 
 			// this should be moved and treated only for modal elements
 			history.pushState(null, null, '/#/');
 
 		} else {
+
+			this.els.block.style.zIndex = 999;
 
 			this.timeline.play();
 
@@ -136,8 +150,8 @@ class HomeBlock extends React.Component {
 			this.pos = this.calcElementPosition(this.els.block);
 
 			// Open the Modal
-			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, top: 0, left: 0 } };
-			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left} };
+			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: 0 } };
+			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left, position: 'absolute' } };
 			const onStartCallback = () => {
 				console.log("onStartCallback fn call");
 			};
@@ -146,16 +160,27 @@ class HomeBlock extends React.Component {
 				console.log("onCompleteCallback fn call");
 
 				this.setState({
-					open: true
+					open: true,
+					mountContent: true
 				});
 
 				// refactor to treat only modal elements
 				this.updateHash();
+
+				this.props.setNoScroll(true);
+
+			};
+			const onReverseCompleteCallback = () => {
+				this.props.setNoScroll(false);
+				this.setState({
+					open: false,
+					mountContent: false
+				});
 			};
 			timeline = new window.TimelineLite({
 				onStart: onStartCallback,
 				onComplete: onCompleteCallback,
-				onReverseComplete: null
+				onReverseComplete: onReverseCompleteCallback
 			});
 
 			timeline.fromTo(this.els.block, 0.3, cssBefore, cssAfter);
