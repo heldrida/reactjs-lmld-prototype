@@ -202,7 +202,6 @@ class HomeBlock extends React.Component {
 
 		if (this.timeline) {
 			this.timeline.clear();
-			delete this.timeline;
 			this.timeline = null;
 		}
 
