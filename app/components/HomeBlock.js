@@ -97,8 +97,7 @@ class HomeBlock extends React.Component {
 	updateHash() {
 
 		// the hash value needs to be passed to props
-		// using hard typed value atm for testing
-		history.pushState(null, null, '/#/case-study-vans');
+		history.pushState(null, null, '/#/' + this.props.urlHash);
 
 	}
 

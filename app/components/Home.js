@@ -25,8 +25,8 @@ class Home extends React.Component {
 
 		return (
 			<div>
-				<HomeBlock innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } />
-				<HomeBlock innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } />
+				<HomeBlock urlHash={'case-study-vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } />
+				<HomeBlock urlHash={'case-study-twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } />
 			</div>
 		);
 
