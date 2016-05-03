@@ -119,7 +119,7 @@ class HomeBlock extends React.Component {
 			});
 
 			// this should be moved and treated only for modal elements
-			history.pushState(null, null, '/#/');
+			history.pushState(null, null, '#/');
 
 		} else {
 
