@@ -19,7 +19,7 @@
 				width: inherit;
 				height: inherit;
 				position: absolute;
-				z-index: 999;
+				z-index: 1;
 				/* temporary: needs to be calc dynamic on the component */
 				min-width: 100%;
 				min-height: 100%;
@@ -38,6 +38,41 @@
 			}
 			.block {
 				left: calc(100% - 500px);
+			}
+		}
+
+		.title-container {
+			margin-top: 60px;
+			position: absolute;
+			z-index: 2;
+			top: 0%;
+
+			h4 {
+				font-family: 'Larsseit';
+				font-size: 50px;
+				color: #000000;
+				letter-spacing: 1.66px;
+				text-transform: uppercase;
+			}
+			p {
+				font-family: Helvetica;
+				font-size: 18px;
+				color: #191919;
+				letter-spacing: 0.5px;
+			}
+		}
+
+		&.left {
+			.title-container {
+				left: 80%;
+				width: 100%;
+			}
+		}
+		&.right {
+			.title-container {
+				right: 85%;
+				width: 100%;
+				text-align: right;
 			}
 		}
 

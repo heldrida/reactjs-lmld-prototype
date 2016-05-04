@@ -234,7 +234,7 @@ body.noscroll {
       width: inherit;
       height: inherit;
       position: absolute;
-      z-index: 999;
+      z-index: 1;
       /* temporary: needs to be calc dynamic on the component */
       min-width: 100%;
       min-height: 100%; }
@@ -244,3 +244,26 @@ body.noscroll {
     background: #0cf; }
   .ns-lmld-2016 .home-block.case-study-twix .block {
     left: calc(100% - 500px); }
+  .ns-lmld-2016 .home-block .title-container {
+    margin-top: 60px;
+    position: absolute;
+    z-index: 2;
+    top: 0%; }
+    .ns-lmld-2016 .home-block .title-container h4 {
+      font-family: 'Larsseit';
+      font-size: 50px;
+      color: #000000;
+      letter-spacing: 1.66px;
+      text-transform: uppercase; }
+    .ns-lmld-2016 .home-block .title-container p {
+      font-family: Helvetica;
+      font-size: 18px;
+      color: #191919;
+      letter-spacing: 0.5px; }
+  .ns-lmld-2016 .home-block.left .title-container {
+    left: 80%;
+    width: 100%; }
+  .ns-lmld-2016 .home-block.right .title-container {
+    right: 85%;
+    width: 100%;
+    text-align: right; }

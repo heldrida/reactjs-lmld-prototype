@@ -30,11 +30,18 @@ class Home extends React.Component {
 		const caseStudyImg1 = require('../../src/images/case-study/case-study-1.jpg');
 		const caseStudyImg2 = require('../../src/images/case-study/case-study-2.jpg');
 
+		const caseStudy1Title = 'field.io';
+		const caseStudy1Description = 'We help ambitious brands get noticed,<br/>operating in the space between digital.';
+		const caseStudy2Title = 'FLOOM';
+		const caseStudy2Description = 'We help ambitious brands get noticed,<br/>operating in the space between digital.';
+
 		return (
 			<div>
 				<Header component={Header} />
-				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg1} align={'left'} />
-				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg2} align={'right'} />
+				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) }
+							posterImg={caseStudyImg1} title={caseStudy1Title} description={caseStudy1Description} align={'left'} />
+				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) }
+							posterImg={caseStudyImg2} title={caseStudy2Title} description={caseStudy2Description} align={'right'} />
 			</div>
 		);
 
