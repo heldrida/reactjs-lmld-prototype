@@ -24,8 +24,9 @@ class HomeBlock extends React.Component {
 
 		this.timeline = false;
 
-		// Create Throttle version of openBlock
+		// Create Throttled versions to improve performance
 		this.openBlockThrottle = _.throttle(this.openBlock, 200);
+		this.onWindowResizeHandlerThrottle = _.throttle(this.onWindowResizeHandler, 200);
 
 		this.posterStyle = {
 			backgroundImage: 'url(' + this.props.posterImg + ')',
@@ -69,9 +70,11 @@ class HomeBlock extends React.Component {
 		// Scroll event listener
 		window.addEventListener('scroll', e => this.onScrollHandler(e));
 
-
 		// Handle hash change
 		window.addEventListener('hashchange', e => this.onHashChangeHandler(e), false);
+
+		// On window resize handler
+		window.addEventListener('resize', e => this.onWindowResizeHandlerThrottle(e), false);
 
 	}
 
@@ -219,14 +222,23 @@ class HomeBlock extends React.Component {
 		let timeline;
 
 		if (this.timeline) {
-			this.timeline.clear();
-			this.timeline = null;
+			this.clearTimeline();
 		}
 
 		timeline = this.initTimeline();
 
 		return timeline;
 
+	}
+
+	clearTimeline() {
+		this.timeline.clear();
+		this.timeline = null;
+	}
+
+	reinitTimeline() {
+		this.clearTimeline();
+		this.timeline = this.updateTimeline();
 	}
 
 	onBlockOpen() {
@@ -280,6 +292,17 @@ class HomeBlock extends React.Component {
 		}
 
 		return null;
+
+	}
+
+	onWindowResizeHandler(e) {
+
+		// Reset the timeline and remove any styles set by GSAP
+		// and also recalc the timeline
+		if (this.els.block.getAttribute('style') !== null) {
+			this.clearTimeline();
+			this.els.block.style = null;
+		}
 
 	}
 
