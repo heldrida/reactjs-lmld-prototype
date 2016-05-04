@@ -116,7 +116,8 @@ table {
   height: auto;
   background-color: #1E1E1E;
   padding: 20px;
-  text-align: center; }
+  text-align: center;
+  margin-top: 70px; }
   .ns-lmld-2016 footer .discover {
     font-size: 30px;
     color: #fff;
@@ -218,14 +219,16 @@ body.noscroll {
 
 .ns-lmld-2016 .home-block {
   width: 100%;
-  height: 400px;
+  height: 328px;
   position: relative;
   z-index: 1;
-  margin: 50px 0; }
+  margin: 70px 0 0 0;
+  text-align: left; }
   .ns-lmld-2016 .home-block .block {
     width: 500px;
-    height: 300px;
-    position: relative; }
+    height: 328px;
+    position: relative;
+    display: inline-block; }
     .ns-lmld-2016 .home-block .block .content {
       background: #FFD000;
       width: inherit;
@@ -235,7 +238,7 @@ body.noscroll {
       /* temporary: needs to be calc dynamic on the component */
       min-width: 100%;
       min-height: 100%; }
-  .ns-lmld-2016 .home-block.case-study-twix {
-    left: 25%; }
-    .ns-lmld-2016 .home-block.case-study-twix .content {
-      background: #0cf; }
+  .ns-lmld-2016 .home-block.case-study-vans .content {
+    background: #E9ECF0; }
+  .ns-lmld-2016 .home-block.case-study-twix .content {
+    background: #0cf; }

@@ -27,6 +27,12 @@ class HomeBlock extends React.Component {
 		// Create Throttle version of openBlock
 		this.openBlockThrottle = _.throttle(this.openBlock, 200);
 
+		this.posterStyle = {
+			backgroundImage: 'url(' + this.props.posterImg + ')',
+			backgroundPosition: 'center center',
+			backgroundSize: 'cover'
+		};
+
 	}
 
 	componentWillMount () {
@@ -321,7 +327,7 @@ class HomeBlock extends React.Component {
 		return (
 			<div className={ 'home-block' + ' ' + this.props.innerComponent.className }>
 				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
-						<div className='content'>
+						<div className='content' style={this.posterStyle}>
 							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
 						</div>
 				</div>

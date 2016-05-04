@@ -27,11 +27,14 @@ class Home extends React.Component {
 
 	render() {
 
+		const caseStudyImg1 = require('../../src/images/case-study/case-study-1.jpg');
+		const caseStudyImg2 = require('../../src/images/case-study/case-study-2.jpg');
+
 		return (
 			<div>
 				<Header component={Header} />
-				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } />
-				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } />
+				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg1} />
+				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg2} />
 			</div>
 		);
 
