@@ -171,8 +171,8 @@ class HomeBlock extends React.Component {
 			this.pos = this.calcElementPosition(this.els.block);
 
 			// Open the Modal
-			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: 0 } };
-			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left, position: 'absolute' } };
+			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - 200)) } };
+			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -(this.props.align === 'left' ? this.pos.left : 100), position: 'absolute' } };
 			const onStartCallback = () => {
 				this.props.setNoScroll(true);
 			};

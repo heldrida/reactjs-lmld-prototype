@@ -242,3 +242,5 @@ body.noscroll {
     background: #E9ECF0; }
   .ns-lmld-2016 .home-block.case-study-twix .content {
     background: #0cf; }
+  .ns-lmld-2016 .home-block.case-study-twix .block {
+    left: calc(100% - 500px); }

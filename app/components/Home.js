@@ -33,8 +33,8 @@ class Home extends React.Component {
 		return (
 			<div>
 				<Header component={Header} />
-				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg1} />
-				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg2} />
+				<HomeBlock location={this.props.location} urlHash={'vans'} innerComponent={homeBlockVans} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg1} align={'left'} />
+				<HomeBlock location={this.props.location} urlHash={'twix'} innerComponent={homeBlockTwix} setNoScroll={ this.props.setNoScroll.bind(this) } posterImg={caseStudyImg2} align={'right'} />
 			</div>
 		);
 
