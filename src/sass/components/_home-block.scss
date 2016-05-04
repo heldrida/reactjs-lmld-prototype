@@ -23,6 +23,12 @@
 				/* temporary: needs to be calc dynamic on the component */
 				min-width: 100%;
 				min-height: 100%;
+				overflow-y: auto;
+
+				> div {
+					margin-top: 100vh;
+					background-color: #888;
+				}
 			}
 		}
 
