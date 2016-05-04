@@ -206,6 +206,10 @@ class HomeBlock extends React.Component {
 				onReverseComplete: onReverseCompleteCallback
 			});
 
+			//timeline.to(this.els.title, 0.2, { css: { left: '100px' } });
+			//timeline.to(this.els.description, 0.2, { css: { left: '100px' } });
+			timeline.to(this.els.titleContainer, 0.3, { css: { opacity: 0 } });
+
 			timeline.fromTo(this.els.block, 0.3, cssBefore, cssAfter);
 
 			timeline.pause();
