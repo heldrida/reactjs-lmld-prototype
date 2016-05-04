@@ -66,6 +66,8 @@
 
 				> https://medium.com/@dan_abramov/how-to-use-classes-and-sleep-at-night-9af8de78ccb4#.nh1iemvcj
 
+				> http://exploringjs.com/es6/
+
 			#Questions:
 
 				> About removing the Hashtag from the url requests:
