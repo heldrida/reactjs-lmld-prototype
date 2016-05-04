@@ -10,14 +10,14 @@ class Header extends React.Component {
 
 	render() {
 
-		const topLogo = require('../../src/images/top-logo.svg');
+		const topLogoSignature = require('../../src/images/top-logo-signature.svg');
 		const topLogoAbstract = require('../../src/images/top-logo-abstract.svg');
 
 		return (
 			<div>
 				<div className={'logo-container'}>
-					<img src={topLogo} />
-					<img src={topLogoAbstract} />
+					<img className={'signature'} src={topLogoSignature} />
+					<img className={'abstract'} src={topLogoAbstract} />
 				</div>
 				<div className={'top-block-particle'}></div>
 			</div>
