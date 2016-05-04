@@ -27,6 +27,9 @@ class HomeBlock extends React.Component {
 		// Create Throttle version of openBlock
 		this.openBlockThrottle = _.throttle(this.openBlock, 200);
 
+		// todo: probably better to calc this value dynamically on mount ?
+		this.contentOffset = 100;
+
 	}
 
 	componentWillMount () {
@@ -166,7 +169,7 @@ class HomeBlock extends React.Component {
 
 			// Open the Modal
 			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: 0 } };
-			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -this.pos.left, position: 'absolute' } };
+			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -(this.pos.left + this.contentOffset), position: 'absolute' } };
 			const onStartCallback = () => {
 				this.props.setNoScroll(true);
 			};
