@@ -18,7 +18,13 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task("webpack:build", function(callback) {
+// Images
+gulp.task('images', function () {
+    return gulp.src('src/images/**/*')
+				.pipe(gulp.dest('build/images'));
+});
+
+gulp.task("webpack:build", ['images'], function(callback) {
 	// modify some webpack config options
 	var myConfig = Object.create(webpackConfig);
 	myConfig.plugins = myConfig.plugins.concat(
