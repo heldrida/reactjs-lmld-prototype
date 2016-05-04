@@ -21,6 +21,7 @@ gulp.task('sass', function () {
 // Images
 gulp.task('images', function () {
     return gulp.src('src/images/**/*')
+    			// *if required* do image optimisation, etc
 				.pipe(gulp.dest('build/images'));
 });
 
