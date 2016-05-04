@@ -1,0 +1,44 @@
+.ns-lmld-2016 {
+
+	.logo-container {
+		display: inline-block;
+		margin-left: 100px;
+		width: auto;
+		height: auto;
+		overflow: hidden;
+		margin: 50px auto;
+
+		.images {
+			width: 180px;
+			height: 52px;
+			display: inline-block;
+			position: relative;
+
+			img {
+				position: absolute;
+			}
+			.signature {
+				top: 0;
+				left: 0;
+			}
+			.abstract {
+				top: 0;
+				right: 0;
+			}
+		}
+		.title {
+			font-family: 'Larsseit';
+			font-size: 16px;
+			color: #888888;
+			letter-spacing: 1.77px;
+			text-transform: uppercase;
+		}
+	}
+
+	.top-block-particle {
+		background-color: $yellowLmld;
+		width: auto;
+		height: 314px;
+	}
+
+}

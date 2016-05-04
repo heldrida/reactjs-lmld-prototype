@@ -74,6 +74,43 @@ table {
   letter-spacing: 2px;
   line-height: 38px; }
 
+.ns-lmld-2016 .logo-container {
+  display: inline-block;
+  margin-left: 100px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  margin: 50px auto; }
+  .ns-lmld-2016 .logo-container .images {
+    width: 180px;
+    height: 52px;
+    display: inline-block;
+    position: relative; }
+    .ns-lmld-2016 .logo-container .images img {
+      position: absolute; }
+    .ns-lmld-2016 .logo-container .images .signature {
+      top: 0;
+      left: 0; }
+    .ns-lmld-2016 .logo-container .images .abstract {
+      top: 0;
+      right: 0; }
+  .ns-lmld-2016 .logo-container .title {
+    font-family: 'Larsseit';
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 1.77px;
+    text-transform: uppercase; }
+
+.ns-lmld-2016 .top-block-particle {
+  background-color: #FFD000;
+  width: auto;
+  height: 314px; }
+
+.ns-lmld-2016 .content {
+  width: auto;
+  margin-left: 100px;
+  margin-right: 100px; }
+
 .ns-lmld-2016 footer {
   width: 100%;
   height: auto;
