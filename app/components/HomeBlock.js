@@ -350,9 +350,9 @@ class HomeBlock extends React.Component {
 		return (
 			<div className={ 'home-block' + ' ' + this.props.innerComponent.className + ' ' + (this.props.align === 'left' ? 'left' : 'right') }>
 				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
-						<div className={'title-container'}>
-							<h4>{this.props.title}</h4>
-							<p dangerouslySetInnerHTML={{__html:this.props.description}}></p>
+						<div className={'title-container'} ref={this.setElement.bind(this, 'titleContainer')}>
+							<h4 ref={this.setElement.bind(this, 'title')}>{this.props.title}</h4>
+							<p ref={this.setElement.bind(this, 'description')} dangerouslySetInnerHTML={{__html:this.props.description}}></p>
 						</div>
 						<div className='content' style={this.posterStyle}>
 							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
