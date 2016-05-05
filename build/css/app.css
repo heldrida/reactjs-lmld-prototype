@@ -230,7 +230,6 @@ body.noscroll {
     position: relative;
     display: inline-block; }
     .ns-lmld-2016 .home-block .block .content {
-      background: #FFD000;
       width: inherit;
       height: inherit;
       position: absolute;
@@ -239,13 +238,6 @@ body.noscroll {
       min-width: 100%;
       min-height: 100%;
       overflow-y: auto; }
-      .ns-lmld-2016 .home-block .block .content > div {
-        margin-top: 100vh;
-        background-color: #888; }
-  .ns-lmld-2016 .home-block.case-study-1 .content {
-    background: #E9ECF0; }
-  .ns-lmld-2016 .home-block.case-study-2 .content {
-    background: #0cf; }
   .ns-lmld-2016 .home-block.case-study-2 .block {
     left: calc(100% - 500px); }
   .ns-lmld-2016 .home-block .title-container {
@@ -273,3 +265,8 @@ body.noscroll {
     right: 85%;
     width: 100%;
     text-align: right; }
+
+.ns-lmld-2016 .project-container {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh; }

@@ -115,7 +115,7 @@ class HomeBlock extends React.Component {
 	updateHash() {
 
 		// the hash value needs to be passed to props
-		history.pushState(null, null, '#/case-study/' + this.props.urlHash);
+		history.pushState(null, null, '#/projects/' + this.props.urlHash);
 
 	}
 
@@ -277,19 +277,19 @@ class HomeBlock extends React.Component {
 
 		// When handling case study requests, close if state open,
 		// then callback the case study request handler
-		if (this.state.open && e.oldURL && e.oldURL.indexOf('case-study') > -1 && e.newURL && e.newURL.indexOf('case-study') > -1) {
+		if (this.state.open && e.oldURL && e.oldURL.indexOf('projects') > -1 && e.newURL && e.newURL.indexOf('projects') > -1) {
 
 			this.openBlock();
 
-		} else if(this.state.open && e.oldURL && e.oldURL.indexOf('case-study') > -1) {
+		} else if(this.state.open && e.oldURL && e.oldURL.indexOf('projects') > -1) {
 
 			this.closeBlock();
 
-		} else if (this.state.open && e.newURL && e.newURL.indexOf('case-study') > -1) {
+		} else if (this.state.open && e.newURL && e.newURL.indexOf('projects') > -1) {
 
 			this.openBlock();
 
-		} else if (!this.state.open && e.newURL && e.newURL.indexOf('case-study') > -1) {
+		} else if (!this.state.open && e.newURL && e.newURL.indexOf('projects') > -1) {
 
 			this.caseStudyRequestHandler();
 

@@ -3,8 +3,10 @@
 import React from 'react';
 import Header from '../containers/Header';
 import HomeBlock from '../components/HomeBlock';
-import HomeBlockCaseStudy1 from '../components/HomeBlockCaseStudy1';
-import HomeBlockCaseStudy2 from '../components/HomeBlockCaseStudy2';
+//import HomeBlockCaseStudy1 from '../components/HomeBlockCaseStudy1';
+//import HomeBlockCaseStudy2 from '../components/HomeBlockCaseStudy2';
+import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
+import ProjectFloom from '../components/projects/ProjectFloom.js';
 
 class Home extends React.Component {
 
@@ -19,7 +21,7 @@ class Home extends React.Component {
 			location: this.props.location,
 			innerComponent: {
 				className: 'case-study-1',
-				component: HomeBlockCaseStudy1
+				component: ProjectFieldIO
 			},
 			urlHash: 'field.io',
 			setNoScroll: this.props.setNoScroll.bind(this),
@@ -31,7 +33,7 @@ class Home extends React.Component {
 			location: this.props.location,
 			innerComponent: {
 				className: 'case-study-2',
-				component: HomeBlockCaseStudy2
+				component: ProjectFloom
 			},
 			urlHash: 'floom',
 			setNoScroll: this.props.setNoScroll.bind(this),

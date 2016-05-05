@@ -15,7 +15,6 @@
 			display: inline-block;
 
 			.content {
-				background: $yellowLmld;
 				width: inherit;
 				height: inherit;
 				position: absolute;
@@ -24,24 +23,13 @@
 				min-width: 100%;
 				min-height: 100%;
 				overflow-y: auto;
-
-				> div {
-					margin-top: 100vh;
-					background-color: #888;
-				}
 			}
 		}
 
 		&.case-study-1 {
-			.content {
-				background: #E9ECF0;
-			}
 		}
 
 		&.case-study-2 {
-			.content {
-				background: #0cf;
-			}
 			.block {
 				left: calc(100% - 500px);
 			}
