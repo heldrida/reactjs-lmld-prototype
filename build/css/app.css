@@ -242,11 +242,11 @@ body.noscroll {
       .ns-lmld-2016 .home-block .block .content > div {
         margin-top: 100vh;
         background-color: #888; }
-  .ns-lmld-2016 .home-block.case-study-vans .content {
+  .ns-lmld-2016 .home-block.case-study-1 .content {
     background: #E9ECF0; }
-  .ns-lmld-2016 .home-block.case-study-twix .content {
+  .ns-lmld-2016 .home-block.case-study-2 .content {
     background: #0cf; }
-  .ns-lmld-2016 .home-block.case-study-twix .block {
+  .ns-lmld-2016 .home-block.case-study-2 .block {
     left: calc(100% - 500px); }
   .ns-lmld-2016 .home-block .title-container {
     margin-top: 60px;
