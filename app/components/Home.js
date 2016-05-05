@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import Header from '../containers/Header';
 import HomeBlock from '../components/HomeBlock';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
@@ -44,7 +43,6 @@ class Home extends React.Component {
 
 		return (
 			<div>
-				<Header component={Header} />
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />

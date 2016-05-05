@@ -74,13 +74,21 @@ table {
   letter-spacing: 2px;
   line-height: 38px; }
 
+.ns-lmld-2016 .logo-wrapper {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  padding: 50px 0; }
+
 .ns-lmld-2016 .logo-container {
-  display: inline-block;
+  display: block;
   margin-left: 100px;
   width: auto;
   height: auto;
-  overflow: hidden;
-  margin: 50px auto; }
+  overflow: hidden; }
   .ns-lmld-2016 .logo-container .images {
     width: 180px;
     height: 52px;

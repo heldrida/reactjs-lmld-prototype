@@ -3,7 +3,7 @@
 import React from 'react';
 import Footer from '../containers/Footer';
 //import ScrollMagic from 'scrollmagic';
-//import Header from '../containers/Header';
+import Header from '../containers/Header';
 
 class Main extends React.Component {
 
@@ -26,6 +26,7 @@ class Main extends React.Component {
 		return(
 
 			<div className="main">
+				<Header component={Header} />
 				<div className="content">
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
 				</div>

@@ -15,14 +15,15 @@ class Header extends React.Component {
 
 		return (
 			<div>
-				<div className={'logo-container'}>
-					<div className={'images'}>
-						<img className={'signature'} src={topLogoSignature} />
-						<img className={'abstract'} src={topLogoAbstract} />
+				<div className={'logo-wrapper'}>
+					<div className={'logo-container'}>
+						<div className={'images'}>
+							<img className={'signature'} src={topLogoSignature} />
+							<img className={'abstract'} src={topLogoAbstract} />
+						</div>
+						<h2 className={'title'}>digital product studio</h2>
 					</div>
-					<h2 className={'title'}>digital product studio</h2>
 				</div>
-				<div className={'top-block-particle'}></div>
 			</div>
 		);
 
