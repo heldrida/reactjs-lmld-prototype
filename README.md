@@ -153,3 +153,12 @@
 			Before trying to run this command, copy the config.example.js and create a config.js with the correct credentials to the ftp server; Run the command `gulp deploy` from the command line for deployment; check for any erros in the console;
 
 
+		- Sitemap:
+
+			Home
+			Projects
+			|_ _ _ _ _
+			|_ _ _ _ _
+			About us
+			Job
+
