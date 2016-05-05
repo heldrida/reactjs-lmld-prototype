@@ -278,3 +278,11 @@ body.noscroll {
     line-height: 33px;
     padding: 50px;
     box-sizing: border-box; }
+  .ns-lmld-2016 .project-container .go-back {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px; }

@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import { Link } from 'react-router';
 
 class ProjectFieldIO extends React.Component {
 
@@ -29,6 +30,9 @@ class ProjectFieldIO extends React.Component {
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
+				{this.props.showBackBtn && (
+					<Link className={'go-back'} to="/projects">{'<< Go back to projects'}</Link>
+				)}
 			</div>
 		);
 

@@ -13,8 +13,10 @@ const routes = (
 	<Router history={hashHistory} onUpdate={() => window.scrollTo(0, 0)}>
 		<Route path='/' component={Main}>
 			<IndexRoute component={Home} />
+			<Route path='/projects' component={Projects}>
+				<Route path=":name" component={Projects} />
+			</Route>
 		</Route>
-		<Route path="projects/:name" component={Projects} />
 	</Router>
 );
 

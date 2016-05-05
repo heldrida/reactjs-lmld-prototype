@@ -3,8 +3,6 @@
 import React from 'react';
 import Header from '../containers/Header';
 import HomeBlock from '../components/HomeBlock';
-//import HomeBlockCaseStudy1 from '../components/HomeBlockCaseStudy1';
-//import HomeBlockCaseStudy2 from '../components/HomeBlockCaseStudy2';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 

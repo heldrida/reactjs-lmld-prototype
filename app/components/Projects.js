@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ProjectBlock from '../components/ProjectBlock';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 
@@ -37,10 +38,54 @@ class Projects extends React.Component {
 	}
 
 	render() {
+		/*
+		return (
+			<div>
+
+				{ this.project ? (
+					<this.project />
+				  ) : (
+					<p>LIST HERE!</p>
+				  )
+				}
+
+			</div>
+		);
+		*/
+
+		// Home block list data
+		const homeBlockList = [{
+			location: this.props.location,
+			innerComponent: {
+				className: 'case-study-1',
+				component: ProjectFieldIO
+			},
+			urlHash: 'field',
+			setNoScroll: this.props.setNoScroll.bind(this),
+			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
+			title: 'field',
+			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			align: 'left'
+		}, {
+			location: this.props.location,
+			innerComponent: {
+				className: 'case-study-2',
+				component: ProjectFloom
+			},
+			urlHash: 'floom',
+			setNoScroll: this.props.setNoScroll.bind(this),
+			posterImg: require('../../src/images/case-study/case-study-2.jpg'),
+			title: 'floom',
+			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			align: 'right'
+		}];
 
 		return (
 			<div>
-				{<this.project />}
+				{homeBlockList.map((obj, key) =>
+					<ProjectBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
+								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
+				)}
 			</div>
 		);
 

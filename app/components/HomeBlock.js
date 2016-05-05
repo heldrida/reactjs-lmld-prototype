@@ -34,6 +34,9 @@ class HomeBlock extends React.Component {
 			backgroundSize: 'cover'
 		};
 
+		// the default location hash name
+		this.defaultLocationHashName = '';
+
 	}
 
 	componentWillMount() {
@@ -142,7 +145,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	closeBlock() {
+	closeBlock(callback = false) {
 		// before the reverse animation starts
 		// the component needs to be dismounted
 		this.setState({
@@ -155,7 +158,7 @@ class HomeBlock extends React.Component {
 		});
 
 		// this should be moved and treated only for modal elements
-		history.pushState(null, null, '#/');
+		history.pushState(null, null, '#/' + this.defaultLocationHashName);
 
 		if (typeof callback === 'function') {
 			callback();
@@ -335,7 +338,7 @@ class HomeBlock extends React.Component {
 
 		let location = this.props.location;
 
-		if (location.pathname && location.pathname.indexOf('case-study') > -1) {
+		if (location.pathname && location.pathname.indexOf('projects') > -1) {
 
 			let arr = location.pathname.split('/');
 			let name = arr[2];
