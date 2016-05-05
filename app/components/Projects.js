@@ -82,6 +82,7 @@ class Projects extends React.Component {
 
 		return (
 			<div>
+				<h2>PROJECTS:</h2>
 				{homeBlockList.map((obj, key) =>
 					<ProjectBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
