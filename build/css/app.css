@@ -166,6 +166,8 @@ body.noscroll {
     width: 100vw;
     height: auto;
     background: #fff; }
+    .ns-lmld-2016 .main > .content {
+      padding-top: 130px; }
 
 .ns-lmld-2016 .newsletter-subscribe form {
   width: 393px;
