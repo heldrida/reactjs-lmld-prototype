@@ -84,7 +84,7 @@ table {
   padding: 50px 0; }
 
 .ns-lmld-2016 .logo-container {
-  display: block;
+  display: inline-block;
   margin-left: 100px;
   width: auto;
   height: auto;
@@ -113,6 +113,15 @@ table {
   background-color: #FFD000;
   width: auto;
   height: 314px; }
+
+.ns-lmld-2016 .tr-menu {
+  background-color: #FFD000;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50px;
+  right: 100px; }
 
 .ns-lmld-2016 .main > .content {
   width: auto;

@@ -11,7 +11,7 @@
 	}
 
 	.logo-container {
-		display: block;
+		display: inline-block;
 		margin-left: 100px;
 		width: auto;
 		height: auto;
@@ -49,6 +49,16 @@
 		background-color: $yellowLmld;
 		width: auto;
 		height: 314px;
+	}
+
+	.tr-menu {
+		background-color: $yellowLmld;
+		display: inline-block;
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		top: 50px;
+		right: 100px;
 	}
 
 }

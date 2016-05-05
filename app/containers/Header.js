@@ -23,6 +23,8 @@ class Header extends React.Component {
 						</div>
 						<h2 className={'title'}>digital product studio</h2>
 					</div>
+					<div className={'tr-menu'}>
+					</div>
 				</div>
 			</div>
 		);
