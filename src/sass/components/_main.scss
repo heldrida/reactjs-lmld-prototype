@@ -13,8 +13,7 @@ body {
 		height: auto;
 		background: #fff;
 
-		.content {
-			min-height: 400px; /* dev only */
+		> .content {
 		}
 
 	}

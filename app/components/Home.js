@@ -23,10 +23,10 @@ class Home extends React.Component {
 				className: 'case-study-1',
 				component: ProjectFieldIO
 			},
-			urlHash: 'field.io',
+			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),
 			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
-			title: 'field.io',
+			title: 'field',
 			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
 			align: 'left'
 		}, {

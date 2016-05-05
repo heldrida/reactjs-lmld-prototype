@@ -36,8 +36,7 @@ class HomeBlock extends React.Component {
 
 	}
 
-	componentWillMount () {
-
+	componentWillMount() {
 
 	}
 

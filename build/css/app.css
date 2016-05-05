@@ -149,9 +149,6 @@ body.noscroll {
     width: 100vw;
     height: auto;
     background: #fff; }
-    .ns-lmld-2016 .main .content {
-      min-height: 400px;
-      /* dev only */ }
 
 .ns-lmld-2016 .newsletter-subscribe form {
   width: 393px;
@@ -235,8 +232,6 @@ body.noscroll {
       position: absolute;
       z-index: 1;
       /* temporary: needs to be calc dynamic on the component */
-      min-width: 100%;
-      min-height: 100%;
       overflow-y: auto; }
   .ns-lmld-2016 .home-block.case-study-2 .block {
     left: calc(100% - 500px); }
@@ -267,6 +262,19 @@ body.noscroll {
     text-align: right; }
 
 .ns-lmld-2016 .project-container {
-  width: 100vw;
+  width: 100%;
   height: auto;
   min-height: 100vh; }
+  .ns-lmld-2016 .project-container .poster {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; }
+  .ns-lmld-2016 .project-container .content {
+    width: 100%;
+    z-index: 2;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 24px;
+    line-height: 33px;
+    padding: 50px;
+    box-sizing: border-box; }
