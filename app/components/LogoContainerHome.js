@@ -18,6 +18,10 @@ class LogoContainerHome extends LogoContainer {
 		this.logoWrapper = document.querySelector('.logo-wrapper');
 		//this.app = document.querySelector('#app');
 		this.logoVisibilityHandler();
+
+		setTimeout(() => {
+			this.mainLogoTopOffset = this.mainLogo.getBoundingClientRect().top;
+		});
 	}
 
 	attachEventListeners() {
@@ -50,10 +54,9 @@ class LogoContainerHome extends LogoContainer {
 
 	logoVisibilityHandler() {
 
-		let mainLogo = this.mainLogo.getBoundingClientRect();
 		let homeLogo = this.homeLogo.getBoundingClientRect();
 
-		if (mainLogo.top >= homeLogo.top) {
+		if (this.mainLogoTopOffset >= homeLogo.top) {
 
 			// hide `a` and show main logo & header background
 			this.mainLogo.style.visibility = '';
@@ -69,20 +72,6 @@ class LogoContainerHome extends LogoContainer {
 
 		}
 
-		/*
-		if (mainLogo.top >= homeLogo.top) {
-
-			// hide `a` and show main logo & header background
-			this.app.classList.add('logo-fix');
-
-		} else {
-
-			// show `b` and hide main logo & header background
-			this.app.classList.remove('logo-fix');
-			this.app.classList.add('home');
-
-		}
-		*/
 
 	}
 
