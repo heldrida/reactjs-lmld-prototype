@@ -198,6 +198,19 @@ body.noscroll {
       .ns-lmld-2016 .main > .content .logo-container {
         margin-left: 0;
         margin-bottom: 60px; }
+    .ns-lmld-2016 .main .center-block {
+      background-color: #FFD000;
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -khtml-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%); }
 
 .ns-lmld-2016 .newsletter-subscribe form {
   width: 393px;
