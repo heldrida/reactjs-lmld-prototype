@@ -16,7 +16,7 @@ class LogoContainerHome extends LogoContainer {
 		this.homeLogo = document.querySelector('.content .logo-container');
 		this.homeLogoTitle = this.homeLogo.querySelector('.title');
 		this.logoWrapper = document.querySelector('.logo-wrapper');
-		//this.app = document.querySelector('.ns-lmld-2016 ');
+		//this.app = document.querySelector('#app');
 		this.logoVisibilityHandler();
 	}
 
