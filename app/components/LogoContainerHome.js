@@ -36,8 +36,8 @@ class LogoContainerHome extends LogoContainer {
 			onReverseComplete: null
 		});
 
-		tl.to(this.mainLogo, 0.1, {opacity: 1});
-		tl.to(this.homeLogo, 0.1, {opacity: 0});
+		tl.to(this.mainLogo, 0.1, { opacity: 1 });
+		tl.to(this.homeLogo, 0.1, { opacity: 0 });
 		tl.set(this.logoWrapper, { className: '+=bg' });
 
 		// declare timeline to controller

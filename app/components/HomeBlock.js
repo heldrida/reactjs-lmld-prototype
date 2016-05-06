@@ -123,6 +123,11 @@ class HomeBlock extends React.Component {
 
 	openBlock(callback = false) {
 
+		// DISABLED
+		// WIP
+		alert('todo: creating new animation and rewritting logic, previous fn disabled.');
+		return false;
+
 		if (this.state.open) {
 
 			this.closeBlock();
