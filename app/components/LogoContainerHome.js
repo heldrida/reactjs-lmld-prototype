@@ -17,12 +17,47 @@ class LogoContainerHome extends LogoContainer {
 		this.homeLogoTitle = this.homeLogo.querySelector('.title');
 		this.logoWrapper = document.querySelector('.logo-wrapper');
 		//this.app = document.querySelector('#app');
-		this.logoVisibilityHandler();
+		//this.logoVisibilityHandler();
+		this.mainLogo.style.opacity = 0;
+
+		this.initScrollMagic();
+	}
+
+	initScrollMagic() {
+
+		this.scrollMagicController = new window.ScrollMagic.Controller({loglevel: 3});
+
+		// Logo switcher timeline
+		let tl = new window.TimelineLite({
+			onStart: null,
+			onComplete: null,
+			onReverseComplete: null
+		});
+
+		tl.to('.logo-wrapper .logo-container', 0.1, {opacity: 1});
+		tl.to('.content .logo-container', 0.1, {opacity: 0});
+		tl.set(this.logoWrapper, { className: '+=bg' });
+
+		new window.ScrollMagic.Scene({
+				triggerElement: '.content .logo-container',
+				triggerHook: 'onLeave',
+				duration: '1px'
+			})
+			.setTween(tl)
+			.addTo(this.scrollMagicController);
+
+		// title fade
+		let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
+
+		new ScrollMagic.Scene({triggerHook: "onLeave", duration: "25%"})
+			.setTween(titleFadeTween)
+			.addTo(this.scrollMagicController);
+
 	}
 
 	attachEventListeners() {
 
-		window.addEventListener('scroll', this.onScrollHandler.bind(this));
+		//window.addEventListener('scroll', this.onScrollHandler.bind(this));
 
 	}
 
