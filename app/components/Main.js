@@ -21,11 +21,17 @@ class Main extends React.Component {
 
 	}
 
+	isHome() {
+
+		return this.props.location.pathname === '/' ? 'home' : 'lg-bg';
+
+	}
+
 	render() {
 
 		return(
 
-			<div className="main">
+			<div className={'main' + ' ' + this.isHome()}>
 				<Header component={Header} />
 				<div className="content">
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}

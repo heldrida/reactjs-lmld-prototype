@@ -31,6 +31,15 @@
 		}
 	}
 	*/
+
+	.lg-bg {
+		.logo-wrapper {
+			&:after {
+				opacity: 1 !important;
+			}
+		}
+	}
+
 	.logo-wrapper {
 		width: 100%;
 		position: fixed;
