@@ -9,18 +9,20 @@ class LogoContainerHome extends LogoContainer {
 	}
 
 	componentDidMount() {
-		this.attachEventListeners();
+
 		this.mainLogo = document.querySelector('.logo-wrapper .logo-container');
 		this.mainLogoTitle = this.mainLogo.querySelector('.title');
 		this.mainLogoTitle.style.opacity = 0;
 		this.homeLogo = document.querySelector('.content .logo-container');
 		this.homeLogoTitle = this.homeLogo.querySelector('.title');
 		this.logoWrapper = document.querySelector('.logo-wrapper');
-		//this.app = document.querySelector('#app');
-		//this.logoVisibilityHandler();
 		this.mainLogo.style.opacity = 0;
 
+		// initialise the scroll magic
+		// todo: move this to ES6 module `import`
+		// currently injected on the html index file
 		this.initScrollMagic();
+
 	}
 
 	initScrollMagic() {
@@ -60,72 +62,6 @@ class LogoContainerHome extends LogoContainer {
 
 	}
 
-	attachEventListeners() {
-
-		// Disabled using Scroll Magic instead
-		//window.addEventListener('scroll', this.onScrollHandler.bind(this));
-
-	}
-
-	onScrollHandler() {
-
-		this.logoVisibilityHandler();
-		this.titleVisibilityHandler();
-
-	}
-
-	titleVisibilityHandler() {
-
-		let maxY = 200;
-
-		if (window.scrollY <= maxY) {
-
-			let p = window.scrollY / maxY * 100;
-			let z = p / 100;
-
-			this.homeLogoTitle.style.opacity = 1 - z;
-
-		}
-
-	}
-
-	logoVisibilityHandler() {
-
-		let mainLogo = this.mainLogo.getBoundingClientRect();
-		let homeLogo = this.homeLogo.getBoundingClientRect();
-
-		if (mainLogo.top >= homeLogo.top) {
-
-			// hide `a` and show main logo & header background
-			this.mainLogo.style.visibility = '';
-			this.homeLogo.style.visibility = 'hidden';
-			this.logoWrapper.classList.add('bg');
-
-		} else {
-
-			// show `b` and hide main logo & header background
-			this.mainLogo.style.visibility = 'hidden';
-			this.homeLogo.style.visibility = '';
-			this.logoWrapper.classList.remove('bg');
-
-		}
-
-		/*
-		if (mainLogo.top >= homeLogo.top) {
-
-			// hide `a` and show main logo & header background
-			this.app.classList.add('logo-fix');
-
-		} else {
-
-			// show `b` and hide main logo & header background
-			this.app.classList.remove('logo-fix');
-			this.app.classList.add('home');
-
-		}
-		*/
-
-	}
 
 }
 
