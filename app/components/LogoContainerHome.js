@@ -10,7 +10,7 @@ class LogoContainerHome extends LogoContainer {
 
 	componentDidMount() {
 		this.attachEventListeners();
-		this.mainLogo = document.querySelector('.logo-container');
+		this.mainLogo = document.querySelector('.logo-wrapper .logo-container');
 		this.mainLogoTitle = this.mainLogo.querySelector('.title');
 		this.mainLogoTitle.style.opacity = 0;
 		this.homeLogo = document.querySelector('.content .logo-container');
@@ -34,22 +34,27 @@ class LogoContainerHome extends LogoContainer {
 			onReverseComplete: null
 		});
 
-		tl.to('.logo-wrapper .logo-container', 0.1, {opacity: 1});
-		tl.to('.content .logo-container', 0.1, {opacity: 0});
+		tl.to(this.mainLogo, 0.1, {opacity: 1});
+		tl.to(this.homeLogo, 0.1, {opacity: 0});
 		tl.set(this.logoWrapper, { className: '+=bg' });
 
+		// declare timeline to controller
 		new window.ScrollMagic.Scene({
-				triggerElement: '.content .logo-container',
+				triggerElement: this.homeLogo,
 				triggerHook: 'onLeave',
 				duration: '1px'
 			})
 			.setTween(tl)
 			.addTo(this.scrollMagicController);
 
-		// title fade
+		// title fade tween
 		let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
 
-		new ScrollMagic.Scene({triggerHook: "onLeave", duration: "25%"})
+		// declare tween to controller
+		new window.ScrollMagic.Scene({
+				triggerHook: 'onLeave',
+				duration: '25%'
+			})
 			.setTween(titleFadeTween)
 			.addTo(this.scrollMagicController);
 
@@ -57,6 +62,7 @@ class LogoContainerHome extends LogoContainer {
 
 	attachEventListeners() {
 
+		// Disabled using Scroll Magic instead
 		//window.addEventListener('scroll', this.onScrollHandler.bind(this));
 
 	}
