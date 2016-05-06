@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import LogoContainer from '../components/LogoContainer';
 
 class Header extends React.Component {
 
@@ -10,19 +11,10 @@ class Header extends React.Component {
 
 	render() {
 
-		const topLogoSignature = require('../../src/images/top-logo-signature.svg');
-		const topLogoAbstract = require('../../src/images/top-logo-abstract.svg');
-
 		return (
 			<div>
 				<div className={'logo-wrapper'}>
-					<div className={'logo-container'}>
-						<div className={'images'}>
-							<img className={'signature'} src={topLogoSignature} />
-							<img className={'abstract'} src={topLogoAbstract} />
-						</div>
-						<h2 className={'title'}>digital product studio</h2>
-					</div>
+					<LogoContainer />
 					<div className={'tr-menu'}>
 					</div>
 				</div>

@@ -2,8 +2,9 @@
 
 import React from 'react';
 import HomeBlock from '../components/HomeBlock';
-import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
-import ProjectFloom from '../components/projects/ProjectFloom.js';
+import ProjectFieldIO from '../components/projects/ProjectFieldIO';
+import ProjectFloom from '../components/projects/ProjectFloom';
+import LogoContainer from '../components/LogoContainer';
 
 class Home extends React.Component {
 
@@ -43,6 +44,7 @@ class Home extends React.Component {
 
 		return (
 			<div>
+				<LogoContainer />
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />

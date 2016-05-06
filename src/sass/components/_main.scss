@@ -14,7 +14,12 @@ body {
 		background: #fff;
 
 		> .content {
-			padding-top: 130px;
+			padding-top: 40vh;
+
+			.logo-container {
+				margin-left: 0;
+				margin-bottom: 60px;
+			}
 		}
 
 	}

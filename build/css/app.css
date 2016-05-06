@@ -78,7 +78,7 @@ table {
   width: 100%;
   position: fixed;
   z-index: 9999;
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: transparent;
   top: 0;
   left: 0;
   padding: 50px 0 20px; }
@@ -167,7 +167,10 @@ body.noscroll {
     height: auto;
     background: #fff; }
     .ns-lmld-2016 .main > .content {
-      padding-top: 130px; }
+      padding-top: 40vh; }
+      .ns-lmld-2016 .main > .content .logo-container {
+        margin-left: 0;
+        margin-bottom: 60px; }
 
 .ns-lmld-2016 .newsletter-subscribe form {
   width: 393px;
@@ -252,6 +255,8 @@ body.noscroll {
       z-index: 1;
       /* temporary: needs to be calc dynamic on the component */
       overflow-y: auto; }
+  .ns-lmld-2016 .home-block.case-study-1 {
+    margin-top: 0; }
   .ns-lmld-2016 .home-block.case-study-2 .block {
     left: calc(100% - 500px); }
   .ns-lmld-2016 .home-block .title-container {
