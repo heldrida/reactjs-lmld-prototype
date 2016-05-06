@@ -33,6 +33,11 @@
 	*/
 
 	.lg-bg {
+		.logo-container {
+			.title {
+				visibility: hidden;
+			}
+		}
 		.logo-wrapper {
 			&:after {
 				opacity: 1 !important;

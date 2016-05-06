@@ -107,6 +107,8 @@ table {
 		}
 	}
 	*/ }
+  .ns-lmld-2016 .lg-bg .logo-container .title {
+    visibility: hidden; }
   .ns-lmld-2016 .lg-bg .logo-wrapper:after {
     opacity: 1 !important; }
   .ns-lmld-2016 .logo-wrapper {
