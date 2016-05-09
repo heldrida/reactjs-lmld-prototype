@@ -25,7 +25,8 @@ body {
 				margin-bottom: 60px;
 			}
 		}
-		.center-block {
+		.back-block {
+			display: none;
 			background-color: $yellowLmld;
 			position: fixed;
 			width: 50px;
@@ -34,6 +35,9 @@ body {
 			left: 50%;
 			z-index: 9999;
 			@include transform(translateX(-50%) translateY(-50%));
+			&.show {
+				display: block;
+			}
 		}
 	}
 }

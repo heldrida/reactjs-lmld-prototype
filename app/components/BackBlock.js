@@ -10,7 +10,7 @@ class BackBlock extends React.Component {
 
 	render() {
 		return (
-			<div className={'center-block'}></div>
+			<div className={'back-block'}></div>
 		);
 	}
 
