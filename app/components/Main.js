@@ -3,7 +3,7 @@
 import React from 'react';
 import Footer from '../containers/Footer';
 import Header from '../containers/Header';
-import ProjectFloom from '../components/projects/ProjectFloom.js';
+import BackBlock from '../components/BackBlock';
 
 class Main extends React.Component {
 
@@ -93,7 +93,7 @@ class Main extends React.Component {
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideComponent ? 'hidden' : '')}>
 				<Header component={Header} />
 				<div className="content">
-					<div className={'center-block'} ref={this.setElement.bind(this, 'center-block')}></div>
+					<BackBlock />
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
 					{this.state.loadComponent ? <this.state.loadComponent /> : null}
 				</div>
