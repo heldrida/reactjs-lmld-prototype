@@ -157,9 +157,12 @@ class HomeBlock extends React.Component {
 			mountContent: false
 		});
 
-		// hide header elements
-		this.headerBg.classList.remove('bg');
-		this.headerLogo.style.opacity = 0;
+		// hide header elements (if on homepage)
+		// todo: use the router lib to detect proper location
+		if (this.props.location.pathname === '/') {
+			this.headerBg.classList.remove('bg');
+			this.headerLogo.style.opacity = 0;
+		}
 
 		setTimeout(() => {
 			this.timeline.reverse();
