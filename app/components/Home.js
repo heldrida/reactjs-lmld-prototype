@@ -41,14 +41,24 @@ class Home extends React.Component {
 			align: 'right'
 		}];
 
-
+		const studio1 = require('../../src/images/studio1.jpg');
+		const studio2 = require('../../src/images/studio2.jpg');
+	
 		return (
 			<div>
 				<LogoContainerHome showTitle={true} />
+				<div className={'projects'}>
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
 				)}
+				</div>
+				<div className='studio'>
+					<div className='trigger2' />
+					<div className='text'>Strategy, UI/UX design, and development for startups and leading brands ment for startups and leading brands.</div>
+					<img className='studio1' src={studio1} />
+					<img className='studio2' src={studio2} />
+				</div>
 			</div>
 		);
 
