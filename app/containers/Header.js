@@ -16,6 +16,9 @@ class Header extends React.Component {
 				<div className={'logo-wrapper'}>
 					<LogoContainer />
 					<div className={'tr-menu'}>
+						<span></span>
+						<span></span>
+						<span></span>
 					</div>
 				</div>
 			</div>

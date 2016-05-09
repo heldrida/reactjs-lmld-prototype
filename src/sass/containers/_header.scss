@@ -87,14 +87,32 @@
 		height: 314px;
 	}
 
-	.tr-menu {
-		background-color: $yellowLmld;
-		display: inline-block;
-		width: 70px;
-		height: 70px;
-		position: absolute;
-		top: 50px;
-		right: 100px;
-	}
+  .tr-menu {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.1s;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin: 5px 0;
+      background-color: #E4E4E4;
+      transition: all 0.1s;
+    }
+    &:hover {
+      top: calc(50px - 1px);
+      span {
+        &:nth-child(2) {
+          margin: 6px 0;
+        }
+      }
+    }
+  }
 
 }
