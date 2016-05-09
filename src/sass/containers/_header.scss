@@ -121,13 +121,14 @@
       margin: 5px 0;
       background-color: #E4E4E4;
       transition: all 0.1s;
+      pointer-events: none;
     }
     &:hover {
-      top: -1px;
+      @include transform(translateY(-2px));
       position: relative;
       span {
         &:nth-child(2) {
-          margin: 6px 0;
+          margin: 7px 0;
         }
       }
     }
