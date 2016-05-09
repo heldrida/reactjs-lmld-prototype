@@ -20,7 +20,7 @@ class LogoHome extends Logo {
 		// initialise the scroll magic
 		// todo: move this to ES6 module `import`
 		// currently injected on the html index file
-		this.initScrollMagic();
+		this.createScrollMagicScenes();
 
 	}
 
@@ -32,7 +32,7 @@ class LogoHome extends Logo {
 		this.props.removeSceneFromScrollMagicController('logoHome');
 	}
 
-	initScrollMagic() {
+	createScrollMagicScenes() {
 
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({

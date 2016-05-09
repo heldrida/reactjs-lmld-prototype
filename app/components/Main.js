@@ -34,6 +34,9 @@ class Main extends React.Component {
 
 	componentDidMount() {
 
+		// initialise the scroll magic
+		// todo: move this to ES6 module `import`
+		// currently injected on the html index file
 		this.scrollMagicMainController = new window.ScrollMagic.Controller({ loglevel: 3 });
 
 	}
