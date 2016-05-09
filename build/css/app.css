@@ -77,18 +77,21 @@ table {
 .ns-lmld-2016 .lg-bg .logo-container .title {
   visibility: hidden; }
 
-.ns-lmld-2016 .lg-bg .logo-wrapper:after {
+.ns-lmld-2016 .lg-bg header:after {
   opacity: 1 !important; }
 
-.ns-lmld-2016 .logo-wrapper {
-  width: 100%;
+.ns-lmld-2016 .home header .logo-container {
+  opacity: 0; }
+
+.ns-lmld-2016 header {
+  width: calc(100% - 200px);
   position: fixed;
   z-index: 9999;
   background-color: transparent;
   top: 0;
   left: 0;
-  padding: 50px 0 20px; }
-  .ns-lmld-2016 .logo-wrapper:after {
+  padding: 20px 100px 20px; }
+  .ns-lmld-2016 header:after {
     content: " ";
     width: 100%;
     height: 100%;
@@ -104,12 +107,17 @@ table {
     -ms-transition: opacity 0.2s;
     -o-transition: opacity 0.2s;
     transition: opacity 0.2s; }
-  .ns-lmld-2016 .logo-wrapper.bg:after {
+  .ns-lmld-2016 header.bg:after {
     opacity: 1; }
+  .ns-lmld-2016 header .col {
+    vertical-align: middle;
+    width: 50%;
+    display: inline-block; }
+  .ns-lmld-2016 header .col-r {
+    text-align: right; }
 
 .ns-lmld-2016 .logo-container {
   display: inline-block;
-  margin-left: 100px;
   width: auto;
   height: auto;
   overflow: hidden; }
@@ -134,7 +142,7 @@ table {
     text-transform: uppercase; }
 
 .ns-lmld-2016 .content .logo-container {
-  padding-top: 50px; }
+  padding-top: 20px; }
 
 .ns-lmld-2016 .top-block-particle {
   background-color: #FFD000;
@@ -147,10 +155,7 @@ table {
   width: 25px;
   height: 20px;
   cursor: pointer;
-  transition: all 0.1s;
-  position: absolute;
-  top: 50px;
-  right: 100px; }
+  transition: all 0.1s; }
   .ns-lmld-2016 .tr-menu span {
     display: block;
     width: 100%;
@@ -159,7 +164,8 @@ table {
     background-color: #E4E4E4;
     transition: all 0.1s; }
   .ns-lmld-2016 .tr-menu:hover {
-    top: calc(50px - 1px); }
+    top: -1px;
+    position: relative; }
     .ns-lmld-2016 .tr-menu:hover span:nth-child(2) {
       margin: 6px 0; }
 

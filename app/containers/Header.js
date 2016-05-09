@@ -12,16 +12,18 @@ class Header extends React.Component {
 	render() {
 
 		return (
-			<div>
-				<div className={'logo-wrapper'}>
+			<header>
+				<div className={'col col-l'}>
 					<LogoContainer />
+				</div>
+				<div className={'col col-r'}>
 					<div className={'tr-menu'}>
 						<span></span>
 						<span></span>
 						<span></span>
 					</div>
 				</div>
-			</div>
+			</header>
 		);
 
 	}

@@ -20,7 +20,9 @@ class LogoContainer extends React.Component {
 						<img className={'signature'} src={topLogoSignature} />
 						<img className={'abstract'} src={topLogoAbstract} />
 					</div>
-					<h2 className={'title'}>digital product studio</h2>
+					{this.props.showTitle && (
+						<h2 className={'title'}>digital product studio</h2>
+					)}
 				</div>
 			</div>
 		);

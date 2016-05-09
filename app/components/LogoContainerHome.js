@@ -10,12 +10,11 @@ class LogoContainerHome extends LogoContainer {
 
 	componentDidMount() {
 
-		this.mainLogo = document.querySelector('.logo-wrapper .logo-container');
+		this.mainLogo = document.querySelector('header .logo-container');
 		this.mainLogoTitle = this.mainLogo.querySelector('.title');
-		this.mainLogoTitle.style.opacity = 0;
 		this.homeLogo = document.querySelector('.content .logo-container');
 		this.homeLogoTitle = this.homeLogo.querySelector('.title');
-		this.logoWrapper = document.querySelector('.logo-wrapper');
+		this.header = document.querySelector('header');
 		this.mainLogo.style.opacity = 0;
 
 		// initialise the scroll magic
@@ -27,7 +26,7 @@ class LogoContainerHome extends LogoContainer {
 
 	initScrollMagic() {
 
-		this.scrollMagicController = new window.ScrollMagic.Controller({loglevel: 3});
+		this.scrollMagicController = new window.ScrollMagic.Controller();
 
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({
@@ -38,7 +37,7 @@ class LogoContainerHome extends LogoContainer {
 
 		tl.to(this.mainLogo, 0.1, { opacity: 1 });
 		tl.to(this.homeLogo, 0.1, { opacity: 0 });
-		tl.set(this.logoWrapper, { className: '+=bg' });
+		tl.set(this.header, { className: '+=bg' });
 
 		// declare timeline to controller
 		new window.ScrollMagic.Scene({

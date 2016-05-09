@@ -44,7 +44,7 @@ class Home extends React.Component {
 
 		return (
 			<div>
-				<LogoContainerHome />
+				<LogoContainerHome showTitle={true} />
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
