@@ -110,7 +110,7 @@ class Main extends React.Component {
 
 		tl.to(content, 0.2, { css: { opacity: 1 } });
 
-		tl.to(backBlock, 0.5, { css: { marginTop: window.innerHeight, ease: window.Bounce.easeOut } }, 1);
+		tl.to(backBlock, 0.6, { css: { marginTop: window.innerHeight, ease: window.Bounce.easeOut } }, 1);
 
 		tl.pause();
 
