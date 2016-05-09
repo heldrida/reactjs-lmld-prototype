@@ -26,7 +26,7 @@ class LogoHome extends Logo {
 
 	componentWillUnmount() {
 		// reset visibility
-		window.TweenLite.to(this.mainLogo, 1.6, { css: { opacity: 1 } });
+		window.TweenLite.to(this.mainLogo, 0.3, { css: { opacity: 1 } });
 
 		// Destroy scroll magic instance
 		this.scrollMagicController.destroy(true);

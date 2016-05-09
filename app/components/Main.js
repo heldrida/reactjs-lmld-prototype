@@ -56,6 +56,7 @@ class Main extends React.Component {
 		let backBlock = document.querySelector('.back-block');
 		let headerOffsetHeight = document.querySelector('header').offsetHeight;
 		let content = document.querySelector('.main > .content');
+		let mainLogo = document.querySelector('header .logo-container');
 
 		const onStartCallback = () => {
 			backBlock.classList.add('show');
@@ -89,6 +90,7 @@ class Main extends React.Component {
 			onReverseComplete: onReverseCompleteCallback
 		});
 
+		tl.to(mainLogo, 0.3, { css: { opacity: 0 } });
 		tl.to(content, 1.2, { css: { opacity: 0 }, onComplete: () => {
 				window.location.hash = '/';
 				this.setNoScroll(false);
