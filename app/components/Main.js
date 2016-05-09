@@ -40,7 +40,7 @@ class Main extends React.Component {
 	 */
 	hideMainContentHandler() {
 
-		if (this.isHome() !== 'home' && this.timelineHideMainContent === null) {
+		if (this.isHome() !== 'home') {
 
 			this.timelineHideMainContent = this.generateTimelineHideMainContent();
 
@@ -51,6 +51,12 @@ class Main extends React.Component {
 	}
 
 	generateTimelineHideMainContent() {
+
+		// destroy if exists as we need to recalculate pos
+		if (this.timelineHideMainContent !== null) {
+			this.timelineHideMainContent.clear();
+			this.timelineHideMainContent = null;
+		}
 
 		let tl;
 		let backBlock = document.querySelector('.back-block');
@@ -90,7 +96,7 @@ class Main extends React.Component {
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		tl.to(mainLogo, 0.3, { css: { opacity: 0 } });
+		tl.to(mainLogo, 0.3, { css: { opacity: 0 } }, 0);
 		tl.to(content, 1.2, { css: { opacity: 0 }, onComplete: () => {
 				window.location.hash = '/';
 				this.setNoScroll(false);
