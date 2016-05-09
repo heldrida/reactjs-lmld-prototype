@@ -175,12 +175,16 @@ class HomeBlock extends React.Component {
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els.block);
 
+			let headerBg = document.querySelector('header');
+			let headerLogo = document.querySelector('header .logo-container');
+
 			// Open the Modal
 			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - 200)) } };
 			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -(this.props.align === 'left' ? this.pos.left : 100), position: 'absolute' } };
 			const onStartCallback = () => {
 				this.props.setNoScroll(true);
 			};
+
 			const onCompleteCallback = () => {
 
 				this.setState({
@@ -191,7 +195,9 @@ class HomeBlock extends React.Component {
 				// refactor to treat only modal elements
 				this.updateHash();
 
-				//this.props.setNoScroll(true);
+				// show header elements
+				headerBg.classList.add('bg');
+				headerLogo.style.opacity = 1;
 
 			};
 			const onReverseCompleteCallback = () => {
@@ -201,6 +207,9 @@ class HomeBlock extends React.Component {
 					open: false,
 					mountContent: false
 				});
+				// hide header elements
+				headerBg.classList.remove('bg');
+				headerLogo.style.opacity = 0;
 			};
 			timeline = new window.TimelineLite({
 				onStart: onStartCallback,
