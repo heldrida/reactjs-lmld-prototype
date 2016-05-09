@@ -89,7 +89,7 @@ class Main extends React.Component {
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		tl.to(content, 1.2, { css: { opacity: 0 }, onStart: () => {
+		tl.to(content, 1.2, { css: { opacity: 0 }, onComplete: () => {
 				window.location.hash = '/';
 				this.setNoScroll(false);
 			}
