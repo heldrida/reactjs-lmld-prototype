@@ -66,7 +66,7 @@ class Main extends React.Component {
 
 		const onStartCallback = () => {
 			backBlock.classList.add('show');
-			this.setNoScroll(true);
+			this.setNoScroll(false);
 			this.setState({
 				hideMainContent: true
 			});
@@ -97,18 +97,20 @@ class Main extends React.Component {
 		});
 
 		tl.to(mainLogo, 0.3, { css: { opacity: 0 } }, 0);
+
 		tl.to(content, 1.2, { css: { opacity: 0 }, onComplete: () => {
 				window.location.hash = '/';
-				this.setNoScroll(false);
+				//this.setNoScroll(false);
 			}
 		}, 0);
-		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px' } }, 0);
+
+		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px', ease: window.Bounce.easeOut } }, { css: { width: '50px', height: '50px', ease: window.Bounce.easeOut } }, 0);
 
 		tl.to(backBlock, 0.3, { css: { width: calcWdith(), height: calcHeight(), marginTop: (headerOffsetHeight / 2) } }, 0.6);
 
 		tl.to(content, 0.2, { css: { opacity: 1 } });
 
-		tl.to(backBlock, 0.3, { css: { marginTop: window.innerHeight } }, 1.2);
+		tl.to(backBlock, 0.6, { css: { marginTop: window.innerHeight, ease: window.Bounce.easeOut } }, 1.2);
 
 		tl.pause();
 
