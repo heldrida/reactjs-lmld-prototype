@@ -180,6 +180,11 @@ class HomeBlock extends React.Component {
 		// Initialise the timeline if not declared yet to cache it
 		if (!this.timeline) {
 
+			let c = document.querySelector('.content');
+			let offset = window.getComputedStyle(c, null).getPropertyValue('margin-left');
+			offset = parseInt(offset, 0);
+
+
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els.block);
 
@@ -187,8 +192,8 @@ class HomeBlock extends React.Component {
 			this.headerLogo = document.querySelector('header .logo-container');
 
 			// Open the Modal
-			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - 200)) } };
-			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -(this.props.align === 'left' ? this.pos.left : 100), position: 'absolute' } };
+			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - (offset * 2))) } };
+			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -(this.props.align === 'left' ? this.pos.left : offset), position: 'absolute' } };
 			const onStartCallback = () => {
 				this.props.setNoScroll(true);
 			};
