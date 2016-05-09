@@ -151,8 +151,6 @@ class Main extends React.Component {
 
 	addToScrollMagicController(obj) {
 
-		console.log('addToScrollMagicController fn call');
-
 		// cache scene by name
 		for (let o in obj) {
 
@@ -172,12 +170,8 @@ class Main extends React.Component {
 	removeSceneFromScrollMagicController(key) {
 
 		if (this.cachedScrollMagicScenes[key]) {
-
-			console.log("this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-
 			this.scrollMagicMainController.removeScene(this.cachedScrollMagicScenes[key]);
 			this.cachedScrollMagicScenes[key] = null;
-
 		}
 
 	}
