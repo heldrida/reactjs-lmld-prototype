@@ -84,13 +84,13 @@ table {
   opacity: 0; }
 
 .ns-lmld-2016 header {
-  width: calc(100% - 200px);
+  width: calc(100% - 120px);
   position: fixed;
   z-index: 9999;
   background-color: transparent;
   top: 0;
   left: 0;
-  padding: 20px 100px 20px; }
+  padding: 20px 60px 20px; }
   .ns-lmld-2016 header:after {
     content: " ";
     width: 100%;
@@ -298,7 +298,6 @@ body.noscroll {
 .ns-lmld-2016 .studio {
   background-color: #1E1E1E;
   min-height: 600px;
-  margin-top: 320px;
   padding: 60px 60px 0 60px; }
   .ns-lmld-2016 .studio .text {
     font-family: 'Larsseit';

@@ -22,13 +22,13 @@
 	}
 
 	header {
-		width: calc(100% - 200px);
+		width: calc(100% - 120px);
 		position: fixed;
 		z-index: 9999;
 		background-color: transparent;
 		top: 0;
 		left: 0;
-		padding: 20px 100px 20px;
+		padding: 20px 60px 20px;
 		&:after {
 			content: " ";
 			width: 100%;

@@ -5,11 +5,11 @@ import NewsletterSubscribe from '../components/NewsletterSubscribe.js';
 
 class Footer extends React.Component {
 
-	constructor (props) {
+	constructor(props) {
 		super(props);
 	}
 
-	render () {
+	render() {
 
 		const studio1 = require('../../src/images/studio1.jpg');
 		const studio2 = require('../../src/images/studio2.jpg');
