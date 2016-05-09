@@ -88,12 +88,12 @@ class Main extends React.Component {
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		tl.to(content, 0.3, { css: { opacity: 0 } }, 0);
-		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px' } }, 0);
+		tl.to(content, 0.5, { css: { opacity: 0 } }, 0);
+		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px', ease: window.Bounce.easeOut } }, 0);
 
-		tl.to(backBlock, 0.3, { css: { width: calcWdith(), height: calcHeight(), marginTop: (headerOffsetHeight / 2) } });
+		tl.to(backBlock, 0.3, { css: { width: calcWdith(), height: calcHeight(), marginTop: (headerOffsetHeight / 2) } }, 0.6);
 
-		tl.to(backBlock, 0.4, { css: { marginTop: window.innerHeight } });
+		tl.to(backBlock, 0.3, { css: { marginTop: window.innerHeight } }, 1.2);
 
 		tl.pause();
 
