@@ -74,8 +74,10 @@ table {
   letter-spacing: 2px;
   line-height: 38px; }
 
-.ns-lmld-2016 .lg-bg .logo-container .title {
-  visibility: hidden; }
+.ns-lmld-2016 .lg-bg .logo-container {
+  cursor: pointer; }
+  .ns-lmld-2016 .lg-bg .logo-container .title {
+    visibility: hidden; }
 
 .ns-lmld-2016 .lg-bg header:after {
   opacity: 1 !important; }
