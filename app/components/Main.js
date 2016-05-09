@@ -63,6 +63,7 @@ class Main extends React.Component {
 		let headerOffsetHeight = document.querySelector('header').offsetHeight;
 		let content = document.querySelector('.main > .content');
 		let mainLogo = document.querySelector('header .logo-container');
+		let footer = document.querySelector('footer');
 
 		const onStartCallback = () => {
 			backBlock.classList.add('show');
@@ -104,11 +105,15 @@ class Main extends React.Component {
 			}
 		}, 0);
 
+		tl.to(footer, 1, { css: { opacity: 0 } }, 0);
+
 		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px', ease: window.Bounce.easeOut } }, { css: { width: '50px', height: '50px', ease: window.Bounce.easeOut } }, 0);
 
 		tl.to(backBlock, 0.3, { css: { width: calcWdith(), height: calcHeight(), marginTop: (headerOffsetHeight / 2) } }, 0.4);
 
 		tl.to(content, 0.2, { css: { opacity: 1 } });
+
+		tl.to(footer, 0.2, { css: { opacity: 1 } });
 
 		tl.to(backBlock, 0.6, { css: { marginTop: window.innerHeight, ease: window.Bounce.easeOut } }, 1);
 
