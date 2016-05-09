@@ -181,25 +181,8 @@ table {
   padding: 20px;
   text-align: center;
   margin-top: 70px; }
-  .ns-lmld-2016 footer .discover {
-    font-size: 30px;
-    color: #fff;
-    line-height: 54px;
-    margin: 40px 0; }
-    .ns-lmld-2016 footer .discover .icon {
-      background: #FFD000;
-      display: inline-block;
-      width: 88px;
-      height: 53px; }
-    .ns-lmld-2016 footer .discover button {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 54px;
-      font-size: 30px;
-      background: transparent;
-      border: none;
-      color: #fff;
-      margin: 50px 320px; }
+  .ns-lmld-2016 footer .get-updates {
+    margin-top: 60px; }
 
 body.noscroll {
   overflow-y: hidden;
