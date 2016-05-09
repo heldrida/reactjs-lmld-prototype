@@ -96,9 +96,7 @@ class Main extends React.Component {
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
 					{this.state.loadComponent ? <this.state.loadComponent /> : null}
 				</div>
-
-				<Footer />
-
+				<Footer isHome={this.isHome()} />
 			</div>
 		);
 
