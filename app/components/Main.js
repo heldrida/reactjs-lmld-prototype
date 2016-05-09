@@ -4,11 +4,12 @@ import React from 'react';
 import Footer from '../containers/Footer';
 import Header from '../containers/Header';
 import BackBlock from '../components/BackBlock';
+import { Router, Link, History } from 'react-router';
 
 class Main extends React.Component {
 
-	constructor(props) {
-		super(props);
+	constructor(props, context) {
+		super(props, context);
 
 		this.state = {
 			loadComponent: null,
@@ -39,7 +40,7 @@ class Main extends React.Component {
 	 */
 	hideMainContentHandler() {
 
-		if (this.timelineHideMainContent === null) {
+		if (this.isHome() !== 'home' && this.timelineHideMainContent === null) {
 
 			this.timelineHideMainContent = this.generateTimelineHideMainContent();
 
@@ -88,10 +89,16 @@ class Main extends React.Component {
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		tl.to(content, 0.5, { css: { opacity: 0 } }, 0);
-		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px', ease: window.Bounce.easeOut } }, 0);
+		tl.to(content, 1.2, { css: { opacity: 0 }, onStart: () => {
+				window.location.hash = '/';
+				this.setNoScroll(false);
+			}
+		}, 0);
+		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px' } }, 0);
 
 		tl.to(backBlock, 0.3, { css: { width: calcWdith(), height: calcHeight(), marginTop: (headerOffsetHeight / 2) } }, 0.6);
+
+		tl.to(content, 0.2, { css: { opacity: 1 } });
 
 		tl.to(backBlock, 0.3, { css: { marginTop: window.innerHeight } }, 1.2);
 
