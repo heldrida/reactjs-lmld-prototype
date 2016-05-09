@@ -15,7 +15,7 @@ class LogoContainer extends React.Component {
 
 		return (
 			<div>
-				<div className={'logo-container'}>
+				<div className={'logo-container'} onClick={this.props.hideMainContentHandler}>
 					<div className={'images'}>
 						<img className={'signature'} src={topLogoSignature} />
 						<img className={'abstract'} src={topLogoAbstract} />

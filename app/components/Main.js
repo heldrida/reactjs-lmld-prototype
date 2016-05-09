@@ -15,7 +15,7 @@ class Main extends React.Component {
 			hideMainContent: false
 		};
 
-		this.timelineCenterBlock = null;
+		this.timelineHideMainContent = null;
 
 		// Component DOM elements
 		this.els = {};
@@ -39,32 +39,48 @@ class Main extends React.Component {
 	 */
 	hideMainContentHandler() {
 
+		console.log("hideMainContentHandler call fn");
+
+		if (this.timelineHideMainContent === null) {
+
+			this.timelineHideMainContent = this.generateTimeline();
+
+			this.timelineHideMainContent.play();
+
+		}
+
+	}
+
+	generateTimeline() {
+
+		let tl;
+
 		const onStartCallback = () => {
 			this.props.setNoScroll(true);
+			this.setState({
+				hideMainContent: true
+			});
 		};
 
 		const onCompleteCallback = () => {
-
-			/*
 			this.setState({
-				loadComponent: componentName
+				hideMainContent: false
 			});
-			*/
-
 		};
 
 		const onReverseCompleteCallback = () => {
 
 		};
 
-		this.timelineCenterBlock = new window.TimelineLite({
+		tl = new window.TimelineLite({
 			onStart: onStartCallback,
 			onComplete: onCompleteCallback,
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		this.timelineCenterBlock.pause();
+		tl.pause();
 
+		return tl;
 	}
 
 	setNoScroll(bool) {
@@ -92,7 +108,7 @@ class Main extends React.Component {
 		return(
 
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideMainContent ? 'hidden' : '')}>
-				<Header component={Header} />
+				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler} />
 				<div className="content">
 					<BackBlock />
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}

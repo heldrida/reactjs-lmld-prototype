@@ -9,12 +9,16 @@ class Header extends React.Component {
 		super(props);
 	}
 
+	componentDidMount(){
+
+	}
+
 	render() {
 
 		return (
 			<header>
 				<div className={'col col-l'}>
-					<LogoContainer />
+					<LogoContainer hideMainContentHandler={this.props.hideMainContentHandler} />
 				</div>
 				<div className={'col col-r'}>
 					<div className={'tr-menu'}>
