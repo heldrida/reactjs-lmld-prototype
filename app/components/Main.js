@@ -56,6 +56,10 @@ class Main extends React.Component {
 
 			this.timelineHideMainContent.play();
 
+		} else if (this.isHome() === 'home' && window.location.hash.indexOf('projects') > -1) {
+
+			window.alert('todo: close active block element differently from the logo go back action, as this is home;');
+
 		}
 
 	}
