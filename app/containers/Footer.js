@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import Studio from '../components/Studio.js';
 import NewsletterSubscribe from '../components/NewsletterSubscribe.js';
 
 class Footer extends React.Component {
@@ -18,12 +19,7 @@ class Footer extends React.Component {
 			<div>
 				<footer>
 					{this.props.isHome && (
-						<div className='studio'>
-							<div className='trigger2' />
-							<div className='text'>Strategy, UI/UX design, and development for startups and leading brands ment for startups and leading brands.</div>
-							<img className='studio1' src={studio1} />
-							<img className='studio2' src={studio2} />
-						</div>
+						<Studio />
 					)}
 					<div className="discover">
 						<span className="icon" />
