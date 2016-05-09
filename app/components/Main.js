@@ -91,6 +91,9 @@ class Main extends React.Component {
 			this.setState({
 				hideMainContent: false
 			});
+
+			backBlock.style = '';
+			backBlock.classList.remove('show');
 		};
 
 		const onReverseCompleteCallback = () => {
