@@ -39,13 +39,13 @@ class Main extends React.Component {
 	 */
 	hideMainContentHandler() {
 
-		console.log("hideMainContentHandler call fn");
-
 		if (this.timelineHideMainContent === null) {
 
 			this.timelineHideMainContent = this.generateTimeline();
 
 			this.timelineHideMainContent.play();
+
+			console.log('this.timelineHideMainContent', this.timelineHideMainContent);
 
 		}
 
@@ -108,7 +108,7 @@ class Main extends React.Component {
 		return(
 
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideMainContent ? 'hidden' : '')}>
-				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler} />
+				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler.bind(this)} />
 				<div className="content">
 					<BackBlock />
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
