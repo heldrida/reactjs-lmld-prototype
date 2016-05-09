@@ -39,6 +39,18 @@ class Home extends React.Component {
 			title: 'floom',
 			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
 			align: 'right'
+		}, {
+			location: this.props.location,
+			innerComponent: {
+				className: 'case-study-3',
+				component: ProjectFieldIO
+			},
+			urlHash: 'field',
+			setNoScroll: this.props.setNoScroll.bind(this),
+			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
+			title: 'field',
+			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			align: 'left'
 		}];
 
 		return (
