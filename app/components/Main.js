@@ -33,10 +33,11 @@ class Main extends React.Component {
 	/*
 	 * Display the yellow square block animation, mount the requested component
 	 * remove the square block, revealing the `main` component content area
+	 * only when user press the logo button to go back
 	 * @param: componentName
 	 * @return: null
 	 */
-	animateCenterBlock(componentName) {
+	hideMainContentHandler() {
 
 		const onStartCallback = () => {
 			this.props.setNoScroll(true);
