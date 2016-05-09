@@ -53,9 +53,12 @@ class Main extends React.Component {
 
 		let tl;
 		let backBlock = document.querySelector('.back-block');
+		let headerOffsetHeight = document.querySelector('header').offsetHeight;
+		let content = document.querySelector('.main > .content');
 
 		const onStartCallback = () => {
 			backBlock.classList.add('show');
+			this.setNoScroll(true);
 			this.setState({
 				hideMainContent: true
 			});
@@ -71,13 +74,26 @@ class Main extends React.Component {
 
 		};
 
+		let calcWdith = () => {
+			return window.innerWidth - 120;
+		};
+
+		let calcHeight = () => {
+			return window.innerHeight - headerOffsetHeight;
+		};
+
 		tl = new window.TimelineLite({
 			onStart: onStartCallback,
 			onComplete: onCompleteCallback,
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px' } });
+		tl.to(content, 0.3, { css: { opacity: 0 } }, 0);
+		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px' } }, { css: { width: '50px', height: '50px' } }, 0);
+
+		tl.to(backBlock, 0.3, { css: { width: calcWdith(), height: calcHeight(), marginTop: (headerOffsetHeight / 2) } });
+
+		tl.to(backBlock, 0.4, { css: { marginTop: window.innerHeight } });
 
 		tl.pause();
 
@@ -108,10 +124,10 @@ class Main extends React.Component {
 
 		return(
 
-			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideMainContent ? 'hidden' : '')}>
+			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
 				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler.bind(this)} />
+				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
-					<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
 					{this.state.loadComponent ? <this.state.loadComponent /> : null}
 				</div>
