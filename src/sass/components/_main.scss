@@ -13,6 +13,10 @@ body {
 		height: auto;
 		background: #fff;
 
+		&.hidden {
+			opacity: 0;
+		}
+
 		> .content {
 			padding-top: 40vh;
 

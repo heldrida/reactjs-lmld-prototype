@@ -11,7 +11,8 @@ class Main extends React.Component {
 		super(props);
 
 		this.state = {
-			loadComponent: null
+			loadComponent: null,
+			hideComponent: false
 		};
 
 		this.timelineCenterBlock = null;
@@ -89,7 +90,7 @@ class Main extends React.Component {
 
 		return(
 
-			<div className={'main' + ' ' + this.isHome()}>
+			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideComponent ? 'hidden' : '')}>
 				<Header component={Header} />
 				<div className="content">
 					<div className={'center-block'} ref={this.setElement.bind(this, 'center-block')}></div>

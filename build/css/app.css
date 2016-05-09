@@ -195,6 +195,8 @@ body.noscroll {
     width: 100vw;
     height: auto;
     background: #fff; }
+    .ns-lmld-2016 .main.hidden {
+      opacity: 0; }
     .ns-lmld-2016 .main > .content {
       padding-top: 40vh; }
       .ns-lmld-2016 .main > .content .logo-container {
