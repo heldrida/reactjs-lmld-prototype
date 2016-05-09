@@ -21,6 +21,11 @@ class Main extends React.Component {
 		// Component DOM elements
 		this.els = {};
 
+
+		this.scrollMagicMainController = null;
+
+		this.cachedScrollMagicScenes = {};
+
 	}
 
 	componentWillMount() {
@@ -28,6 +33,8 @@ class Main extends React.Component {
 	}
 
 	componentDidMount() {
+
+		this.scrollMagicMainController = new window.ScrollMagic.Controller({ loglevel: 3 });
 
 	}
 
@@ -142,6 +149,39 @@ class Main extends React.Component {
 
 	}
 
+	addToScrollMagicController(obj) {
+
+		console.log('addToScrollMagicController fn call');
+
+		// cache scene by name
+		for (let o in obj) {
+
+			if (obj[o]) {
+
+				this.cachedScrollMagicScenes[o] = obj[o];
+
+				// add to the controller
+				this.scrollMagicMainController.addScene(obj[o]);
+
+			}
+
+		}
+
+	}
+
+	removeSceneFromScrollMagicController(key) {
+
+		if (this.cachedScrollMagicScenes[key]) {
+
+			console.log("this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+
+			this.scrollMagicMainController.removeScene(this.cachedScrollMagicScenes[key]);
+			this.cachedScrollMagicScenes[key] = null;
+
+		}
+
+	}
+
 	render() {
 
 		return(
@@ -150,7 +190,8 @@ class Main extends React.Component {
 				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler.bind(this)} />
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
-					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this) })}
+					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this), addToScrollMagicController: this.addToScrollMagicController.bind(this),
+						removeSceneFromScrollMagicController: this.removeSceneFromScrollMagicController.bind(this) })}
 					{this.state.loadComponent ? <this.state.loadComponent /> : null}
 				</div>
 				<Footer isHome={this.isHome()} />

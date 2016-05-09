@@ -29,13 +29,13 @@ class LogoHome extends Logo {
 		window.TweenLite.to(this.mainLogo, 0.3, { css: { opacity: 1 } });
 
 		// Destroy scroll magic instance
-		this.scrollMagicController.destroy(true);
-		this.scrollMagicController = null;
+		//this.scrollMagicController.destroy(true);
+		//this.scrollMagicController = null;
+
+		this.props.removeSceneFromScrollMagicController('logoHome');
 	}
 
 	initScrollMagic() {
-
-		this.scrollMagicController = new window.ScrollMagic.Controller();
 
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({
@@ -49,24 +49,26 @@ class LogoHome extends Logo {
 		tl.set(this.header, { className: '+=bg' });
 
 		// declare timeline to controller
-		new window.ScrollMagic.Scene({
+		let sc1 = new window.ScrollMagic.Scene({
 				triggerElement: this.homeLogo,
 				triggerHook: 'onLeave',
 				duration: '1px'
 			})
-			.setTween(tl)
-			.addTo(this.scrollMagicController);
+			.setTween(tl);
 
 		// title fade tween
 		let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
 
 		// declare tween to controller
-		new window.ScrollMagic.Scene({
+		let sc2 = new window.ScrollMagic.Scene({
 				triggerHook: 'onLeave',
 				duration: '25%'
 			})
-			.setTween(titleFadeTween)
-			.addTo(this.scrollMagicController);
+			.setTween(titleFadeTween);
+
+		setTimeout(() => {
+			this.props.addToScrollMagicController({'logoHome': [sc1, sc2] });
+		}, 0);
 
 	}
 

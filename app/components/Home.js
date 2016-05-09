@@ -55,7 +55,7 @@ class Home extends React.Component {
 
 		return (
 			<div>
-				<LogoHome showTitle={true} />
+				<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 				<div className={'projects'}>
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}

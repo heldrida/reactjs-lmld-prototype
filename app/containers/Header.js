@@ -18,7 +18,7 @@ class Header extends React.Component {
 		return (
 			<header>
 				<div className={'col col-l'}>
-					<Logo hideMainContentHandler={this.props.hideMainContentHandler} />
+					<Logo hideMainContentHandler={this.props.hideMainContentHandler} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 				</div>
 				<div className={'col col-r'}>
 					<div className={'tr-menu'}>
