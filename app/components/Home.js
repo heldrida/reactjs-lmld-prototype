@@ -4,7 +4,7 @@ import React from 'react';
 import HomeBlock from '../components/HomeBlock';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO';
 import ProjectFloom from '../components/projects/ProjectFloom';
-import LogoContainerHome from '../components/LogoContainerHome';
+import LogoHome from '../components/LogoHome';
 
 class Home extends React.Component {
 
@@ -55,7 +55,7 @@ class Home extends React.Component {
 
 		return (
 			<div>
-				<LogoContainerHome showTitle={true} />
+				<LogoHome showTitle={true} />
 				<div className={'projects'}>
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}

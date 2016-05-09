@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import LogoContainer from '../components/LogoContainer';
+import Logo from '../components/Logo';
 
 class Header extends React.Component {
 
@@ -18,7 +18,7 @@ class Header extends React.Component {
 		return (
 			<header>
 				<div className={'col col-l'}>
-					<LogoContainer hideMainContentHandler={this.props.hideMainContentHandler} />
+					<Logo hideMainContentHandler={this.props.hideMainContentHandler} />
 				</div>
 				<div className={'col col-r'}>
 					<div className={'tr-menu'}>

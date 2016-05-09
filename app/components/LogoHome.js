@@ -1,8 +1,8 @@
 'use strict';
 
-import LogoContainer from '../components/LogoContainer';
+import Logo from '../components/Logo';
 
-class LogoContainerHome extends LogoContainer {
+class LogoHome extends Logo {
 
 	constructor(props) {
 		super(props);
@@ -64,4 +64,4 @@ class LogoContainerHome extends LogoContainer {
 
 }
 
-export default LogoContainerHome;
+export default LogoHome;
