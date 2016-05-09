@@ -12,7 +12,7 @@ class Main extends React.Component {
 
 		this.state = {
 			loadComponent: null,
-			hideComponent: false
+			hideMainContent: false
 		};
 
 		this.timelineCenterBlock = null;
@@ -90,7 +90,7 @@ class Main extends React.Component {
 
 		return(
 
-			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideComponent ? 'hidden' : '')}>
+			<div className={'main' + ' ' + this.isHome() + ' ' + (this.hideMainContent ? 'hidden' : '')}>
 				<Header component={Header} />
 				<div className="content">
 					<BackBlock />
