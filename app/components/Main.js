@@ -41,7 +41,7 @@ class Main extends React.Component {
 
 		if (this.timelineHideMainContent === null) {
 
-			this.timelineHideMainContent = this.generateTimeline();
+			this.timelineHideMainContent = this.generateTimelineHideMainContent();
 
 			this.timelineHideMainContent.play();
 
@@ -51,7 +51,7 @@ class Main extends React.Component {
 
 	}
 
-	generateTimeline() {
+	generateTimelineHideMainContent() {
 
 		let tl;
 
