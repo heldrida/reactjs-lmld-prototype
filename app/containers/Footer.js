@@ -12,9 +12,6 @@ class Footer extends React.Component {
 
 	render() {
 
-		const studio1 = require('../../src/images/studio1.jpg');
-		const studio2 = require('../../src/images/studio2.jpg');
-
 		return (
 			<div>
 				<footer>
@@ -30,7 +27,7 @@ class Footer extends React.Component {
 						</p>
 						<button>discover more</button>
 					</div>
-					<div class="get-updates">
+					<div className={'get-updates'}>
 						<h6>Get updates from our latest projects</h6>
 						<NewsletterSubscribe />
 					</div>
