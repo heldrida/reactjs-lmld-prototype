@@ -37,6 +37,10 @@ class HomeBlock extends React.Component {
 		// the default location hash name
 		this.defaultLocationHashName = '';
 
+		// header elements
+		this.headerBg = null;
+		this.headerLogo = null;
+
 	}
 
 	componentWillMount() {
@@ -153,6 +157,10 @@ class HomeBlock extends React.Component {
 			mountContent: false
 		});
 
+		// hide header elements
+		this.headerBg.classList.remove('bg');
+		this.headerLogo.style.opacity = 0;
+
 		setTimeout(() => {
 			this.timeline.reverse();
 		});
@@ -175,8 +183,8 @@ class HomeBlock extends React.Component {
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els.block);
 
-			let headerBg = document.querySelector('header');
-			let headerLogo = document.querySelector('header .logo-container');
+			this.headerBg = document.querySelector('header');
+			this.headerLogo = document.querySelector('header .logo-container');
 
 			// Open the Modal
 			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - 200)) } };
@@ -196,8 +204,8 @@ class HomeBlock extends React.Component {
 				this.updateHash();
 
 				// show header elements
-				headerBg.classList.add('bg');
-				headerLogo.style.opacity = 1;
+				this.headerBg.classList.add('bg');
+				this.headerLogo.style.opacity = 1;
 
 			};
 			const onReverseCompleteCallback = () => {
@@ -207,9 +215,6 @@ class HomeBlock extends React.Component {
 					open: false,
 					mountContent: false
 				});
-				// hide header elements
-				headerBg.classList.remove('bg');
-				headerLogo.style.opacity = 0;
 			};
 			timeline = new window.TimelineLite({
 				onStart: onStartCallback,
