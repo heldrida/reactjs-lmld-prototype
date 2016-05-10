@@ -13,10 +13,6 @@ class Header extends React.Component {
 		};
 	}
 
-	componentDidMount(){
-
-	}
-
   menuClick(event) {
     this.setState({
     	menuOpen: !this.state.menuOpen
@@ -26,7 +22,7 @@ class Header extends React.Component {
 	render() {
 		var text = this.state.menuOpen ? 'menu-open' : 'menu-close';
 		return (
-			<header className={text}>
+			<header>
 				<div className={'col col-l'}>
 					<Logo hideMainContentHandler={this.props.hideMainContentHandler} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 				</div>
@@ -37,7 +33,9 @@ class Header extends React.Component {
 						<span></span>
 					</div>
 				</div>
-				<Menu />
+				<div className={text}>
+					<Menu />
+				</div>
 			</header>
 		);
 

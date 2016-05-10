@@ -51,8 +51,8 @@ class LogoHome extends Logo {
 				triggerHook: 'onLeave',
 				duration: '1px'
 			})
-			.setTween(tl)
-			.addIndicators({name: "tl 1"});
+			.setTween(tl);
+			//.addIndicators({name: "tl 1"});
 
 		// title fade tween
 		let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
@@ -62,8 +62,8 @@ class LogoHome extends Logo {
 				triggerHook: 'onLeave',
 				duration: '25%'
 			})
-			.setTween(titleFadeTween)
-			.addIndicators({name: "tl 2"});
+			.setTween(titleFadeTween);
+			//.addIndicators({name: "tl 2"});
 
 		setTimeout(() => {
 			this.props.addToScrollMagicController({'logoHome': [sc1, sc2] });

@@ -1,16 +1,16 @@
 header {
-  &.menu-open {
+  .menu-open {
     .menu {
       width: 100vw;
       height: 100vh;
-      transition: all 0.8s ease;
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
   }
-  &.menu-close {
+  .menu-close {
     .menu {
       width: 0vw;
       height: 0vh;
-      transition: all 0.6s ease;
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
   }
   .menu {
@@ -41,6 +41,22 @@ header {
         line-height: 66px;
         letter-spacing: 1px;
       }
+    }
+    .triangle1, .triangle2 {
+      position: absolute;
+      /* use fixed to keep it in place */
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: solid;
+      border-color: transparent transparent #3D3D3D #3D3D3D;
+      z-index: -2;
+    }
+    .triangle2 {
+      right: 1px;
+      border-color: transparent transparent #1F1F1F #1F1F1F;
+      z-index: -1;
     }
   }
 }
