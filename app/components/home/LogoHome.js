@@ -1,6 +1,6 @@
 'use strict';
 
-import Logo from '../components/Logo';
+import Logo from '../../components/Logo';
 
 class LogoHome extends Logo {
 
@@ -24,7 +24,8 @@ class LogoHome extends Logo {
 
 	}
 
-	componentWillUnmount()  		// reset visibility
+	componentWillUnmount() {
+		// reset visibility
 		window.TweenLite.to(this.mainLogo, 0.3, { css: { opacity: 1 } });
 
 		// Destroy scroll magic scene instances
@@ -62,7 +63,7 @@ class LogoHome extends Logo {
 				duration: '25%'
 			})
 			.setTween(titleFadeTween)
-			.addIndicators({name: "tl 1"});
+			.addIndicators({name: "tl 2"});
 
 		setTimeout(() => {
 			this.props.addToScrollMagicController({'logoHome': [sc1, sc2] });

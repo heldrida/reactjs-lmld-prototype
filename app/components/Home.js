@@ -1,11 +1,12 @@
 'use strict';
 
 import React from 'react';
-import HomeBlock from '../components/HomeBlock';
+import LogoHome from '../components/home/LogoHome';
+import YellowHello from '../components/home/YellowHello';
+import HomeBlock from '../components/home/ProjectsHome';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO';
 import ProjectFloom from '../components/projects/ProjectFloom';
-import LogoHome from '../components/LogoHome';
-import YellowHello from '../components/home/YellowHello';
+import Studio from '../components/home/Studio';
 
 class Home extends React.Component {
 
@@ -56,16 +57,19 @@ class Home extends React.Component {
 
 		return (
 			<div className='home-content'>
-				<div className='logo-home'>
-					<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+				<div className='wrapper'>
+					<div className='logo-home'>
+						<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+					</div>
+					<YellowHello />
+					<div className={'projects'}>
+					{homeBlockList.map((obj, key) =>
+						<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
+									posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
+					)}
+					</div>
 				</div>
-				<YellowHello />
-				<div className={'projects'}>
-				{homeBlockList.map((obj, key) =>
-					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
-								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
-				)}
-				</div>
+				<Studio />
 			</div>
 		);
 

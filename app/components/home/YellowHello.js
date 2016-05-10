@@ -10,7 +10,7 @@ class YellowHello extends React.Component {
 
 	render() {
 		return (
-			<div className={'yellow-hello'}>caca</div>
+			<div className={'yellow-hello'}></div>
 		);
 	}
 

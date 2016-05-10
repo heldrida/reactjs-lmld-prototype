@@ -127,6 +127,8 @@ class HomeBlock extends React.Component {
 
 	openBlock(callback = false) {
 
+		console.log('open block call fn');
+
 		if (this.state.open) {
 
 			this.closeBlock();
@@ -150,12 +152,20 @@ class HomeBlock extends React.Component {
 	}
 
 	closeBlock(callback = false) {
+		console.log('close block call fn');
+
 		// before the reverse animation starts
 		// the component needs to be dismounted
-		this.setState({
-			open: false,
-			mountContent: false
-		});
+
+		if (window.location.hash !== '/') {
+			/*
+			 * todo: check state when routing from non home to home
+			this.setState({
+				open: false,
+				mountContent: false
+			});
+			*/
+		}
 
 		// hide header elements (if on homepage)
 		// todo: use the router lib to detect proper location
@@ -217,12 +227,15 @@ class HomeBlock extends React.Component {
 
 			};
 			const onReverseCompleteCallback = () => {
-				this.els.block.parentNode.style.zIndex = '';
-				this.props.setNoScroll(false);
-				this.setState({
-					open: false,
-					mountContent: false
-				});
+			 	// todo: check state when routing from non home to home
+				if (this.els.block) {
+					this.els.block.parentNode.style.zIndex = '';
+					this.props.setNoScroll(false);
+					this.setState({
+						open: false,
+						mountContent: false
+					});
+				}
 			};
 			timeline = new window.TimelineLite({
 				onStart: onStartCallback,

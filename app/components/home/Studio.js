@@ -10,8 +10,8 @@ class Studio extends React.Component {
 
 	render() {
 
-		const studio1 = require('../../src/images/studio1.jpg');
-		const studio2 = require('../../src/images/studio2.jpg');
+		const studio1 = require('../../../src/images/studio1.jpg');
+		const studio2 = require('../../../src/images/studio2.jpg');
 
 		return (
 			<div className='studio'>

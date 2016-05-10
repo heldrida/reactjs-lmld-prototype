@@ -2,7 +2,7 @@
 
 import React from 'react';
 import _ from 'lodash';
-import HomeBlock from '../components/HomeBlock';
+import HomeBlock from '../components/home/ProjectsHome';
 
 class ProjectBlock extends HomeBlock {
 
