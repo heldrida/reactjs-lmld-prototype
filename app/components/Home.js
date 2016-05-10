@@ -5,6 +5,7 @@ import HomeBlock from '../components/HomeBlock';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO';
 import ProjectFloom from '../components/projects/ProjectFloom';
 import LogoHome from '../components/LogoHome';
+import YellowHello from '../components/home/YellowHello';
 
 class Home extends React.Component {
 
@@ -54,8 +55,11 @@ class Home extends React.Component {
 		}];
 
 		return (
-			<div>
-				<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+			<div className='home-content'>
+				<div className='logo-home'>
+					<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+				</div>
+				<YellowHello />
 				<div className={'projects'}>
 				{homeBlockList.map((obj, key) =>
 					<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
