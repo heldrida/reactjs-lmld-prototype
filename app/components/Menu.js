@@ -27,16 +27,14 @@ class Menu extends React.Component {
 
   render() {
     return (
-      <div className={'menu'}>
-        <div className={'container'}>
-          <nav>
-            <a href='#'>Work</a>
-            <a href='#'>About Us</a>
-            <a href='#'>Join the team</a>
-          </nav>
-          <div className={'triangle1'}></div>
-          <div className={'triangle2'}></div>
-        </div>
+      <div className={'container'}>
+        <nav>
+          <a href='#'>Work</a>
+          <a href='#'>About Us</a>
+          <a href='#'>Join the team</a>
+        </nav>
+        <div className={'triangle1'}></div>
+        <div className={'triangle2'}></div>
       </div>
     );
   }

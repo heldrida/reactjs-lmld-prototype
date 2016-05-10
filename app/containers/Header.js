@@ -13,14 +13,24 @@ class Header extends React.Component {
 		};
 	}
 
+	componentDidMount() {
+	  this.menu = document.querySelector('.menu');
+	  this.container = document.querySelector('.menu .container');
+	}
+
   menuClick(event) {
     this.setState({
     	menuOpen: !this.state.menuOpen
     });
+    if (this.menu.classList.contains('close')) {
+		  window.TweenLite.to(this.container, 1, { css: { display: 'block' } });
+		} else {
+			window.TweenLite.to(this.container, 1, { css: { display: 'none' } });
+		}
   }
 
 	render() {
-		var text = this.state.menuOpen ? 'menu-open' : 'menu-close';
+		const text = this.state.menuOpen ? 'menu open' : 'menu close';
 		return (
 			<header>
 				<div className={'col col-l'}>
@@ -38,7 +48,6 @@ class Header extends React.Component {
 				</div>
 			</header>
 		);
-
 	}
 
 }

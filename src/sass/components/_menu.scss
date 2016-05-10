@@ -1,18 +1,4 @@
 header {
-  .menu-open {
-    .menu {
-      width: 100vw;
-      height: 100vh;
-      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-  }
-  .menu-close {
-    .menu {
-      width: 0vw;
-      height: 0vh;
-      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-  }
   .menu {
     position: fixed;
     right: 0;
@@ -57,6 +43,17 @@ header {
       right: 1px;
       border-color: transparent transparent #1F1F1F #1F1F1F;
       z-index: -1;
+    }
+    &.open {
+      width: 100vw;
+      height: 100vh;
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+      .container {}
+    }
+    &.close {
+      width: 0vw;
+      height: 0vh;
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
   }
 }
