@@ -297,26 +297,6 @@ body.noscroll {
     .ns-lmld-2016 .newsletter-subscribe form input[type="submit"]:hover {
       opacity: 0.9; }
 
-.ns-lmld-2016 .studio {
-  background-color: #1E1E1E;
-  min-height: 600px;
-  padding: 60px 60px 0 60px; }
-  .ns-lmld-2016 .studio .text {
-    font-family: 'Larsseit';
-    font-weight: 100;
-    font-size: 28px;
-    color: #fff;
-    max-width: 60%;
-    line-height: 50px; }
-  .ns-lmld-2016 .studio .studio1 {
-    display: block;
-    margin-left: 40%;
-    margin-top: 60px;
-    width: 60%; }
-  .ns-lmld-2016 .studio .studio2 {
-    display: block;
-    width: 60%; }
-
 .ns-lmld-2016 .home-block {
   width: 100%;
   height: 328px;
@@ -335,7 +315,8 @@ body.noscroll {
       position: absolute;
       z-index: 1;
       /* temporary: needs to be calc dynamic on the component */
-      overflow-y: auto; }
+      overflow-y: auto;
+      overflow-x: hidden; }
   .ns-lmld-2016 .home-block.case-study-1 {
     margin-top: 0; }
   .ns-lmld-2016 .home-block.case-study-2 .block {
@@ -365,6 +346,26 @@ body.noscroll {
     right: 85%;
     width: 100%;
     text-align: right; }
+
+.ns-lmld-2016 .studio {
+  background-color: #1E1E1E;
+  min-height: 600px;
+  padding: 60px 60px 0 60px; }
+  .ns-lmld-2016 .studio .text {
+    font-family: 'Larsseit';
+    font-weight: 100;
+    font-size: 28px;
+    color: #fff;
+    max-width: 60%;
+    line-height: 50px; }
+  .ns-lmld-2016 .studio .studio1 {
+    display: block;
+    margin-left: 40%;
+    margin-top: 60px;
+    width: 60%; }
+  .ns-lmld-2016 .studio .studio2 {
+    display: block;
+    width: 60%; }
 
 .ns-lmld-2016 .project-container {
   width: 100%;

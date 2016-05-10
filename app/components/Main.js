@@ -187,9 +187,7 @@ class Main extends React.Component {
 	}
 
 	render() {
-
 		return(
-
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
 				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler.bind(this)} />
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
@@ -201,7 +199,6 @@ class Main extends React.Component {
 				<Footer isHome={this.isHome()} />
 			</div>
 		);
-
 	}
 
 }

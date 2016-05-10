@@ -10,11 +10,11 @@ class LogoHome extends Logo {
 
 	componentDidMount() {
 
+		this.header = document.querySelector('header');
 		this.mainLogo = document.querySelector('header .logo-container');
 		this.mainLogoTitle = this.mainLogo.querySelector('.title');
 		this.homeLogo = document.querySelector('.content .logo-container');
 		this.homeLogoTitle = this.homeLogo.querySelector('.title');
-		this.header = document.querySelector('header');
 		this.mainLogo.style.opacity = 0;
 
 		// initialise the scroll magic
@@ -51,7 +51,8 @@ class LogoHome extends Logo {
 				triggerHook: 'onLeave',
 				duration: '1px'
 			})
-			.setTween(tl);
+			.setTween(tl)
+			.addIndicators({name: "tl 1"});
 
 		// title fade tween
 		let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
@@ -61,7 +62,8 @@ class LogoHome extends Logo {
 				triggerHook: 'onLeave',
 				duration: '25%'
 			})
-			.setTween(titleFadeTween);
+			.setTween(titleFadeTween)
+			.addIndicators({name: "tl 2"});
 
 		setTimeout(() => {
 			this.props.addToScrollMagicController({'logoHome': [sc1, sc2] });
