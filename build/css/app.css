@@ -68,24 +68,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.ns-lmld-2016 h6 {
+h6 {
   font-size: 30px;
   color: #fff;
   letter-spacing: 2px;
   line-height: 38px; }
 
-.ns-lmld-2016 .lg-bg .logo-container {
+.lg-bg .logo-container {
   cursor: pointer; }
-  .ns-lmld-2016 .lg-bg .logo-container .title {
+  .lg-bg .logo-container .title {
     visibility: hidden; }
 
-.ns-lmld-2016 .lg-bg header:after {
+.lg-bg header:after {
   opacity: 1 !important; }
 
-.ns-lmld-2016 .home header .logo-container {
+.home header .logo-container {
   opacity: 0; }
 
-.ns-lmld-2016 header {
+header {
   width: calc(100% - 120px);
   position: fixed;
   z-index: 9999;
@@ -93,72 +93,58 @@ table {
   top: 0;
   left: 0;
   padding: 20px 60px 20px; }
-  .ns-lmld-2016 header:after {
-    content: " ";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
-    -khtml-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    -ms-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s; }
-  .ns-lmld-2016 header.bg:after {
-    opacity: 1; }
-  .ns-lmld-2016 header .col {
+  header.bg {
+    background-color: rgba(255, 255, 255, 0.95); }
+  header .col {
     vertical-align: middle;
     width: 50%;
     display: inline-block; }
-  .ns-lmld-2016 header .col-r {
+  header .col-r {
     text-align: right; }
 
-.ns-lmld-2016 .logo-container {
+.logo-container {
   display: inline-block;
   width: auto;
   height: auto;
   overflow: hidden; }
-  .ns-lmld-2016 .logo-container .images {
+  .logo-container .images {
     width: 180px;
     height: 52px;
     display: inline-block;
     position: relative; }
-    .ns-lmld-2016 .logo-container .images img {
+    .logo-container .images img {
       position: absolute; }
-    .ns-lmld-2016 .logo-container .images .signature {
+    .logo-container .images .signature {
       top: 0;
       left: 0; }
-    .ns-lmld-2016 .logo-container .images .abstract {
+    .logo-container .images .abstract {
       top: 0;
       right: 0; }
-  .ns-lmld-2016 .logo-container .title {
+  .logo-container .title {
     font-family: 'Larsseit';
     font-size: 16px;
     color: #888888;
     letter-spacing: 1.77px;
     text-transform: uppercase; }
 
-.ns-lmld-2016 .content .logo-container {
+.content .logo-container {
   padding-top: 20px; }
 
-.ns-lmld-2016 .top-block-particle {
+.top-block-particle {
   background-color: #FFD000;
   width: auto;
   height: 314px; }
 
-.ns-lmld-2016 .tr-menu {
+.tr-menu {
   display: inline-block;
   vertical-align: middle;
   width: 25px;
   height: 20px;
   cursor: pointer;
-  transition: all 0.1s; }
-  .ns-lmld-2016 .tr-menu span {
+  transition: all 0.1s;
+  position: relative;
+  z-index: 1000; }
+  .tr-menu span {
     display: block;
     width: 100%;
     height: 2px;
@@ -166,7 +152,7 @@ table {
     background-color: #E4E4E4;
     transition: all 0.1s;
     pointer-events: none; }
-  .ns-lmld-2016 .tr-menu:hover {
+  .tr-menu:hover {
     -webkit-transform: translateY(-2px);
     -khtml-transform: translateY(-2px);
     -moz-transform: translateY(-2px);
@@ -174,22 +160,17 @@ table {
     -o-transform: translateY(-2px);
     transform: translateY(-2px);
     position: relative; }
-    .ns-lmld-2016 .tr-menu:hover span:nth-child(2) {
+    .tr-menu:hover span:nth-child(2) {
       margin: 7px 0; }
 
-.ns-lmld-2016 .main > .content {
-  width: auto;
-  margin-left: 60px;
-  margin-right: 60px; }
-
-.ns-lmld-2016 footer {
+footer {
   width: 100%;
   height: auto;
   background-color: #1E1E1E;
   padding: 20px;
   text-align: center;
   margin-top: 70px; }
-  .ns-lmld-2016 footer .get-updates {
+  footer .get-updates {
     margin-top: 60px; }
 
 body.noscroll {
@@ -197,25 +178,13 @@ body.noscroll {
   width: 100vw;
   height: 100vh; }
 
-.ns-lmld-2016 {
+.lm-2016 {
   overflow-x: hidden; }
-  .ns-lmld-2016 .main {
+  .lm-2016 .main {
     width: 100vw;
     height: auto;
-    background: #fff;
-    /*
-		&.hidden {
-			> .content {
-				opacity: 0;
-			}
-		}
-		*/ }
-    .ns-lmld-2016 .main > .content {
-      padding-top: 40vh; }
-      .ns-lmld-2016 .main > .content .logo-container {
-        margin-left: 0;
-        margin-bottom: 60px; }
-    .ns-lmld-2016 .main .back-block {
+    background: #fff; }
+    .lm-2016 .main .back-block {
       display: none;
       background-color: #FFD000;
       position: fixed;
@@ -230,15 +199,50 @@ body.noscroll {
       -ms-transform: translateX(-50%) translateY(-50%);
       -o-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%); }
-      .ns-lmld-2016 .main .back-block.show {
+      .lm-2016 .main .back-block.show {
         display: block; }
 
-.ns-lmld-2016 .newsletter-subscribe form {
+header.menu-open .menu {
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.8s; }
+  header.menu-open .menu .container {
+    display: block; }
+
+header .menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0vw;
+  height: 0vh;
+  overflow: hidden; }
+  header .menu .container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1F1F1F;
+    display: none; }
+  header .menu nav {
+    position: absolute;
+    bottom: 80px;
+    left: 80px; }
+    header .menu nav a {
+      color: #fff;
+      font-family: 'Larsseit';
+      text-decoration: none;
+      display: block;
+      font-size: 40px;
+      line-height: 66px;
+      letter-spacing: 1px; }
+
+.newsletter-subscribe form {
   width: 393px;
   height: 56px;
   position: relative;
   margin: 40px auto; }
-  .ns-lmld-2016 .newsletter-subscribe form input {
+  .newsletter-subscribe form input {
     height: 56px;
     line-height: 56px;
     padding: 0;
@@ -246,7 +250,7 @@ body.noscroll {
     display: inline-block;
     position: absolute;
     border: none; }
-  .ns-lmld-2016 .newsletter-subscribe form input[type="email"] {
+  .newsletter-subscribe form input[type="email"] {
     top: 0;
     left: 0;
     width: calc(100% - 128px - 20px);
@@ -256,27 +260,27 @@ body.noscroll {
     letter-spacing: 1px;
     line-height: 26px;
     color: #C4C4C4; }
-    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]::-webkit-input-placeholder {
+    .newsletter-subscribe form input[type="email"]::-webkit-input-placeholder {
       font-size: 20px;
       letter-spacing: 1px;
       line-height: 26px;
       color: #C4C4C4; }
-    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]:-moz-placeholder {
+    .newsletter-subscribe form input[type="email"]:-moz-placeholder {
       font-size: 20px;
       letter-spacing: 1px;
       line-height: 26px;
       color: #C4C4C4; }
-    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]::-moz-placeholder {
+    .newsletter-subscribe form input[type="email"]::-moz-placeholder {
       font-size: 20px;
       letter-spacing: 1px;
       line-height: 26px;
       color: #C4C4C4; }
-    .ns-lmld-2016 .newsletter-subscribe form input[type="email"]:-ms-input-placeholder {
+    .newsletter-subscribe form input[type="email"]:-ms-input-placeholder {
       font-size: 20px;
       letter-spacing: 1px;
       line-height: 26px;
       color: #C4C4C4; }
-  .ns-lmld-2016 .newsletter-subscribe form input[type="submit"] {
+  .newsletter-subscribe form input[type="submit"] {
     top: 0;
     right: 0;
     width: 128px;
@@ -294,88 +298,105 @@ body.noscroll {
     -ms-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s; }
-    .ns-lmld-2016 .newsletter-subscribe form input[type="submit"]:hover {
+    .newsletter-subscribe form input[type="submit"]:hover {
       opacity: 0.9; }
 
-.ns-lmld-2016 .home-block {
-  width: 100%;
-  height: 328px;
-  position: relative;
-  z-index: 1;
-  margin: 70px 0 0 0;
-  text-align: left; }
-  .ns-lmld-2016 .home-block .block {
-    width: 500px;
-    height: 328px;
-    position: relative;
-    display: inline-block; }
-    .ns-lmld-2016 .home-block .block .content {
-      width: inherit;
-      height: inherit;
-      position: absolute;
-      z-index: 1;
-      /* temporary: needs to be calc dynamic on the component */
-      overflow-y: auto;
-      overflow-x: hidden; }
-  .ns-lmld-2016 .home-block.case-study-1 {
-    margin-top: 0; }
-  .ns-lmld-2016 .home-block.case-study-2 .block {
-    left: calc(100% - 500px); }
-  .ns-lmld-2016 .home-block .title-container {
-    margin-top: 60px;
-    position: absolute;
-    z-index: 2;
-    top: 0%; }
-    .ns-lmld-2016 .home-block .title-container h4 {
-      font-family: 'Larsseit';
-      font-size: 50px;
-      color: #000000;
-      letter-spacing: 1.66px;
-      text-transform: uppercase;
-      margin-bottom: 10px; }
-    .ns-lmld-2016 .home-block .title-container p {
-      font-family: Helvetica;
-      font-size: 18px;
-      color: #191919;
-      letter-spacing: 0.5px;
-      line-height: 30px; }
-  .ns-lmld-2016 .home-block.left .title-container {
-    left: 80%;
-    width: 100%; }
-  .ns-lmld-2016 .home-block.right .title-container {
-    right: 85%;
+.home-content .wrapper {
+  margin-left: 60px;
+  margin-right: 60px; }
+  .home-content .wrapper .logo-home {
+    height: 60vh;
+    vertical-align: bottom; }
+    .home-content .wrapper .logo-home:before {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: bottom; }
+    .home-content .wrapper .logo-home .logo-container {
+      margin-bottom: 60px; }
+  .home-content .wrapper .yellow-hello {
     width: 100%;
-    text-align: right; }
+    background-color: #FFD000;
+    height: 40vh; }
 
-.ns-lmld-2016 .studio {
+.home-content .studio {
   background-color: #1E1E1E;
   min-height: 600px;
   padding: 60px 60px 0 60px; }
-  .ns-lmld-2016 .studio .text {
+  .home-content .studio .text {
     font-family: 'Larsseit';
     font-weight: 100;
     font-size: 28px;
     color: #fff;
     max-width: 60%;
     line-height: 50px; }
-  .ns-lmld-2016 .studio .studio1 {
+  .home-content .studio .studio1 {
     display: block;
     margin-left: 40%;
     margin-top: 60px;
     width: 60%; }
-  .ns-lmld-2016 .studio .studio2 {
+  .home-content .studio .studio2 {
     display: block;
     width: 60%; }
 
-.ns-lmld-2016 .project-container {
+.home-block {
+  width: 100%;
+  height: 328px;
+  position: relative;
+  z-index: 1;
+  margin: 70px 0 0 0;
+  text-align: left; }
+  .home-block .block {
+    width: 500px;
+    height: 328px;
+    position: relative;
+    display: inline-block; }
+    .home-block .block .content {
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      z-index: 1;
+      overflow-y: auto;
+      overflow-x: hidden; }
+  .home-block.case-study-1 {
+    margin-top: 0; }
+  .home-block.case-study-2 .block {
+    left: calc(100% - 500px); }
+  .home-block .title-container {
+    margin-top: 60px;
+    position: absolute;
+    z-index: 2;
+    top: 0%; }
+    .home-block .title-container h4 {
+      font-family: 'Larsseit';
+      font-size: 50px;
+      color: #000000;
+      letter-spacing: 1.66px;
+      text-transform: uppercase;
+      margin-bottom: 10px; }
+    .home-block .title-container p {
+      font-family: Helvetica;
+      font-size: 18px;
+      color: #191919;
+      letter-spacing: 0.5px;
+      line-height: 30px; }
+  .home-block.left .title-container {
+    left: 80%;
+    width: 100%; }
+  .home-block.right .title-container {
+    right: 85%;
+    width: 100%;
+    text-align: right; }
+
+.project-container {
   width: 100%;
   height: auto;
   min-height: 100vh; }
-  .ns-lmld-2016 .project-container .poster {
+  .project-container .poster {
     width: 100vw;
     height: 100vh;
     z-index: 1; }
-  .ns-lmld-2016 .project-container .content {
+  .project-container .content {
     width: 100%;
     z-index: 2;
     background-color: #ccc;
@@ -384,7 +405,7 @@ body.noscroll {
     line-height: 33px;
     padding: 50px;
     box-sizing: border-box; }
-  .ns-lmld-2016 .project-container .go-back {
+  .project-container .go-back {
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 1px;

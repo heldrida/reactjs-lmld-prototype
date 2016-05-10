@@ -1,16 +1,11 @@
-.ns-lmld-2016 {
-
-	footer {
-		width: 100%;
-		height: auto;
-		background-color: $darkGrey;
-		padding: 20px;
-		text-align: center;
-		margin-top: 70px;
-
-		.get-updates {
-			margin-top: 60px;
-		}
-	}
-
+footer {
+  width: 100%;
+  height: auto;
+  background-color: $darkGrey;
+  padding: 20px;
+  text-align: center;
+  margin-top: 70px;
+  .get-updates {
+    margin-top: 60px;
+  }
 }

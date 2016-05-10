@@ -1,0 +1,46 @@
+header {
+  &.menu-open {
+    .menu {
+      width: 100vw;
+      height: 100vh;
+      transition: all 0.8s ease;
+    }
+  }
+  &.menu-close {
+    .menu {
+      width: 0vw;
+      height: 0vh;
+      transition: all 0.6s ease;
+    }
+  }
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0vw;
+    height: 0vh;
+    overflow: hidden;
+    .container {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #1F1F1F;
+    }
+    nav {
+      position: absolute;
+      bottom: 80px;
+      left: 80px;
+      a {
+        color: #fff;
+        font-family: 'Larsseit';
+        text-decoration: none;
+        display: block;
+        font-size: 40px;
+        line-height: 66px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

@@ -1,123 +1,115 @@
-.ns-lmld-2016 {
-
-	.lg-bg {
-		.logo-container {
-			cursor: pointer;
-			.title {
-				visibility: hidden;
-			}
-		}
-		header {
-			&:after {
-				opacity: 1 !important;
-			}
-		}
-	}
-
-	.home {
-		header {
-			.logo-container {
-				opacity: 0;
-			}
-		}
-	}
-
-	header {
-		width: calc(100% - 120px);
-		position: fixed;
-		z-index: 9999;
-		background-color: transparent;
-		top: 0;
-		left: 0;
-		padding: 20px 60px 20px;
-		&.bg {
-			background-color: rgba(255, 255, 255, 0.95);
-		}
-
-		.col {
-			vertical-align: middle;
-			width: 50%;
-			display: inline-block;
-		}
-		.col-r {
-			text-align: right;
-		}
-		.logo-container {
-
-		}
-	}
-
-	.logo-container {
-		display: inline-block;
-		width: auto;
-		height: auto;
-		overflow: hidden;
-
-		.images {
-			width: 180px;
-			height: 52px;
-			display: inline-block;
-			position: relative;
-
-			img {
-				position: absolute;
-			}
-			.signature {
-				top: 0;
-				left: 0;
-			}
-			.abstract {
-				top: 0;
-				right: 0;
-			}
-		}
-		.title {
-			font-family: 'Larsseit';
-			font-size: 16px;
-			color: #888888;
-			letter-spacing: 1.77px;
-			text-transform: uppercase;
-		}
-	}
-
-	.content {
-		.logo-container {
-			padding-top: 20px;
-		}
-	}
-
-	.top-block-particle {
-		background-color: $yellow;
-		width: auto;
-		height: 314px;
-	}
-
-  .tr-menu {
-    display: inline-block;
-    vertical-align: middle;
-    width: 25px;
-    height: 20px;
+.lg-bg {
+  .logo-container {
     cursor: pointer;
-    transition: all 0.1s;
-
-    span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      margin: 5px 0;
-      background-color: #E4E4E4;
-      transition: all 0.1s;
-      pointer-events: none;
+    .title {
+      visibility: hidden;
     }
-    &:hover {
-      @include transform(translateY(-2px));
-      position: relative;
-      span {
-        &:nth-child(2) {
-          margin: 7px 0;
-        }
+  }
+  header {
+    &:after {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.home {
+  header {
+    .logo-container {
+      opacity: 0;
+    }
+  }
+}
+
+header {
+  width: calc(100% - 120px);
+  position: fixed;
+  z-index: 9999;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  padding: 20px 60px 20px;
+  &.bg {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .col {
+    vertical-align: middle;
+    width: 50%;
+    display: inline-block;
+  }
+  .col-r {
+    text-align: right;
+  }
+  .logo-container {}
+}
+
+.logo-container {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  .images {
+    width: 180px;
+    height: 52px;
+    display: inline-block;
+    position: relative;
+    img {
+      position: absolute;
+    }
+    .signature {
+      top: 0;
+      left: 0;
+    }
+    .abstract {
+      top: 0;
+      right: 0;
+    }
+  }
+  .title {
+    font-family: 'Larsseit';
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 1.77px;
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  .logo-container {
+    padding-top: 20px;
+  }
+}
+
+.top-block-particle {
+  background-color: $yellow;
+  width: auto;
+  height: 314px;
+}
+
+.tr-menu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+  position: relative;
+  z-index: 1000;
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #E4E4E4;
+    transition: all 0.1s;
+    pointer-events: none;
+  }
+  &:hover {
+    @include transform(translateY(-2px));
+    position: relative;
+    span {
+      &:nth-child(2) {
+        margin: 7px 0;
       }
     }
   }
-
 }
