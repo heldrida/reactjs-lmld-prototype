@@ -3,25 +3,20 @@
   height: 410px;
   position: relative;
   z-index: 1;
-  margin: 70px 0 0 0;
+  margin-bottom: 50px;
   text-align: left;
   .block {
-    width: 500px;
+    width: 60%;
     height: 328px;
     position: relative;
     display: inline-block;
     .content {
-      width: inherit;
+      width: 100%;
       height: inherit;
       position: absolute;
       z-index: 1;
       overflow-y: auto;
       overflow-x: hidden;
-    }
-  }
-  &.case-study-2 {
-    .block {
-      left: calc(100% - 500px);
     }
   }
   .title-container {

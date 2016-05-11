@@ -31,36 +31,49 @@ class Projects extends React.Component {
 		const homeBlockList = [{
 			location: this.props.location,
 			innerComponent: {
-				className: 'case-study-1',
+				className: 'thumb1',
 				component: ProjectField
 			},
 			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),
 			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
 			title: 'field',
-			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			description: 'Digital Identity',
 			align: 'left'
 		}, {
 			location: this.props.location,
 			innerComponent: {
-				className: 'case-study-2',
+				className: 'thumb2',
 				component: ProjectFloom
 			},
 			urlHash: 'floom',
 			setNoScroll: this.props.setNoScroll.bind(this),
 			posterImg: require('../../src/images/case-study/case-study-2.jpg'),
 			title: 'floom',
-			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			description: 'Digital Identity',
 			align: 'right'
+		}, {
+			location: this.props.location,
+			innerComponent: {
+				className: 'thumb3',
+				component: ProjectField
+			},
+			urlHash: 'field',
+			setNoScroll: this.props.setNoScroll.bind(this),
+			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
+			title: 'field',
+			description: 'Digital Identity',
+			align: 'left'
 		}];
 
 		return (
-			<div>
-				<h2>PROJECTS:</h2>
-				{homeBlockList.map((obj, key) =>
-					<ProjectsThumbnail key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
-								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
-				)}
+			<div className='projects-content'>
+				<div className='wrapper'>
+					{homeBlockList.map((obj, key) =>
+						<ProjectsThumbnail key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
+									posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
+					)}
+				</div>
 			</div>
 		);
 

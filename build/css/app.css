@@ -359,7 +359,7 @@ header .menu {
   height: 410px;
   position: relative;
   z-index: 1;
-  margin: 70px 0 0 0;
+  margin-bottom: 50px;
   text-align: left; }
   .thumbnail .block {
     width: 500px;
@@ -373,8 +373,6 @@ header .menu {
       z-index: 1;
       overflow-y: auto;
       overflow-x: hidden; }
-  .thumbnail.case-study-2 .block {
-    left: calc(100% - 500px); }
   .thumbnail .title-container {
     position: absolute;
     top: 360px;
