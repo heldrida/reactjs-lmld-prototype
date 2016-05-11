@@ -457,7 +457,9 @@ header .menu {
     .content .home-content .wrapper .yellow-hello {
       width: calc(100% - 80px); }
   .content .thumbnail .block {
-    width: 80%; } }
+    width: 80%; }
+    .content .thumbnail .block .title-container {
+      font-size: 20px; } }
 
 .home-content .wrapper {
   padding-left: 60px;
