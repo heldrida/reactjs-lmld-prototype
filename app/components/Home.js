@@ -14,6 +14,21 @@ class Home extends React.Component {
 		super(props);
 	}
 
+	componentDidMount() {
+		this.homeLogo = document.querySelector('.logo-home');
+		this.yellowHello = document.querySelector('.yellow-hello');
+
+		this.noLagOnMobile();
+	}
+
+	noLagOnMobile() {
+		let x = window.innerHeight;
+		let size1 = x * 0.6 + 'px';
+		let size2 = x * 0.7 + 'px';
+		this.homeLogo.style.height = size1;
+		this.yellowHello.style.height = size2;
+	}
+
 	render() {
 
 		// Home block list data

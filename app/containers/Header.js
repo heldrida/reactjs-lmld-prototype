@@ -9,21 +9,21 @@ class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-		  menuOpen: false
+		menuOpen: false
 		};
 	}
 
 	componentDidMount() {
-	  this.menu = document.querySelector('.menu');
-	  this.container = document.querySelector('.menu .container');
+		this.menu = document.querySelector('.menu');
+		this.container = document.querySelector('.menu .container');
 	}
 
-  menuClick(event) {
+  menuClick() {
     this.setState({
-    	menuOpen: !this.state.menuOpen
+			menuOpen: !this.state.menuOpen
     });
     if (this.menu.classList.contains('close')) {
-		  window.TweenLite.to(this.container, 1, { css: { display: 'block' } });
+			window.TweenLite.to(this.container, 1, { css: { display: 'block' } });
 		} else {
 			window.TweenLite.to(this.container, 1, { css: { display: 'none' } });
 		}
