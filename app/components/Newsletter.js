@@ -9,8 +9,14 @@ class Newsletter extends React.Component {
 	}
 
 	render () {
+
+		const icon = require('../../src/images/newsletter.svg?234');
+
 		return (
 			<div className="updates">
+				<div className='icon'>
+					<img src={icon} />
+				</div>
 				<div className='title'>Get updates on our latest project</div>
 				<div className='form'>
 					<form action="getform.php" method="get">

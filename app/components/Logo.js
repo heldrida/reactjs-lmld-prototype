@@ -10,8 +10,8 @@ class LogoContainer extends React.Component {
 
 	render() {
 
-		const topLogoSignature = require('../../src/images/top-logo-signature.svg');
-		const topLogoAbstract = require('../../src/images/top-logo-abstract.svg');
+		const topLogoSignature = require('../../src/images/top-logo-signature.svg?1234');
+		const topLogoAbstract = require('../../src/images/top-logo-abstract.svg?12');
 
 		return (
 			<div className={'logo-container'} onClick={this.props.hideMainContentHandler}>

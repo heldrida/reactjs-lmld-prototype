@@ -9,6 +9,7 @@ module.exports = {
 		'./app/index.js'
 	],
 	output: {
+		publicPath: "http://localhost:8888/",
 		path: __dirname + '/build',
 		filename: "index_bundle.js"
 	},
