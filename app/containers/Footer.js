@@ -1,8 +1,7 @@
 'use strict';
 
 import React from 'react';
-
-import NewsletterSubscribe from '../components/NewsletterSubscribe.js';
+import Newsletter from '../components/Newsletter.js';
 
 class Footer extends React.Component {
 
@@ -13,14 +12,31 @@ class Footer extends React.Component {
 	render() {
 
 		return (
-			<div>
-				<footer>
-					<div className={'get-updates'}>
-						<h6>Get updates from our latest projects</h6>
-						<NewsletterSubscribe />
+			<footer>
+				<div className={'get-updates'}>
+					<Newsletter />
+				</div>
+				<div className='links'>
+					<div className='left'>
+						<nav>
+							<a href="#">Work</a>
+							<a href="#">About Us</a>
+							<a href="#">Join Us</a>
+						</nav>
+						<div className='bottom'>
+							<a href="#">F</a>
+							<a href="#">T</a>
+							<a href="#">In</a>
+						</div>
 					</div>
-				</footer>
-			</div>
+					<div className='right'>
+						<div className='bottom'>
+							81 Curtain Road, Unit H - EC2A 3AG London<br />
+							07534117755 - Google Maps
+						</div>
+					</div>
+				</div>
+			</footer>
 		);
 
 	}

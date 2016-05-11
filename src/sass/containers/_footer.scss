@@ -1,10 +1,59 @@
 footer {
-  width: 100%;
   height: auto;
   background-color: $darkGrey;
-  padding: 20px;
-  text-align: center;
+  padding: 60px 60px 100px 60px;
+  color: #fff;
   .get-updates {
-    margin-top: 60px;
+    padding-top: 60px;
+  }
+  .links {
+    font-family: 'Larsseit';
+    font-size: 0;
+    display: inline-block;
+    width: 100%;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+    }
+    .left {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      width: 54%;
+      margin-right: 4%;
+      nav {
+        display: block;
+        height: 20px;
+      }
+      a {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        font-weight: 100;
+        margin-right: 40px;
+      }
+      .bottom {
+        border-top: 2px solid #3E3E3E;
+        margin-top: 30px;
+        padding-top: 30px;
+        a {
+          font-size: 30px;
+        }
+      }
+    }
+    .right {
+      display: inline-block;
+      vertical-align: top;
+      width: 42%;
+      font-size: 14px;
+      .bottom {
+        border-top: 2px solid #3E3E3E;
+        margin-top: 50px;
+        padding-top: 30px;
+        font-weight: 100;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+      }
+    }
   }
 }

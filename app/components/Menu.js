@@ -37,8 +37,8 @@ class Menu extends React.Component {
       <div className={'container'}>
         <nav>
           <a href='#/projects' onClick={this.props.menuClick}>Work</a>
-          <a href='#'>About Us</a>
-          <a href='#'>Join the team</a>
+          <a href='#/about-us' onClick={this.props.menuClick}>About Us</a>
+          <a href='#/jobs' onClick={this.props.menuClick}>Join the team</a>
         </nav>
         <div className={'triangle1'}></div>
         <div className={'triangle2'}></div>

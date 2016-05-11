@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-class NewsletterSubscribe extends React.Component {
+class Newsletter extends React.Component {
 
 	constructor (props) {
 		super(props);
@@ -25,4 +25,4 @@ class NewsletterSubscribe extends React.Component {
 
 }
 
-export default NewsletterSubscribe;
+export default Newsletter;

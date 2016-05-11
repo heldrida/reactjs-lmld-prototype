@@ -176,7 +176,7 @@ class Thumbnail extends React.Component {
 		// Initialise the timeline if not declared yet to cache it
 		if (!this.timeline) {
 
-			let c = document.querySelector('.content');
+			let c = document.querySelector('.wrapper');
 			let offset = window.getComputedStyle(c, null).getPropertyValue('margin-left');
 			offset = parseInt(offset, 0);
 

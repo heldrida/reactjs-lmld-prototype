@@ -168,8 +168,7 @@ footer {
   height: auto;
   background-color: #1E1E1E;
   padding: 20px;
-  text-align: center;
-  margin-top: 70px; }
+  text-align: center; }
   footer .get-updates {
     margin-top: 60px; }
 
@@ -316,6 +315,40 @@ header .menu {
     .newsletter-subscribe form input[type="submit"]:hover {
       opacity: 0.9; }
 
+.thumbnail {
+  width: 100%;
+  height: 410px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+  text-align: left; }
+  .thumbnail .block {
+    width: 60%;
+    height: 328px;
+    position: relative;
+    display: inline-block; }
+    .thumbnail .block .content {
+      width: 100%;
+      height: inherit;
+      position: absolute;
+      z-index: 1;
+      overflow-y: auto;
+      overflow-x: hidden; }
+  .thumbnail .title-container {
+    position: absolute;
+    top: 360px;
+    left: 0;
+    font-family: 'Larsseit';
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: 100; }
+    .thumbnail .title-container h4 {
+      color: #000;
+      display: inline; }
+    .thumbnail .title-container p {
+      color: #807F7F;
+      display: inline; }
+
 .home-content .wrapper {
   margin-left: 60px;
   margin-right: 60px; }
@@ -333,6 +366,11 @@ header .menu {
     width: 100%;
     background-color: #FFD000;
     height: 40vh; }
+
+.home-content .projects {
+  margin-top: 80px; }
+  .home-content .projects .thumb2 {
+    text-align: right; }
 
 .home-content .studio {
   background-color: #1E1E1E;
@@ -353,40 +391,6 @@ header .menu {
   .home-content .studio .studio2 {
     display: block;
     width: 60%; }
-
-.thumbnail {
-  width: 100%;
-  height: 410px;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 50px;
-  text-align: left; }
-  .thumbnail .block {
-    width: 500px;
-    height: 328px;
-    position: relative;
-    display: inline-block; }
-    .thumbnail .block .content {
-      width: inherit;
-      height: inherit;
-      position: absolute;
-      z-index: 1;
-      overflow-y: auto;
-      overflow-x: hidden; }
-  .thumbnail .title-container {
-    position: absolute;
-    top: 360px;
-    left: 0;
-    font-family: 'Larsseit';
-    font-size: 24px;
-    letter-spacing: 1.5px;
-    font-weight: 100; }
-    .thumbnail .title-container h4 {
-      color: #000;
-      display: inline; }
-    .thumbnail .title-container p {
-      color: #807F7F;
-      display: inline; }
 
 .project-container {
   width: 100%;
@@ -413,3 +417,23 @@ header .menu {
     top: 0;
     right: 0;
     padding: 20px; }
+
+.projects-content {
+  margin-top: 30vh; }
+  .projects-content .wrapper {
+    margin-left: 60px;
+    margin-right: 60px; }
+
+.about-us-content {
+  margin-top: 30vh;
+  margin-bottom: 60px; }
+  .about-us-content .wrapper {
+    margin-left: 60px;
+    margin-right: 60px; }
+
+.jobs-content {
+  margin-top: 30vh;
+  margin-bottom: 60px; }
+  .jobs-content .wrapper {
+    margin-left: 60px;
+    margin-right: 60px; }

@@ -6,6 +6,8 @@ import { createHashHistory } from 'history';
 import Main from '../components/Main';
 import Home from '../components/Home';
 import Projects from '../components/Projects';
+import AboutUs from '../components/AboutUs';
+import Jobs from '../components/Jobs';
 
 const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -16,6 +18,8 @@ const routes = (
 			<Route path='/projects' component={Projects}>
 				<Route path=":name" component={Projects} />
 			</Route>
+      <Route path='/about-us' component={AboutUs} />
+      <Route path='/jobs' component={Jobs} />
 		</Route>
 	</Router>
 );
