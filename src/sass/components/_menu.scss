@@ -7,7 +7,7 @@ header {
     height: 0vh;
     overflow: hidden;
     .container {
-      position: fixed;
+      position: absolute;
       right: 0;
       top: 0;
       width: 100vw;
@@ -18,6 +18,7 @@ header {
       position: absolute;
       bottom: 80px;
       left: 80px;
+      z-index: 3;
       a {
         color: #fff;
         font-family: 'Larsseit';
@@ -37,23 +38,23 @@ header {
       height: 0;
       border: solid;
       border-color: transparent transparent #3D3D3D #3D3D3D;
-      z-index: -2;
+      z-index: 1;
     }
     .triangle2 {
       right: 1px;
       border-color: transparent transparent #1F1F1F #1F1F1F;
-      z-index: -1;
+      z-index: 2;
     }
     &.open {
       width: 100vw;
       height: 100vh;
-      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
       .container {}
     }
     &.close {
       width: 0vw;
       height: 0vh;
-      transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
   }
 }

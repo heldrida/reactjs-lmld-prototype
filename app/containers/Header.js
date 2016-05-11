@@ -30,7 +30,7 @@ class Header extends React.Component {
   }
 
 	render() {
-		const text = this.state.menuOpen ? 'menu open' : 'menu close';
+		let text = this.state.menuOpen ? 'menu open' : 'menu close';
 		return (
 			<header>
 				<div className={'col col-l'}>
@@ -44,7 +44,7 @@ class Header extends React.Component {
 					</div>
 				</div>
 				<div className={text}>
-					<Menu />
+					<Menu menuClick={this.menuClick.bind(this)} />
 				</div>
 			</header>
 		);
