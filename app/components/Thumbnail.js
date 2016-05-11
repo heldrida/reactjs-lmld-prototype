@@ -3,7 +3,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-class HomeBlock extends React.Component {
+class Thumbnail extends React.Component {
 
 	constructor(props) {
 
@@ -406,4 +406,4 @@ class HomeBlock extends React.Component {
 
 }
 
-export default HomeBlock;
+export default Thumbnail;

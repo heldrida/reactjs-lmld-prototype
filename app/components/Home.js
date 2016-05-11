@@ -3,7 +3,7 @@
 import React from 'react';
 import LogoHome from '../components/home/LogoHome';
 import YellowHello from '../components/home/YellowHello';
-import HomeBlock from '../components/home/ProjectsHome';
+import Thumbnail from '../components/Thumbnail';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO';
 import ProjectFloom from '../components/projects/ProjectFloom';
 import Studio from '../components/home/Studio';
@@ -64,7 +64,7 @@ class Home extends React.Component {
 					<YellowHello />
 					<div className={'projects'}>
 					{homeBlockList.map((obj, key) =>
-						<HomeBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
+						<Thumbnail key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 									posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
 					)}
 					</div>

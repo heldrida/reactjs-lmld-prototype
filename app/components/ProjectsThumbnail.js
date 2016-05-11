@@ -2,9 +2,9 @@
 
 import React from 'react';
 import _ from 'lodash';
-import HomeBlock from '../components/home/ProjectsHome';
+import ProjectBlock from '../components/Thumbnail';
 
-class ProjectBlock extends HomeBlock {
+class ProjectsThumbnail extends ProjectBlock {
 
 	constructor(props) {
 
@@ -33,4 +33,4 @@ class ProjectBlock extends HomeBlock {
 
 }
 
-export default ProjectBlock;
+export default ProjectsThumbnail;

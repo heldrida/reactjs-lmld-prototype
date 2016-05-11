@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ProjectBlock from '../components/ProjectBlock';
+import ProjectsThumbnail from '../components/ProjectsThumbnail';
 import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 
@@ -84,7 +84,7 @@ class Projects extends React.Component {
 			<div>
 				<h2>PROJECTS:</h2>
 				{homeBlockList.map((obj, key) =>
-					<ProjectBlock key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
+					<ProjectsThumbnail key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
 								posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
 				)}
 			</div>
