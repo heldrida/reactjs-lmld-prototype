@@ -50,15 +50,22 @@ class Main extends React.Component {
 	 */
 	hideMainContentHandler() {
 
-		if (this.isHome() !== 'home') {
+		const goHomeAction = () => {
 
 			this.timelineHideMainContent = this.generateTimelineHideMainContent();
 
 			this.timelineHideMainContent.play();
 
+		};
+
+		if (this.isHome() !== 'home') {
+
+			goHomeAction();
+
 		} else if (this.isHome() === 'home' && window.location.hash.indexOf('projects') > -1) {
 
-			window.alert('todo: close active block element differently from the logo go back action, as this is home;');
+				//window.alert('todo: close active block element differently from the logo go back action, as this is home;');
+				goHomeAction();
 
 		}
 

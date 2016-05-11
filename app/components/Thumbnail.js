@@ -116,7 +116,7 @@ class Thumbnail extends React.Component {
 
 		if (this.state.open) {
 
-			this.closeBlock();
+			//this.closeBlock();
 
 		} else {
 
