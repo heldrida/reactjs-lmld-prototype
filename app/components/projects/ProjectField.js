@@ -20,7 +20,7 @@ class ProjectField extends React.Component {
 	render() {
 
 		return (
-			<div className={'project-container' + ' ' + 'project-field-io'}>
+			<div className={'project-container' + ' ' + 'project-field'}>
 				<div className={'poster'} style={this.posterStyle}></div>
 				<div className={'content'}>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
