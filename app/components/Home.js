@@ -58,10 +58,11 @@ class Home extends React.Component {
 		return (
 			<div className='home-content'>
 				<div className='wrapper'>
+					<div className='trigger1'></div>
 					<div className='logo-home'>
 						<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					</div>
-					<YellowHello />
+					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					<div className={'projects'}>
 					{homeBlockList.map((obj, key) =>
 						<Thumbnail key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}

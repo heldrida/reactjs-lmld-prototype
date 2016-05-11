@@ -33,18 +33,20 @@ class Header extends React.Component {
 		let text = this.state.menuOpen ? 'menu open' : 'menu close';
 		return (
 			<header>
-				<div className={'col col-l'}>
-					<Logo hideMainContentHandler={this.props.hideMainContentHandler} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
-				</div>
-				<div className={'col col-r'}>
-					<div className={'tr-menu'} onClick={this.menuClick.bind(this)}>
-						<span></span>
-						<span></span>
-						<span></span>
+				<div className='wrapper'>
+					<div className={'col col-l'}>
+						<Logo hideMainContentHandler={this.props.hideMainContentHandler} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					</div>
-				</div>
-				<div className={text}>
-					<Menu menuClick={this.menuClick.bind(this)} />
+					<div className={'col col-r'}>
+						<div className={'tr-menu'} onClick={this.menuClick.bind(this)}>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div className={text}>
+						<Menu menuClick={this.menuClick.bind(this)} />
+					</div>
 				</div>
 			</header>
 		);

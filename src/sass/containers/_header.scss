@@ -1,14 +1,25 @@
-.lg-bg {
-  .logo-container {
-    cursor: pointer;
-    .title {
-      visibility: hidden;
+header {
+  width: calc(100% - 120px);
+  position: fixed;
+  z-index: 9999;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  padding: 20px 60px 20px;
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    .col {
+      vertical-align: middle;
+      width: 50%;
+      display: inline-block;
+    }
+    .col-r {
+      text-align: right;
     }
   }
-  header {
-    &:after {
-      opacity: 1 !important;
-    }
+  &.bg {
+    background-color: rgba(255, 255, 255, 0.95);
   }
 }
 
@@ -18,28 +29,6 @@
       opacity: 0;
     }
   }
-}
-
-header {
-  width: calc(100% - 120px);
-  position: fixed;
-  z-index: 9999;
-  background-color: transparent;
-  top: 0;
-  left: 0;
-  padding: 20px 60px 20px;
-  &.bg {
-    background-color: rgba(255, 255, 255, 0.95);
-  }
-  .col {
-    vertical-align: middle;
-    width: 50%;
-    display: inline-block;
-  }
-  .col-r {
-    text-align: right;
-  }
-  .logo-container {}
 }
 
 .logo-container {

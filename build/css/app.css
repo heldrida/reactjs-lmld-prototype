@@ -102,17 +102,6 @@ h6 {
   letter-spacing: 2px;
   line-height: 38px; }
 
-.lg-bg .logo-container {
-  cursor: pointer; }
-  .lg-bg .logo-container .title {
-    visibility: hidden; }
-
-.lg-bg header:after {
-  opacity: 1 !important; }
-
-.home header .logo-container {
-  opacity: 0; }
-
 header {
   width: calc(100% - 120px);
   position: fixed;
@@ -121,14 +110,20 @@ header {
   top: 0;
   left: 0;
   padding: 20px 60px 20px; }
+  header .wrapper {
+    max-width: 1200px;
+    margin: 0 auto; }
+    header .wrapper .col {
+      vertical-align: middle;
+      width: 50%;
+      display: inline-block; }
+    header .wrapper .col-r {
+      text-align: right; }
   header.bg {
     background-color: rgba(255, 255, 255, 0.95); }
-  header .col {
-    vertical-align: middle;
-    width: 50%;
-    display: inline-block; }
-  header .col-r {
-    text-align: right; }
+
+.home header .logo-container {
+  opacity: 0; }
 
 .logo-container {
   display: inline-block;
@@ -443,9 +438,21 @@ header .menu {
       color: #807F7F;
       display: inline; }
 
+@media screen and (max-width: 600px) {
+  header .menu .container nav {
+    left: 40px;
+    bottom: 40px; }
+    header .menu .container nav a {
+      font-size: 26px;
+      line-height: 50px;
+      font-weight: 100;
+      letter-spacing: 2px; } }
+
 .home-content .wrapper {
-  margin-left: 60px;
-  margin-right: 60px; }
+  padding-left: 60px;
+  padding-right: 60px;
+  margin: 0 auto;
+  max-width: 1200px; }
   .home-content .wrapper .logo-home {
     height: 60vh;
     vertical-align: bottom; }
@@ -457,12 +464,18 @@ header .menu {
     .home-content .wrapper .logo-home .logo-container {
       margin-bottom: 60px; }
   .home-content .wrapper .yellow-hello {
-    width: 100%;
-    background-color: #FFD000;
-    height: 40vh; }
+    width: calc(100% - 120px);
+    max-width: 1200px;
+    height: 60vh;
+    position: fixed;
+    z-index: 10; }
+    .home-content .wrapper .yellow-hello .block {
+      background-color: #FFD000;
+      width: 100%;
+      height: 100%; }
 
 .home-content .projects {
-  margin-top: 80px; }
+  margin-top: 280px; }
   .home-content .projects .thumb2 {
     text-align: right; }
 
