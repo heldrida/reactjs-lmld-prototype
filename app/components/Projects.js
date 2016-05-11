@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ProjectsThumbnail from '../components/ProjectsThumbnail';
-import ProjectFieldIO from '../components/projects/ProjectFieldIO.js';
+import ProjectField from '../components/projects/ProjectField.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 
 class Projects extends React.Component {
@@ -16,49 +16,23 @@ class Projects extends React.Component {
 	}
 
 	projectLoader() {
-
 		let $p;
-
 		switch(this.props.params.name) {
-
-			case 'floom':
-				$p = ProjectFloom;
-			break;
-
-			case 'field':
-				$p = ProjectFieldIO;
-			break;
-
-			default:
-				$p = false;
-
+			case 'floom': $p = ProjectFloom; break;
+			case 'field': $p = ProjectField; break;
+			default: $p = false;
 		}
-
 		return $p;
 	}
 
 	render() {
-		/*
-		return (
-			<div>
-
-				{ this.project ? (
-					<this.project />
-				  ) : (
-					<p>LIST HERE!</p>
-				  )
-				}
-
-			</div>
-		);
-		*/
 
 		// Home block list data
 		const homeBlockList = [{
 			location: this.props.location,
 			innerComponent: {
 				className: 'case-study-1',
-				component: ProjectFieldIO
+				component: ProjectField
 			},
 			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),

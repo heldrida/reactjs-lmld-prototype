@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class ProjectFieldIO extends React.Component {
+class ProjectField extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -40,4 +40,4 @@ class ProjectFieldIO extends React.Component {
 
 }
 
-export default ProjectFieldIO;
+export default ProjectField;

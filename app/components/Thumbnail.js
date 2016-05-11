@@ -21,7 +21,7 @@ class Thumbnail extends React.Component {
 
 		// The default element position
 		this.defaultPosition = {};
-
+		
 		this.timeline = false;
 
 		// Create Throttled versions to improve performance
@@ -43,10 +43,6 @@ class Thumbnail extends React.Component {
 
 	}
 
-	componentWillMount() {
-
-	}
-
 	componentDidMount() {
 
 		// Set the default position and everytime the browser resizes
@@ -57,17 +53,6 @@ class Thumbnail extends React.Component {
 
 		// Set event listeners
 		this.setEventListeners();
-
-	}
-
-	componentWillUnmount() {
-
-		// Remove event listeners
-
-	}
-
-	componentDidUpdate() {
-
 
 	}
 
@@ -142,9 +127,7 @@ class Thumbnail extends React.Component {
 			// get updated timeline with correct position
 			// the user may have scrolled
 			this.timeline = this.updateTimeline();
-
 			this.els.block.parentNode.style.zIndex = 999;
-
 			this.timeline.play();
 
 		}
@@ -197,10 +180,8 @@ class Thumbnail extends React.Component {
 			let offset = window.getComputedStyle(c, null).getPropertyValue('margin-left');
 			offset = parseInt(offset, 0);
 
-
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els.block);
-
 			this.headerBg = document.querySelector('header');
 			this.headerLogo = document.querySelector('header .logo-container');
 
@@ -246,9 +227,7 @@ class Thumbnail extends React.Component {
 			//timeline.to(this.els.title, 0.2, { css: { left: '100px' } });
 			//timeline.to(this.els.description, 0.2, { css: { left: '100px' } });
 			timeline.to(this.els.titleContainer, 0.3, { css: { opacity: 0 } });
-
 			timeline.fromTo(this.els.block, 0.2, cssBefore, cssAfter);
-
 			timeline.pause();
 
 		}
@@ -315,21 +294,13 @@ class Thumbnail extends React.Component {
 		// When handling case study requests, close if state open,
 		// then callback the case study request handler
 		if (this.state.open && e.oldURL && e.oldURL.indexOf('projects') > -1 && e.newURL && e.newURL.indexOf('projects') > -1) {
-
 			this.openBlock();
-
 		} else if(this.state.open && e.oldURL && e.oldURL.indexOf('projects') > -1) {
-
 			this.closeBlock();
-
 		} else if (this.state.open && e.newURL && e.newURL.indexOf('projects') > -1) {
-
 			this.openBlock();
-
 		} else if (!this.state.open && e.newURL && e.newURL.indexOf('projects') > -1) {
-
 			this.caseStudyRequestHandler();
-
 		}
 
 		return null;
@@ -352,13 +323,9 @@ class Thumbnail extends React.Component {
 		let zIndex = null;
 
 		if (this.state.open) {
-
 			zIndex = 999;
-
 		} else {
-
 			zIndex = null;
-
 		}
 
 		this.setState({
@@ -374,14 +341,11 @@ class Thumbnail extends React.Component {
 		let location = this.props.location;
 
 		if (location.pathname && location.pathname.indexOf('projects') > -1) {
-
 			let arr = location.pathname.split('/');
 			let name = arr[2];
-
 			if (this.props.urlHash === name) {
 				this.openBlock();
 			}
-
 		}
 
 	}
@@ -389,14 +353,15 @@ class Thumbnail extends React.Component {
 	render() {
 
 		return (
-			<div className={ (this.state.open ? 'open' : '') + ' ' + 'home-block' + ' ' + this.props.innerComponent.className + ' ' + (this.props.align === 'left' ? 'left' : 'right') }>
+			<div className={'thumbnail' + ' ' + this.props.innerComponent.className + ' ' + (this.state.open ? 'open' : '')}>
 				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
-						<div className={'title-container'} ref={this.setElement.bind(this, 'titleContainer')}>
-							<h4 ref={this.setElement.bind(this, 'title')}>{this.props.title}</h4>
-							<p ref={this.setElement.bind(this, 'description')} dangerouslySetInnerHTML={{__html:this.props.description}}></p>
-						</div>
 						<div className='content' style={this.posterStyle}>
 							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
+						</div>
+						<div className={'title-container'} ref={this.setElement.bind(this, 'titleContainer')}>
+							<h4 ref={this.setElement.bind(this, 'title')}>{this.props.title}</h4>
+							<span className='separator'> - </span>
+							<p ref={this.setElement.bind(this, 'description')} dangerouslySetInnerHTML={{__html:this.props.description}}></p>
 						</div>
 				</div>
 			</div>

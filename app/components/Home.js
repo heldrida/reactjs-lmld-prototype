@@ -4,7 +4,7 @@ import React from 'react';
 import LogoHome from '../components/home/LogoHome';
 import YellowHello from '../components/home/YellowHello';
 import Thumbnail from '../components/Thumbnail';
-import ProjectFieldIO from '../components/projects/ProjectFieldIO';
+import ProjectField from '../components/projects/ProjectField';
 import ProjectFloom from '../components/projects/ProjectFloom';
 import Studio from '../components/home/Studio';
 
@@ -20,38 +20,38 @@ class Home extends React.Component {
 		const homeBlockList = [{
 			location: this.props.location,
 			innerComponent: {
-				className: 'case-study-1',
-				component: ProjectFieldIO
+				className: 'thumb1',
+				component: ProjectField
 			},
 			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),
 			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
 			title: 'field',
-			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			description: 'Digital Identity',
 			align: 'left'
 		}, {
 			location: this.props.location,
 			innerComponent: {
-				className: 'case-study-2',
+				className: 'thumb2',
 				component: ProjectFloom
 			},
 			urlHash: 'floom',
 			setNoScroll: this.props.setNoScroll.bind(this),
 			posterImg: require('../../src/images/case-study/case-study-2.jpg'),
 			title: 'floom',
-			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			description: 'Digital Identity',
 			align: 'right'
 		}, {
 			location: this.props.location,
 			innerComponent: {
-				className: 'case-study-3',
-				component: ProjectFieldIO
+				className: 'thumb3',
+				component: ProjectField
 			},
 			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),
 			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
 			title: 'field',
-			description: 'We help ambitious brands get noticed,<br/>operating in the space between digital.',
+			description: 'Digital Identity',
 			align: 'left'
 		}];
 
