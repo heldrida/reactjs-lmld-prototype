@@ -439,14 +439,25 @@ header .menu {
       display: inline; }
 
 @media screen and (max-width: 600px) {
-  header .menu .container nav {
-    left: 40px;
-    bottom: 40px; }
-    header .menu .container nav a {
-      font-size: 26px;
-      line-height: 50px;
-      font-weight: 100;
-      letter-spacing: 2px; } }
+  header {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: calc(100% - 80px); }
+    header .menu .container nav {
+      left: 40px;
+      bottom: 40px; }
+      header .menu .container nav a {
+        font-size: 26px;
+        line-height: 50px;
+        font-weight: 100;
+        letter-spacing: 2px; }
+  .content .home-content .wrapper {
+    padding-left: 40px;
+    padding-right: 40px; }
+    .content .home-content .wrapper .yellow-hello {
+      width: calc(100% - 80px); }
+  .content .thumbnail .block {
+    width: 80%; } }
 
 .home-content .wrapper {
   padding-left: 60px;
