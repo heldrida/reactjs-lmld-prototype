@@ -7,6 +7,7 @@
     .logo-home {
       height: 60vh;
       vertical-align: bottom;
+      position: relative;
       &:before {
         content: '';
         height: 100%;

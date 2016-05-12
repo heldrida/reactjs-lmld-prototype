@@ -314,6 +314,34 @@ header .menu {
     height: 0vh;
     transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); }
 
+.home-shapes {
+  position: absolute;
+  position: absolute;
+  bottom: -60px;
+  right: 10%;
+  z-index: 11; }
+  .home-shapes .shape1 {
+    width: 160px;
+    height: 288px; }
+    .home-shapes .shape1 svg {
+      display: block;
+      position: absolute; }
+    .home-shapes .shape1 .shape1-1 {
+      top: 0;
+      left: 0; }
+    .home-shapes .shape1 .shape1-2 {
+      top: 25px;
+      left: 0; }
+    .home-shapes .shape1 .shape1-3 {
+      top: 50px;
+      left: 0; }
+    .home-shapes .shape1 .shape1-4 {
+      top: 90px;
+      left: 80px; }
+    .home-shapes .shape1 .shape1-5 {
+      top: 80px;
+      left: 120px; }
+
 .updates {
   background-color: #1E1E1E;
   width: 60%;
@@ -468,7 +496,8 @@ header .menu {
   max-width: 1200px; }
   .home-content .wrapper .logo-home {
     height: 60vh;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    position: relative; }
     .home-content .wrapper .logo-home:before {
       content: '';
       height: 100%;

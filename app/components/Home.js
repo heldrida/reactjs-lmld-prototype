@@ -3,6 +3,7 @@
 import React from 'react';
 import LogoHome from '../components/home/LogoHome';
 import YellowHello from '../components/home/YellowHello';
+import HomeShapes from '../components/home/Shapes';
 import Thumbnail from '../components/Thumbnail';
 import ProjectField from '../components/projects/ProjectField';
 import ProjectFloom from '../components/projects/ProjectFloom';
@@ -30,7 +31,6 @@ class Home extends React.Component {
 	}
 
 	render() {
-
 		// Home block list data
 		const homeBlockList = [{
 			location: this.props.location,
@@ -75,6 +75,7 @@ class Home extends React.Component {
 				<div className='wrapper'>
 					<div className='trigger1'></div>
 					<div className='logo-home'>
+						<HomeShapes addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 						<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					</div>
 					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />

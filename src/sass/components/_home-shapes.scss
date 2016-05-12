@@ -1,0 +1,35 @@
+.home-shapes {
+  position: absolute;
+  position: absolute;
+  bottom: -60px;
+  right: 10%;
+  z-index: 11;
+  .shape1 {
+    width: 160px;
+    height: 288px;
+    svg {
+      display: block;
+      position: absolute;
+    }
+    .shape1-1 {
+      top: 0;
+      left: 0;
+    }
+    .shape1-2 {
+      top: 25px;
+      left: 0;
+    }
+    .shape1-3 {
+      top: 50px;
+      left: 0;
+    }
+    .shape1-4 {
+      top: 90px;
+      left: 80px;
+    }
+    .shape1-5 {
+      top: 80px;
+      left: 120px;
+    }
+  }
+}
