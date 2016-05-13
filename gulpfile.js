@@ -6,6 +6,7 @@ var config = require('./config'),
 	webpack = require("webpack"),
 	webpackDevServer = require("webpack-dev-server"),
 	webpackConfig = require("./webpack.config.js"),
+	webpackConfigProduction = require("./webpack.config.production.js"),
 	gutil = require('gulp-util'),
 	inject = require('gulp-inject'),
 	DiffDeployer = require('ftp-diff-deployer');
@@ -27,7 +28,7 @@ gulp.task('images', function () {
 
 gulp.task("webpack:build", ['images'], function(callback) {
 	// modify some webpack config options
-	var myConfig = Object.create(webpackConfig);
+	var myConfig = Object.create(webpackConfigProduction);
 	myConfig.plugins = myConfig.plugins.concat(
 		new webpack.DefinePlugin({
 			"process.env": {
