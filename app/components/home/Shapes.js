@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import '../../../src/js/gsap/plugins/DrawSVGPlugin.min.js';
 
 class HomeShapes extends React.Component {
 
