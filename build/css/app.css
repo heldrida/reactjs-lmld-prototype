@@ -342,6 +342,8 @@ header .menu {
     .home-shapes .shape1 .shape1-5 {
       top: 60px;
       left: 140px; }
+    .home-shapes .shape1 .shape1-6 {
+      display: none; }
 
 .updates {
   background-color: #1E1E1E;
@@ -474,7 +476,7 @@ header .menu {
     width: calc(100% - 80px); }
     header .menu .container nav {
       left: 40px;
-      bottom: 40px; }
+      bottom: 100px; }
       header .menu .container nav a {
         font-size: 26px;
         line-height: 50px;
@@ -483,6 +485,20 @@ header .menu {
   .content .home-content .wrapper {
     padding-left: 40px;
     padding-right: 40px; }
+    .content .home-content .wrapper .home-shapes {
+      bottom: 50px;
+      width: 180px;
+      right: -40px; }
+      .content .home-content .wrapper .home-shapes .shape1 {
+        width: 180px; }
+        .content .home-content .wrapper .home-shapes .shape1 .shape1-4 {
+          display: none; }
+        .content .home-content .wrapper .home-shapes .shape1 .shape1-5 {
+          top: 52px;
+          left: 110px; }
+        .content .home-content .wrapper .home-shapes .shape1 .shape1-6 {
+          display: block;
+          top: 90px; }
     .content .home-content .wrapper .yellow-hello {
       width: calc(100% - 80px); }
   .content .thumbnail .block {

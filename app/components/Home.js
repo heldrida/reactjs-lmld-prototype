@@ -24,10 +24,12 @@ class Home extends React.Component {
 
 	noLagOnMobile() {
 		let x = window.innerHeight;
-		let size1 = x * 0.6 + 'px';
+		let size1 = x * 0.8 + 'px';
 		let size2 = x * 0.7 + 'px';
-		this.homeLogo.style.height = size1;
-		this.yellowHello.style.height = size2;
+		if ((window.innerWidth < 600)) {
+      this.homeLogo.style.height = size1;
+			this.yellowHello.style.height = size2;
+    }
 	}
 
 	render() {

@@ -9,7 +9,7 @@
       .container {
         nav {
           left: 40px;
-          bottom: 40px;
+          bottom: 100px;
           a {
             font-size: 26px;
             line-height: 50px;
@@ -25,6 +25,25 @@
       .wrapper {
         padding-left: 40px;
         padding-right: 40px;
+        .home-shapes {
+          bottom: 50px;
+          width: 180px;
+          right: -40px;
+          .shape1 {
+            width: 180px;
+            .shape1-4 {
+              display: none;
+            }
+            .shape1-5 {
+              top: 52px;
+              left: 110px;
+            }
+            .shape1-6 {
+              display: block;
+              top: 90px;
+            }
+          }
+        }
         .yellow-hello {
           width: calc(100% - 80px);
         }
