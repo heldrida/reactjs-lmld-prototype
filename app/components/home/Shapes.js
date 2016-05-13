@@ -17,21 +17,11 @@ class HomeShapes extends React.Component {
     this.shape1part5 = document.querySelector('.shape1-5');
     this.shape1part6 = document.querySelector('.shape1-6 line');
 
-    // initialise the scroll magic
-    // todo: move this to ES6 module `import`
-    // currently injected on the html index file
-    this.createScrollMagicScenes();
+    this.shapeAnimation();
 
   }
 
-  componentWillUnmount() {
-    
-
-    // Destroy scroll magic scene instances
-    this.props.removeSceneFromScrollMagicController('homeShapes');
-  }
-
-  createScrollMagicScenes() {
+  shapeAnimation() {
 
     let tl = new window.TimelineMax({
       repeat: -1,
@@ -40,11 +30,10 @@ class HomeShapes extends React.Component {
       immediateRender: false,
       delay: 1
     });
-
     tl.set([this.shape1part4, this.shape1part6], { drawSVG: '0% 0%'});
     tl.set([this.shape1part1, this.shape1part2, this.shape1part3], { opacity: 0, y: -30 });
     tl.set(this.shape1part5, { width: 0, height: 0, opacity: 0 });
-
+    
     tl.to(this.shape1part1, 0.8, { opacity: 1, y: 0, ease: Elastic.easeOut.config(1, 0.3) });
     tl.to(this.shape1part2, 0.8, { opacity: 1, y: 0, ease: Elastic.easeOut.config(1, 0.3) }, '-=0.6');
     tl.to(this.shape1part3, 0.8, { opacity: 1, y: 0, ease: Elastic.easeOut.config(1, 0.3) }, '-=0.6');
@@ -54,10 +43,7 @@ class HomeShapes extends React.Component {
       tl.to(this.shape1part4, 1.6, { drawSVG: '100% 0%', ease: Bounce.easeOut }, '-=1');
     }
     tl.to(this.shape1part5, 0.8, { width: 38, height: 38, left: '-=19', top: '+=20', opacity: 1, ease: Elastic.easeOut.config(1, 0.3), y: 0 }, '-=0.6');
-
-    setTimeout(() => {
-      this.props.addToScrollMagicController({ homeShapes: [tl] });
-    }, 0);
+  
   }
 
   render() {

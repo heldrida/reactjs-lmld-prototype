@@ -77,7 +77,7 @@ class Home extends React.Component {
 				<div className='wrapper'>
 					<div className='trigger1'></div>
 					<div className='logo-home'>
-						<HomeShapes addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+						<HomeShapes />
 						<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					</div>
 					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
