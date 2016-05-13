@@ -328,7 +328,8 @@ header .menu {
       position: absolute; }
     .home-shapes .shape1 .shape1-1 {
       top: 0;
-      left: 0; }
+      left: 0;
+      opacity: 0; }
     .home-shapes .shape1 .shape1-2 {
       top: 25px;
       left: 0; }
@@ -339,8 +340,8 @@ header .menu {
       top: 90px;
       left: 80px; }
     .home-shapes .shape1 .shape1-5 {
-      top: 80px;
-      left: 120px; }
+      top: 60px;
+      left: 140px; }
 
 .updates {
   background-color: #1E1E1E;
