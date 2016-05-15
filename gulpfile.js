@@ -94,7 +94,7 @@ gulp.task('deploy', ['webpack:build'], function () {
 			password: config.ftp.password
 		},
 		src: 'build',
-		dest: '/lamoulade_reactjs_v4',
+		dest: '/lm4',
 		memory: 'ftp-diff-deployer-memory-file.json',
 		exclude: ['node_modules']
 	});
