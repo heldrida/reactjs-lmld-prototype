@@ -8,14 +8,10 @@
       height: 60vh;
       vertical-align: bottom;
       position: relative;
-      &:before {
-        content: '';
-        height: 100%;
-        display: inline-block;
-        vertical-align: bottom;
-      }
       .logo-container {
         margin-bottom: 60px;
+        position: absolute;
+        bottom: 0;
       }
     }
     .yellow-hello {
