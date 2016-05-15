@@ -41,7 +41,7 @@ class YellowHello extends React.Component {
       tl.to(this.yellowHelloBlock, 0.6, { width: '60%', y: -60 });
     }
     tl.to(this.yellowHelloBlock, 0.6, { opacity: 0, y: 20 });
-    tl.set(this.yellowHello, { display: 'none' });
+    tl.set(this.yellowHello, { zIndex: -100 });
 
     // declare timeline to controller
     let sc1 = new window.ScrollMagic.Scene({
