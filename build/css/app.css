@@ -493,10 +493,30 @@ header .menu {
         height: 304px; }
     .content .home-content .wrapper .yellow-hello {
       width: calc(100% - 80px); }
+  .content .home-content .studio {
+    padding: 60px 30px 0 30px; }
+    .content .home-content .studio .text {
+      max-width: 80%;
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: 1.5px; }
+    .content .home-content .studio .studio1 {
+      margin-left: 0;
+      width: 100%; }
+    .content .home-content .studio .studio2 {
+      width: 100%;
+      margin-top: 30px; }
   .content .thumbnail .block {
     width: 80%; }
     .content .thumbnail .block .title-container {
-      font-size: 20px; } }
+      font-size: 20px; }
+  footer {
+    padding-left: 30px;
+    padding-right: 30px; }
+    footer .get-updates .updates {
+      width: 100%; }
+      footer .get-updates .updates .title {
+        font-size: 20px; } }
 
 .home-content .wrapper {
   padding-left: 60px;

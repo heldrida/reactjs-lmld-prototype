@@ -50,12 +50,52 @@
           width: calc(100% - 80px);
         }
       }
+      .studio {
+        padding: 60px 30px 0 30px;
+        .text {
+          max-width: 80%;
+          font-size: 20px;
+          line-height: 36px;
+          letter-spacing: 1.5px;
+        }
+        .studio1 {
+          margin-left: 0;
+          width: 100%;
+        }
+        .studio2 {
+          width: 100%;
+          margin-top: 30px;
+        }
+      }
     }
     .thumbnail {
       .block {
         width: 80%;
         .title-container {
           font-size: 20px;
+        }
+      }
+    }
+  }
+  footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 100px;
+    .get-updates {
+      .updates {
+        width: 100%;
+        .title {
+          font-size: 20px;
+          padding-top: 80px;
+          line-height: 28px;
+          margin: 0 40px;
+        }
+        .form {
+          width: 80%;
+          position: relative;
+          margin: 0 auto;
+          left: auto;
+          bottom: -30px;
         }
       }
     }
