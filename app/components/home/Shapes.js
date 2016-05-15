@@ -25,12 +25,11 @@ class HomeShapes extends React.Component {
     this.shape2part5 = document.querySelector('.shape2-5');
     this.shape2part6 = document.querySelector('.shape2-6');
 
+    // Launch Animation
     this.shapeAnimation();
-
   }
 
   shapeAnimation() {
-
     let tl = new window.TimelineMax({
       repeat: -1,
       paused: false,
@@ -103,7 +102,6 @@ class HomeShapes extends React.Component {
         </div>
       </div>
     );
-
   }
 
 }
