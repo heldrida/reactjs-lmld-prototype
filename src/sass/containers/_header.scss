@@ -6,6 +6,7 @@ header {
   top: 0;
   left: 0;
   padding: 20px 60px 20px;
+  background-color: rgba(255, 255, 255, 0.95);
   .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,9 +18,6 @@ header {
     .col-r {
       text-align: right;
     }
-  }
-  &.bg {
-    background-color: rgba(255, 255, 255, 0.95);
   }
 }
 

@@ -111,7 +111,8 @@ header {
   background-color: transparent;
   top: 0;
   left: 0;
-  padding: 20px 60px 20px; }
+  padding: 20px 60px 20px;
+  background-color: rgba(255, 255, 255, 0.95); }
   header .wrapper {
     max-width: 1200px;
     margin: 0 auto; }
@@ -121,8 +122,6 @@ header {
       display: inline-block; }
     header .wrapper .col-r {
       text-align: right; }
-  header.bg {
-    background-color: rgba(255, 255, 255, 0.95); }
 
 .home header .logo-container {
   opacity: 0; }
