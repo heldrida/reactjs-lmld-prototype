@@ -12,6 +12,8 @@ body {
     width: 100vw;
     height: auto;
     background: #fff;
+    position: relative;
+    z-index: 1;
     .back-block {
       display: none;
       background-color: $yellow;

@@ -1,8 +1,202 @@
 .about-us-content {
-  margin-top: 30vh;
+  margin-top: 260px;
   margin-bottom: 60px;
   .wrapper {
-    margin-left: 60px;
-    margin-right: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    .title {
+      display: inline-block;
+      position: relative;
+      h2 {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 3px;
+        line-height: 60px;
+        background-color: transparent;
+      }
+      p {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+        font-size: 17px;
+        line-height: 30px;
+        font-weight: 100;
+      }
+      &.title1 {
+        margin-bottom: 120px;
+        &:before {
+          content: '';
+          width: 250px;
+          height: 250px;
+          background-color: $yellow;
+          position: absolute;
+          top: -50px;
+          left: 20%;
+          z-index: -1;
+        }
+        h2 {
+          margin-bottom: 96px;
+        }
+      }
+      &.title2 {
+        margin-bottom: 60px;
+        &:before {
+          content: '';
+          width: 250px;
+          height: 250px;
+          background-color: $yellow;
+          position: absolute;
+          top: -50px;
+          left: 40%;
+          z-index: -1;
+          border-radius: 200px;
+        }
+        h2 {
+          margin-bottom: 96px;
+        }
+      }
+    }
+    .desc1 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 60px;
+      .col {
+        display: inline-block;
+        vertical-align: top;
+        width: calc( 50% - 40px );
+        margin-right: 40px;
+        h3 {
+          margin-bottom: 15px;
+        }
+        p {
+          margin-bottom: 20px;
+          max-width: 70%;
+        }
+        ul {
+          li {
+            font-size: 13px;
+            line-height: 34px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            &:before {
+              content: '';
+              display: block;
+              width: 10px;
+              height: 10px;
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 15px;
+            }
+          }
+        }
+        &.col1 {
+          li {
+            &:nth-child(1) {
+              &:before {
+                background-image: url('../images/about/icon1.png');
+                background-size: 10px 10px;
+              }
+            }
+            &:nth-child(2) {
+              &:before {
+                background-image: url('../images/about/icon2.png');
+                background-size: 10px 10px;
+              }
+            }
+            &:nth-child(3) {
+              &:before {
+                background-image: url('../images/about/icon3.png');
+                background-size: 10px 10px;
+              }
+            }
+          }
+        }
+        &.col2 {
+          li {
+            &:nth-child(1) {
+              &:before {
+                background-image: url('../images/about/icon4.png');
+                background-size: 10px 10px;
+              }
+            }
+            &:nth-child(2) {
+              &:before {
+                background-image: url('../images/about/icon5.png');
+                background-size: 10px 10px;
+              }
+            }
+            &:nth-child(3) {
+              &:before {
+                background-image: url('../images/about/icon6.png');
+                background-size: 10px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .desc2 {
+      .col {
+        display: inline-block;
+        vertical-align: top;
+        width: calc( 25% - 40px );
+        margin-right: 40px;
+        .img {
+          width: 83px;
+          height: 103px;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-bottom: 20px;background-position: center;
+        }
+        &.col1 {
+          .img {
+            background-image: url('../images/about/capability1.png');
+            background-size: 80px 81px;
+          }
+        }
+        &.col2 {
+          .img {
+            background-image: url('../images/about/capability2.png');
+            background-size: 64px 103px;
+          }
+        }
+        &.col3 {
+          .img {
+            background-image: url('../images/about/capability3.png');
+            background-size: 83px 103px;
+          }
+        }
+        &.col4 {
+          .img {
+            background-image: url('../images/about/capability4.png');
+            background-size: 78px 78px;
+          }
+        }
+      }
+    }
+    .desc1, .desc2 {
+      h3 {
+        font-size: 17px;
+        color: #000;
+        letter-spacing: 0.5px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 26px;
+        color: $lightGrey;
+        letter-spacing: 0.5px;
+      }
+    }
+    .studioImg {
+      width: 100%;
+      margin-bottom: 100px;
+    }
   }
 }

@@ -5,6 +5,7 @@ import LogoHome from '../components/home/LogoHome';
 import YellowHello from '../components/home/YellowHello';
 import HomeShapes from '../components/home/Shapes';
 import Thumbnail from '../components/Thumbnail';
+import LouboutinV3 from '../components/projects/LouboutinV3';
 import ProjectField from '../components/projects/ProjectField';
 import ProjectFloom from '../components/projects/ProjectFloom';
 import Studio from '../components/home/Studio';
@@ -38,12 +39,12 @@ class Home extends React.Component {
 			location: this.props.location,
 			innerComponent: {
 				className: 'thumb1',
-				component: ProjectField
+				component: LouboutinV3
 			},
-			urlHash: 'field',
+			urlHash: 'louboutinv3',
 			setNoScroll: this.props.setNoScroll.bind(this),
-			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
-			title: 'field',
+			posterImg: require('../../src/images/thumbnails/louboutin-v3-2.jpg'),
+			title: 'Christian Louboutin',
 			description: 'Digital Identity',
 			align: 'left'
 		}, {
@@ -54,10 +55,10 @@ class Home extends React.Component {
 			},
 			urlHash: 'floom',
 			setNoScroll: this.props.setNoScroll.bind(this),
-			posterImg: require('../../src/images/case-study/case-study-2.jpg'),
+			posterImg: require('../../src/images/thumbnails/floom.jpg'),
 			title: 'floom',
 			description: 'Digital Identity',
-			align: 'right'
+			align: 'left'
 		}, {
 			location: this.props.location,
 			innerComponent: {
@@ -66,7 +67,7 @@ class Home extends React.Component {
 			},
 			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),
-			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
+			posterImg: require('../../src/images/thumbnails/field.jpg'),
 			title: 'field',
 			description: 'Digital Identity',
 			align: 'left'

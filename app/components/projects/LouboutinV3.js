@@ -3,12 +3,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class ProjectFloom extends React.Component {
+class LouboutinV3 extends React.Component {
 
 	constructor(props) {
 		super(props);
 
-		const posterImg = require('../../../src/images/thumbnails/floom.jpg');
+		const posterImg = require('../../../src/images/projects/louboutin-v3/louboutin-v3-1.jpg');
 
 		this.posterStyle = {
 			backgroundImage: 'url(' + posterImg + ')',
@@ -20,7 +20,7 @@ class ProjectFloom extends React.Component {
 	render() {
 
 		return (
-			<div className={'project-container' + ' ' + 'project-field-io'}>
+			<div className={'project-container' + ' ' + 'project-louboutinv3'}>
 				<div className={'poster'} style={this.posterStyle}></div>
 				<div className={'content'}>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -40,4 +40,4 @@ class ProjectFloom extends React.Component {
 
 }
 
-export default ProjectFloom;
+export default LouboutinV3;

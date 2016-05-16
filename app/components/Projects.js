@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ProjectsThumbnail from '../components/ProjectsThumbnail';
+import LouboutinV3 from '../components/projects/LouboutinV3';
 import ProjectField from '../components/projects/ProjectField.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 
@@ -32,12 +33,12 @@ class Projects extends React.Component {
 			location: this.props.location,
 			innerComponent: {
 				className: 'thumb1',
-				component: ProjectField
+				component: LouboutinV3
 			},
-			urlHash: 'field',
+			urlHash: 'louboutinv3',
 			setNoScroll: this.props.setNoScroll.bind(this),
-			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
-			title: 'field',
+			posterImg: require('../../src/images/thumbnails/louboutin-v3-2.jpg'),
+			title: 'Christian Louboutin',
 			description: 'Digital Identity',
 			align: 'left'
 		}, {
@@ -48,10 +49,10 @@ class Projects extends React.Component {
 			},
 			urlHash: 'floom',
 			setNoScroll: this.props.setNoScroll.bind(this),
-			posterImg: require('../../src/images/case-study/case-study-2.jpg'),
+			posterImg: require('../../src/images/thumbnails/floom.jpg'),
 			title: 'floom',
 			description: 'Digital Identity',
-			align: 'right'
+			align: 'left'
 		}, {
 			location: this.props.location,
 			innerComponent: {
@@ -60,7 +61,7 @@ class Projects extends React.Component {
 			},
 			urlHash: 'field',
 			setNoScroll: this.props.setNoScroll.bind(this),
-			posterImg: require('../../src/images/case-study/case-study-1.jpg'),
+			posterImg: require('../../src/images/thumbnails/field.jpg'),
 			title: 'field',
 			description: 'Digital Identity',
 			align: 'left'

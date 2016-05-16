@@ -8,7 +8,7 @@ class ProjectField extends React.Component {
 	constructor(props) {
 		super(props);
 
-		const posterImg = require('../../../src/images/case-study/case-study-1.jpg');
+		const posterImg = require('../../../src/images/thumbnails/field.jpg');
 
 		this.posterStyle = {
 			backgroundImage: 'url(' + posterImg + ')',

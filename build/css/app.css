@@ -51,7 +51,9 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  font-family: 'Larsseit';
+  font-weight: 100; }
 
 ol, ul {
   list-style: none; }
@@ -245,7 +247,9 @@ body.noscroll {
   .lm-2016 .main {
     width: 100vw;
     height: auto;
-    background: #fff; }
+    background: #fff;
+    position: relative;
+    z-index: 1; }
     .lm-2016 .main .back-block {
       display: none;
       background-color: #FFD000;
@@ -368,64 +372,66 @@ header .menu {
     left: 50%;
     bottom: -40px;
     margin-left: -200px; }
-    .updates .form form input {
-      height: 100%;
-      line-height: 56px;
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-      position: absolute;
-      border: none; }
-    .updates .form form input[type="email"] {
-      top: 0;
-      left: 0;
-      width: calc(100% - 128px - 20px);
-      padding-left: 20px;
-      z-index: 1;
-      font-size: 20px;
-      letter-spacing: 1px;
-      line-height: 26px;
-      color: #C4C4C4; }
-      .updates .form form input[type="email"]::-webkit-input-placeholder {
+    .updates .form form {
+      height: 100%; }
+      .updates .form form input {
+        height: 100%;
+        line-height: 56px;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        border: none; }
+      .updates .form form input[type="email"] {
+        top: 0;
+        left: 0;
+        width: calc(100% - 128px - 20px);
+        padding-left: 20px;
+        z-index: 1;
         font-size: 20px;
         letter-spacing: 1px;
         line-height: 26px;
         color: #C4C4C4; }
-      .updates .form form input[type="email"]:-moz-placeholder {
-        font-size: 20px;
+        .updates .form form input[type="email"]::-webkit-input-placeholder {
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 26px;
+          color: #C4C4C4; }
+        .updates .form form input[type="email"]:-moz-placeholder {
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 26px;
+          color: #C4C4C4; }
+        .updates .form form input[type="email"]::-moz-placeholder {
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 26px;
+          color: #C4C4C4; }
+        .updates .form form input[type="email"]:-ms-input-placeholder {
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 26px;
+          color: #C4C4C4; }
+      .updates .form form input[type="submit"] {
+        top: 0;
+        right: 0;
+        width: 128px;
+        background-color: #FFD000;
+        color: #fff;
+        z-index: 2;
+        text-transform: uppercase;
+        font-size: 16px;
         letter-spacing: 1px;
-        line-height: 26px;
-        color: #C4C4C4; }
-      .updates .form form input[type="email"]::-moz-placeholder {
-        font-size: 20px;
-        letter-spacing: 1px;
-        line-height: 26px;
-        color: #C4C4C4; }
-      .updates .form form input[type="email"]:-ms-input-placeholder {
-        font-size: 20px;
-        letter-spacing: 1px;
-        line-height: 26px;
-        color: #C4C4C4; }
-    .updates .form form input[type="submit"] {
-      top: 0;
-      right: 0;
-      width: 128px;
-      background-color: #FFD000;
-      color: #fff;
-      z-index: 2;
-      text-transform: uppercase;
-      font-size: 16px;
-      letter-spacing: 1px;
-      line-height: 21px;
-      cursor: pointer;
-      -webkit-transition: opacity 0.3s;
-      -khtml-transition: opacity 0.3s;
-      -moz-transition: opacity 0.3s;
-      -ms-transition: opacity 0.3s;
-      -o-transition: opacity 0.3s;
-      transition: opacity 0.3s; }
-      .updates .form form input[type="submit"]:hover {
-        opacity: 0.9; }
+        line-height: 21px;
+        cursor: pointer;
+        -webkit-transition: opacity 0.3s;
+        -khtml-transition: opacity 0.3s;
+        -moz-transition: opacity 0.3s;
+        -ms-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 0.3s; }
+        .updates .form form input[type="submit"]:hover {
+          opacity: 0.9; }
 
 .thumbnail {
   width: 100%;
@@ -512,11 +518,21 @@ header .menu {
       font-size: 20px; }
   footer {
     padding-left: 30px;
-    padding-right: 30px; }
+    padding-right: 30px;
+    padding-top: 100px; }
     footer .get-updates .updates {
       width: 100%; }
       footer .get-updates .updates .title {
-        font-size: 20px; } }
+        font-size: 20px;
+        padding-top: 80px;
+        line-height: 28px;
+        margin: 0 40px; }
+      footer .get-updates .updates .form {
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+        left: auto;
+        bottom: -30px; } }
 
 .home-content .wrapper {
   padding-left: 60px;
@@ -600,11 +616,142 @@ header .menu {
     margin-right: 60px; }
 
 .about-us-content {
-  margin-top: 30vh;
+  margin-top: 260px;
   margin-bottom: 60px; }
   .about-us-content .wrapper {
-    margin-left: 60px;
-    margin-right: 60px; }
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .about-us-content .wrapper .title {
+      display: inline-block;
+      position: relative; }
+      .about-us-content .wrapper .title h2 {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 3px;
+        line-height: 60px;
+        background-color: transparent; }
+      .about-us-content .wrapper .title p {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+        font-size: 17px;
+        line-height: 30px;
+        font-weight: 100; }
+      .about-us-content .wrapper .title.title1 {
+        margin-bottom: 120px; }
+        .about-us-content .wrapper .title.title1:before {
+          content: '';
+          width: 250px;
+          height: 250px;
+          background-color: #FFD000;
+          position: absolute;
+          top: -50px;
+          left: 20%;
+          z-index: -1; }
+        .about-us-content .wrapper .title.title1 h2 {
+          margin-bottom: 96px; }
+      .about-us-content .wrapper .title.title2 {
+        margin-bottom: 60px; }
+        .about-us-content .wrapper .title.title2:before {
+          content: '';
+          width: 250px;
+          height: 250px;
+          background-color: #FFD000;
+          position: absolute;
+          top: -50px;
+          left: 40%;
+          z-index: -1;
+          border-radius: 200px; }
+        .about-us-content .wrapper .title.title2 h2 {
+          margin-bottom: 96px; }
+    .about-us-content .wrapper .desc1 {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 60px; }
+      .about-us-content .wrapper .desc1 .col {
+        display: inline-block;
+        vertical-align: top;
+        width: calc( 50% - 40px);
+        margin-right: 40px; }
+        .about-us-content .wrapper .desc1 .col h3 {
+          margin-bottom: 15px; }
+        .about-us-content .wrapper .desc1 .col p {
+          margin-bottom: 20px;
+          max-width: 70%; }
+        .about-us-content .wrapper .desc1 .col ul li {
+          font-size: 13px;
+          line-height: 34px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 100%; }
+          .about-us-content .wrapper .desc1 .col ul li:before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px; }
+        .about-us-content .wrapper .desc1 .col.col1 li:nth-child(1):before {
+          background-image: url("../images/about/icon1.png");
+          background-size: 10px 10px; }
+        .about-us-content .wrapper .desc1 .col.col1 li:nth-child(2):before {
+          background-image: url("../images/about/icon2.png");
+          background-size: 10px 10px; }
+        .about-us-content .wrapper .desc1 .col.col1 li:nth-child(3):before {
+          background-image: url("../images/about/icon3.png");
+          background-size: 10px 10px; }
+        .about-us-content .wrapper .desc1 .col.col2 li:nth-child(1):before {
+          background-image: url("../images/about/icon4.png");
+          background-size: 10px 10px; }
+        .about-us-content .wrapper .desc1 .col.col2 li:nth-child(2):before {
+          background-image: url("../images/about/icon5.png");
+          background-size: 10px 10px; }
+        .about-us-content .wrapper .desc1 .col.col2 li:nth-child(3):before {
+          background-image: url("../images/about/icon6.png");
+          background-size: 10px 10px; }
+    .about-us-content .wrapper .desc2 .col {
+      display: inline-block;
+      vertical-align: top;
+      width: calc( 25% - 40px);
+      margin-right: 40px; }
+      .about-us-content .wrapper .desc2 .col .img {
+        width: 83px;
+        height: 103px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+        background-position: center; }
+      .about-us-content .wrapper .desc2 .col.col1 .img {
+        background-image: url("../images/about/capability1.png");
+        background-size: 80px 81px; }
+      .about-us-content .wrapper .desc2 .col.col2 .img {
+        background-image: url("../images/about/capability2.png");
+        background-size: 64px 103px; }
+      .about-us-content .wrapper .desc2 .col.col3 .img {
+        background-image: url("../images/about/capability3.png");
+        background-size: 83px 103px; }
+      .about-us-content .wrapper .desc2 .col.col4 .img {
+        background-image: url("../images/about/capability4.png");
+        background-size: 78px 78px; }
+    .about-us-content .wrapper .desc1 h3, .about-us-content .wrapper .desc2 h3 {
+      font-size: 17px;
+      color: #000;
+      letter-spacing: 0.5px; }
+    .about-us-content .wrapper .desc1 p, .about-us-content .wrapper .desc2 p {
+      font-size: 13px;
+      line-height: 26px;
+      color: #807F7F;
+      letter-spacing: 0.5px; }
+    .about-us-content .wrapper .studioImg {
+      width: 100%;
+      margin-bottom: 100px; }
 
 .jobs-content {
   margin-top: 30vh;
