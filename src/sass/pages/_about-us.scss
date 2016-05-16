@@ -198,5 +198,26 @@
       width: 100%;
       margin-bottom: 100px;
     }
+    #instagram {
+      margin-top: 60px;
+      .instablock {
+        display: inline-block;
+        width: calc(33.33% - 40px);
+        margin-bottom: 60px;
+        img {
+          width: 100%;
+        }
+        &:nth-child(3n-2) {
+          margin-right: 60px;
+          transform: translateY(40px);
+        }
+        &:nth-child(3n-1) {
+          margin-right: 60px;
+        }
+        &:nth-child(3n) {
+          transform: translateY(80px);
+        }
+      }
+    }
   }
 }

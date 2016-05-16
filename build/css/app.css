@@ -751,6 +751,21 @@ header .menu {
     .about-us-content .wrapper .studioImg {
       width: 100%;
       margin-bottom: 100px; }
+    .about-us-content .wrapper #instagram {
+      margin-top: 60px; }
+      .about-us-content .wrapper #instagram .instablock {
+        display: inline-block;
+        width: calc(33.33% - 40px);
+        margin-bottom: 60px; }
+        .about-us-content .wrapper #instagram .instablock img {
+          width: 100%; }
+        .about-us-content .wrapper #instagram .instablock:nth-child(3n-2) {
+          margin-right: 60px;
+          transform: translateY(40px); }
+        .about-us-content .wrapper #instagram .instablock:nth-child(3n-1) {
+          margin-right: 60px; }
+        .about-us-content .wrapper #instagram .instablock:nth-child(3n) {
+          transform: translateY(80px); }
 
 .jobs-content {
   margin-top: 30vh;

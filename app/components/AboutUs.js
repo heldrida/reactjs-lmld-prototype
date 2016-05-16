@@ -2,10 +2,31 @@
 
 import React from 'react';
 
+
 class AboutUs extends React.Component {
 
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+
+    this.instagram();
+
+  }
+
+  instagram() {
+    let feed = new Instafeed({
+        get: 'user',
+        userId: '2714410395',
+        clientId: '2714410395',
+        accessToken: '2714410395.1677ed0.f14bf10977af4de4b1160e51a12f5695',
+        target: 'instagram',
+        limit: 8,
+        resolution: 'standard_resolution',
+        template: '<a class="instablock" href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
+    });
+    feed.run();
   }
 
   render() {
@@ -73,6 +94,9 @@ class AboutUs extends React.Component {
               <h4>Research & Planning</h4>
               <p>Working towards a centrally driven agenda that is informed by what we have jointly discovered.</p>
             </div>
+          </div>
+          <div id="instagram">
+            <div className='intro instablock'>crotte</div>
           </div>
         </div>
       </div>
