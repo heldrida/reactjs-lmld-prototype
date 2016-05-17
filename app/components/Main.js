@@ -123,13 +123,13 @@ class Main extends React.Component {
 
 		tl.to(mainLogo, 0.3, { css: { opacity: 0 } }, 0);
 
-		tl.to(content, 1, { css: { opacity: 0 }, onComplete: () => {
+		tl.to(content, 0.6, { css: { opacity: 0 }, onComplete: () => {
 				window.location.hash = '/';
 				//this.setNoScroll(false);
 			}
 		}, 0);
 
-		tl.to(footer, 1, { css: { opacity: 0 } }, 0);
+		tl.to(footer, 0.6, { css: { opacity: 0 } }, 0);
 
 		tl.fromTo(backBlock, 0.3, { css: { width: '0px', height: '0px', ease: window.Bounce.easeOut } }, { css: { width: '50px', height: '50px', ease: window.Bounce.easeOut } }, 0);
 
