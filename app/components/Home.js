@@ -58,7 +58,7 @@ class Home extends React.Component {
 			posterImg: require('../../src/images/thumbnails/floom.jpg'),
 			title: 'floom',
 			description: 'Digital Identity',
-			align: 'left'
+			align: 'right'
 		}, {
 			location: this.props.location,
 			innerComponent: {
