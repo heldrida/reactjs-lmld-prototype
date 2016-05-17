@@ -21,7 +21,7 @@ class Thumbnail extends React.Component {
 
 		// The default element position
 		this.defaultPosition = {};
-		
+
 		this.timeline = false;
 
 		// Create Throttled versions to improve performance
@@ -158,7 +158,9 @@ class Thumbnail extends React.Component {
 		}
 
 		setTimeout(() => {
-			this.timeline.reverse();
+			if (this.els.block) {
+				this.resetBlock();
+			}
 		});
 
 		// this should be moved and treated only for modal elements
@@ -167,6 +169,17 @@ class Thumbnail extends React.Component {
 		if (typeof callback === 'function') {
 			callback();
 		}
+	}
+
+	resetBlock() {
+		window.scroll(0, 0);
+		this.els.block.setAttribute('style', null);
+		this.els.block.parentNode.style.zIndex = '';
+		this.props.setNoScroll(false);
+		this.setState({
+			open: false,
+			mountContent: false
+		});
 	}
 
 	initTimeline() {
