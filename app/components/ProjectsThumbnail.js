@@ -16,10 +16,9 @@ class ProjectsThumbnail extends Thumbnail {
 	render() {
 
 		return (
-			<div className={'thumbnail' + ' ' + this.props.innerComponent.className + ' ' + (this.state.open ? 'open' : '')}>
+			<div className={'thumbnail' + ' ' + this.props.className + ' ' + (this.state.open ? 'open' : '')}>
 				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
 						<div className='content' style={this.posterStyle}>
-							{this.state.mountContent ? <this.props.innerComponent.component showBackBtn={true} /> : null}
 						</div>
 						<div className={'title-container'} ref={this.setElement.bind(this, 'titleContainer')}>
 							<h4 ref={this.setElement.bind(this, 'title')}>{this.props.title}</h4>

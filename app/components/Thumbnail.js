@@ -45,11 +45,13 @@ class Thumbnail extends React.Component {
 
 	componentDidMount() {
 
+		/*
 		// Set the default position and everytime the browser resizes
 		setTimeout(() => {
 			this.setBlockDefaults();
 			this.caseStudyRequestHandler();
 		});
+		*/
 
 		// Set event listeners
 		this.setEventListeners();
@@ -61,8 +63,10 @@ class Thumbnail extends React.Component {
 		// Scroll event listener
 		window.addEventListener('scroll', e => this.onScrollHandler(e));
 
+		/*
 		// Handle hash change
 		window.addEventListener('hashchange', e => this.onHashChangeHandler(e), false);
+		*/
 
 		// On window resize handler
 		window.addEventListener('resize', e => this.onWindowResizeHandlerThrottle(e), false);

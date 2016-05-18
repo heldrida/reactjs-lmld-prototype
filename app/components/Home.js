@@ -5,15 +5,20 @@ import LogoHome from '../components/home/LogoHome';
 import YellowHello from '../components/home/YellowHello';
 import HomeShapes from '../components/home/Shapes';
 import Thumbnail from '../components/Thumbnail';
-import LouboutinV3 from '../components/projects/LouboutinV3';
-import ProjectField from '../components/projects/ProjectField';
-import ProjectFloom from '../components/projects/ProjectFloom';
 import Studio from '../components/home/Studio';
+import ProjectList from '../data/ProjectList';
+import _ from 'lodash';
 
 class Home extends React.Component {
 
 	constructor(props) {
 		super(props);
+
+		this.thumbnails = null;
+	}
+
+	componentWillMount() {
+		this.setThumbnailsList();
 	}
 
 	componentDidMount() {
@@ -24,51 +29,31 @@ class Home extends React.Component {
 	}
 
 	noLagOnMobile() {
+
 		let x = window.innerHeight;
 		let size1 = x * 0.8 + 'px';
 		let size2 = x * 0.7 + 'px';
+
 		if ((window.innerWidth < 600)) {
-      this.homeLogo.style.height = size1;
+			this.homeLogo.style.height = size1;
 			this.yellowHello.style.height = size2;
-    }
+		}
+
+	}
+
+	setThumbnailsList() {
+		this.thumbnails = _
+							.chain(ProjectList)
+							.filter(o => {
+								return o.home;
+							})
+							.sortBy(o => {
+								return o.order.home;
+							})
+							.value();
 	}
 
 	render() {
-		// Home block list data
-		const homeBlockList = [{
-			urlHash: 'louboutinv3',
-			className: {
-				home: 'thumb1'
-			},
-			posterImg: require('../../src/images/thumbnails/louboutin-v3-2.jpg'),
-			title: 'Christian Louboutin',
-			description: 'Digital Identity',
-			align: {
-				home: 'left'
-			}
-		}, {
-			urlHash: 'floom',
-			className: {
-				home: 'thumb2'
-			},
-			posterImg: require('../../src/images/thumbnails/floom.jpg'),
-			title: 'floom',
-			description: 'Digital Identity',
-			align: {
-				home: 'right'
-			}
-		}, {
-			urlHash: 'field',
-			className: {
-				home: 'thumb3'
-			},
-			posterImg: require('../../src/images/thumbnails/field.jpg'),
-			title: 'field',
-			description: 'Digital Identity',
-			align: {
-				home: 'left'
-			}
-		}];
 
 		return (
 			<div className='home-content'>
@@ -80,13 +65,14 @@ class Home extends React.Component {
 					</div>
 					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					<div className={'projects'}>
-					{homeBlockList.map((obj, key) =>
+					{this.thumbnails.map((obj, key) =>
 						<Thumbnail 	key={key}
 									urlHash={obj.urlHash}
 									posterImg={obj.posterImg}
 									title={obj.title}
 									description={obj.description}
-									align={obj.align.home} />
+									align={obj.align.home}
+									className={obj.className.home} />
 					)}
 					</div>
 				</div>
