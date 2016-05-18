@@ -5,7 +5,7 @@ import ProjectField from '../components/projects/ProjectField.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 
 const ProjectList = {
-	'louboutin-v3': {
+	'louboutinv3': {
 		title: 'Christian Louboutin',
 		description: 'Digital Identity',
 		component: LouboutinV3

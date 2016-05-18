@@ -105,8 +105,8 @@ class Thumbnail extends React.Component {
 
 	updateHash() {
 
-		// the hash value needs to be passed to props
-		history.pushState(null, null, '#/projects/' + this.props.urlHash);
+		// update hash and toggle component mount
+		window.location.hash = '#/projects/' + this.props.urlHash;
 
 	}
 
@@ -221,14 +221,13 @@ class Thumbnail extends React.Component {
 							};
 
 			const onStartCallback = () => {
-				this.props.setNoScroll(true);
+				//this.props.setNoScroll(true);
 			};
 
 			const onCompleteCallback = () => {
 
 				this.setState({
-					open: true,
-					mountContent: true
+					open: true
 				});
 
 				// refactor to treat only modal elements
@@ -245,8 +244,7 @@ class Thumbnail extends React.Component {
 					this.els.block.parentNode.style.zIndex = '';
 					this.props.setNoScroll(false);
 					this.setState({
-						open: false,
-						mountContent: false
+						open: false
 					});
 				}
 			};
@@ -388,7 +386,7 @@ class Thumbnail extends React.Component {
 			<div className={'thumbnail' + ' ' + this.props.innerComponent.className + ' ' + (this.state.open ? 'open' : '')}>
 				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
 						<div className='content' style={this.posterStyle}>
-							{this.state.mountContent ? <this.props.innerComponent.component /> : null}
+
 						</div>
 						<div className={'title-container'} ref={this.setElement.bind(this, 'titleContainer')}>
 							<h4 ref={this.setElement.bind(this, 'title')}>{this.props.title}</h4>
