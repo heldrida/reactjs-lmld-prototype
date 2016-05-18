@@ -112,8 +112,6 @@ class Thumbnail extends React.Component {
 
 	openBlock(callback = false) {
 
-		console.log('open block call fn');
-
 		if (this.state.open) {
 
 			//this.closeBlock();
@@ -132,10 +130,13 @@ class Thumbnail extends React.Component {
 
 		}
 
+		if (typeof callback === 'function') {
+			callback();
+		}
+
 	}
 
 	closeBlock(callback = false) {
-		console.log('close block call fn');
 
 		// before the reverse animation starts
 		// the component needs to be dismounted
