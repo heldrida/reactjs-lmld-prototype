@@ -239,7 +239,7 @@ class Thumbnail extends React.Component {
 
 			};
 			const onReverseCompleteCallback = () => {
-			 	// todo: check state when routing from non home to home
+				// todo: check state when routing from non home to home
 				if (this.els.block) {
 					this.els.block.parentNode.style.zIndex = '';
 					this.props.setNoScroll(false);
@@ -338,7 +338,7 @@ class Thumbnail extends React.Component {
 
 	}
 
-	onWindowResizeHandler(e) {
+	onWindowResizeHandler() {
 
 		// Reset the timeline and remove any styles set by GSAP
 		// and also recalc the timeline
@@ -392,7 +392,7 @@ class Thumbnail extends React.Component {
 						<div className={'title-container'} ref={this.setElement.bind(this, 'titleContainer')}>
 							<h4 ref={this.setElement.bind(this, 'title')}>{this.props.title}</h4>
 							<span className='separator'> - </span>
-							<p ref={this.setElement.bind(this, 'description')} dangerouslySetInnerHTML={{__html:this.props.description}}></p>
+							<p ref={this.setElement.bind(this, 'description')} dangerouslySetInnerHTML={ { __html: this.props.description } }></p>
 						</div>
 				</div>
 			</div>
