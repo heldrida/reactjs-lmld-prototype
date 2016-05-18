@@ -33,7 +33,7 @@ class Footer extends React.Component {
 					<div className='right'>
 						<div className='bottom'>
 							81 Curtain Road, Unit H - EC2A 3AG London<br />
-							07534117755 - Google Maps
+							07534117755 - <a href="#">Google Maps</a>
 						</div>
 					</div>
 				</div>
