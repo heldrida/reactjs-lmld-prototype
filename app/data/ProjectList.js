@@ -11,10 +11,6 @@ const ProjectList = {
 		title: 'Christian Louboutin',
 		description: 'Digital Identity',
 		component: LouboutinV3,
-		align: {
-			home: 'left',
-			projects: 'left'
-		},
 		className: {
 			home: 'thumb1',
 			projects: 'louboutinv3'
@@ -31,10 +27,6 @@ const ProjectList = {
 		title: 'Field',
 		description: 'Digital Identity',
 		component: ProjectField,
-		align: {
-			home: 'left',
-			projects: 'left'
-		},
 		className: {
 			home: 'thumb3',
 			projects: 'field'
@@ -51,10 +43,6 @@ const ProjectList = {
 		title: 'Floom',
 		description: 'Digital Identity',
 		component: ProjectFloom,
-		align: {
-			home: 'right',
-			projects: 'left'
-		},
 		className: {
 			home: 'thumb2',
 			projects: 'floom'

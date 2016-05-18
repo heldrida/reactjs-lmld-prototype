@@ -71,7 +71,6 @@ class Home extends React.Component {
 									posterImg={obj.posterImg}
 									title={obj.title}
 									description={obj.description}
-									align={obj.align.home}
 									className={obj.className.home} />
 					)}
 					</div>

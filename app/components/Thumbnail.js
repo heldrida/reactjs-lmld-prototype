@@ -45,14 +45,6 @@ class Thumbnail extends React.Component {
 
 	componentDidMount() {
 
-		/*
-		// Set the default position and everytime the browser resizes
-		setTimeout(() => {
-			this.setBlockDefaults();
-			this.caseStudyRequestHandler();
-		});
-		*/
-
 		// Set event listeners
 		this.setEventListeners();
 
@@ -62,11 +54,6 @@ class Thumbnail extends React.Component {
 
 		// Scroll event listener
 		window.addEventListener('scroll', e => this.onScrollHandler(e));
-
-		/*
-		// Handle hash change
-		window.addEventListener('hashchange', e => this.onHashChangeHandler(e), false);
-		*/
 
 		// On window resize handler
 		window.addEventListener('resize', e => this.onWindowResizeHandlerThrottle(e), false);
@@ -142,19 +129,6 @@ class Thumbnail extends React.Component {
 
 	closeBlock(callback = false) {
 
-		// before the reverse animation starts
-		// the component needs to be dismounted
-
-		if (window.location.hash !== '/') {
-			/*
-			 * todo: check state when routing from non home to home
-			this.setState({
-				open: false,
-				mountContent: false
-			});
-			*/
-		}
-
 		// hide header elements (if on homepage)
 		// todo: use the router lib to detect proper location
 		if (this.props.location.pathname === '/') {
@@ -210,7 +184,7 @@ class Thumbnail extends React.Component {
 										height: this.pos.height,
 										position: 'absolute',
 										top: 0,
-										left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - (offset * 2)))
+										left: this.pos.left - offset
 									}
 							};
 
@@ -219,8 +193,8 @@ class Thumbnail extends React.Component {
 										width: window.innerWidth,
 										height: window.innerHeight,
 										top: -this.pos.top,
-										left: -(this.props.align === 'left' ? this.pos.left : offset),
-										position: 'absolute'
+										position: 'absolute',
+										left: -offset
 									}
 							};
 
@@ -258,8 +232,6 @@ class Thumbnail extends React.Component {
 				onReverseComplete: onReverseCompleteCallback
 			});
 
-			//timeline.to(this.els.title, 0.2, { css: { left: '100px' } });
-			//timeline.to(this.els.description, 0.2, { css: { left: '100px' } });
 			timeline.to(this.els.titleContainer, 0.3, { css: { opacity: 0 } });
 			timeline.fromTo(this.els.block, 0.2, cssBefore, cssAfter);
 			timeline.pause();
@@ -320,24 +292,6 @@ class Thumbnail extends React.Component {
 	}
 
 	onScrollHandler() {
-
-	}
-
-	onHashChangeHandler(e) {
-
-		// When handling case study requests, close if state open,
-		// then callback the case study request handler
-		if (this.state.open && e.oldURL && e.oldURL.indexOf('projects') > -1 && e.newURL && e.newURL.indexOf('projects') > -1) {
-			this.openBlock();
-		} else if(this.state.open && e.oldURL && e.oldURL.indexOf('projects') > -1) {
-			this.closeBlock();
-		} else if (this.state.open && e.newURL && e.newURL.indexOf('projects') > -1) {
-			this.openBlock();
-		} else if (!this.state.open && e.newURL && e.newURL.indexOf('projects') > -1) {
-			this.caseStudyRequestHandler();
-		}
-
-		return null;
 
 	}
 

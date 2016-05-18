@@ -46,7 +46,6 @@ class Projects extends React.Component {
 											posterImg={obj.posterImg}
 											title={obj.title}
 											description={obj.description}
-											align={obj.align.projects}
 											className={obj.className.projects} />
 					)}
 				</div>
