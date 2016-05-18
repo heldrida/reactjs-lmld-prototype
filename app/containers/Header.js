@@ -9,7 +9,7 @@ class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-		menuOpen: false
+			menuOpen: false
 		};
 	}
 
@@ -18,19 +18,28 @@ class Header extends React.Component {
 		this.container = document.querySelector('.menu .container');
 	}
 
-  menuClick() {
-    this.setState({
+	menuClick() {
+
+		this.setState({
 			menuOpen: !this.state.menuOpen
-    });
-    if (this.menu.classList.contains('close')) {
+		});
+
+		if (this.menu.classList.contains('close')) {
+
 			window.TweenLite.to(this.container, 1, { css: { display: 'block' } });
+
 		} else {
+
 			window.TweenLite.to(this.container, 1, { css: { display: 'none' } });
+
 		}
-  }
+
+	}
 
 	render() {
+
 		let text = this.state.menuOpen ? 'menu open' : 'menu close';
+
 		return (
 			<header>
 				<div className='wrapper'>
