@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Newsletter from '../components/Newsletter.js';
+import { Link } from 'react-router'
 
 class Footer extends React.Component {
 
@@ -19,9 +20,9 @@ class Footer extends React.Component {
 				<div className='links'>
 					<div className='left'>
 						<nav>
-							<a href="#">Work</a>
-							<a href="#">About Us</a>
-							<a href="#">Join Us</a>
+							<Link to={'/projects'}>{'Work'}</Link>
+							<Link to={'/about-us'}>{'About us'}</Link>
+							<Link to={'/jobs'}>{'Join us'}</Link>
 						</nav>
 						<div className='bottom'>
 							<a href="#">F</a>
