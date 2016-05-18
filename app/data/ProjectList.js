@@ -21,7 +21,8 @@ const ProjectList = {
 		},
 		posterImg: require('../../src/images/thumbnails/louboutin-v3-2.jpg'),
 		order: {
-			home: 1
+			home: 1,
+			date: 20150101
 		}
 	},
 	field: {
@@ -40,7 +41,8 @@ const ProjectList = {
 		},
 		posterImg: require('../../src/images/thumbnails/field.jpg'),
 		order: {
-			home: 3
+			home: 3,
+			date: 20160115
 		}
 	},
 	floom: {
@@ -59,7 +61,8 @@ const ProjectList = {
 		},
 		posterImg: require('../../src/images/thumbnails/floom.jpg'),
 		order: {
-			home: 2
+			home: 2,
+			date: 20160501
 		}
 	}
 };

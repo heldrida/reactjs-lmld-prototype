@@ -25,8 +25,11 @@ class Projects extends React.Component {
 							.filter(o => {
 								return o.component;
 							})
-							.sortBy('title')
+							.sortBy(o => {
+								return -o.order.date;
+							})
 							.value();
+
 	}
 
 	render() {
