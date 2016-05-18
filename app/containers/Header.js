@@ -61,11 +61,17 @@ class Header extends React.Component {
 
 		if (this.menu.classList.contains('close')) {
 
-			window.TweenLite.to(this.container, 1, { css: { display: 'block' } });
+			window.TweenLite.to(this.container, 1, { css: { display: 'block' }, onComplete: () => {
+					this.props.setNoScroll(true);
+				} 
+			});
 
 		} else {
 
-			window.TweenLite.to(this.container, 1, { css: { display: 'none' } });
+			window.TweenLite.to(this.container, 1, { css: { display: 'none' }, onStart: () => {
+					this.props.setNoScroll(false);
+				}
+			});
 
 		}
 
