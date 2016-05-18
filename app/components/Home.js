@@ -36,41 +36,38 @@ class Home extends React.Component {
 	render() {
 		// Home block list data
 		const homeBlockList = [{
-			location: this.props.location,
-			innerComponent: {
-				className: 'thumb1',
-				component: LouboutinV3
-			},
 			urlHash: 'louboutinv3',
-			setNoScroll: this.props.setNoScroll.bind(this),
+			className: {
+				home: 'thumb1'
+			},
 			posterImg: require('../../src/images/thumbnails/louboutin-v3-2.jpg'),
 			title: 'Christian Louboutin',
 			description: 'Digital Identity',
-			align: 'left'
+			align: {
+				home: 'left'
+			}
 		}, {
-			location: this.props.location,
-			innerComponent: {
-				className: 'thumb2',
-				component: ProjectFloom
-			},
 			urlHash: 'floom',
-			setNoScroll: this.props.setNoScroll.bind(this),
+			className: {
+				home: 'thumb2'
+			},
 			posterImg: require('../../src/images/thumbnails/floom.jpg'),
 			title: 'floom',
 			description: 'Digital Identity',
-			align: 'right'
+			align: {
+				home: 'right'
+			}
 		}, {
-			location: this.props.location,
-			innerComponent: {
-				className: 'thumb3',
-				component: ProjectField
-			},
 			urlHash: 'field',
-			setNoScroll: this.props.setNoScroll.bind(this),
+			className: {
+				home: 'thumb3'
+			},
 			posterImg: require('../../src/images/thumbnails/field.jpg'),
 			title: 'field',
 			description: 'Digital Identity',
-			align: 'left'
+			align: {
+				home: 'left'
+			}
 		}];
 
 		return (
@@ -84,8 +81,12 @@ class Home extends React.Component {
 					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					<div className={'projects'}>
 					{homeBlockList.map((obj, key) =>
-						<Thumbnail key={key} location={obj.location} urlHash={obj.urlHash} innerComponent={obj.innerComponent} setNoScroll={obj.setNoScroll}
-									posterImg={obj.posterImg} title={obj.title} description={obj.description} align={obj.align} />
+						<Thumbnail 	key={key}
+									urlHash={obj.urlHash}
+									posterImg={obj.posterImg}
+									title={obj.title}
+									description={obj.description}
+									align={obj.align.home} />
 					)}
 					</div>
 				</div>

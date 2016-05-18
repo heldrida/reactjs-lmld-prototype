@@ -383,7 +383,7 @@ class Thumbnail extends React.Component {
 	render() {
 
 		return (
-			<div className={'thumbnail' + ' ' + this.props.innerComponent.className + ' ' + (this.state.open ? 'open' : '')}>
+			<div className={'thumbnail' + ' ' + this.props.className + ' ' + (this.state.open ? 'open' : '')}>
 				<div className='block' ref={this.setElement.bind(this, 'block')} onClick={this.openBlockThrottle.bind(this)}>
 						<div className='content' style={this.posterStyle}>
 
