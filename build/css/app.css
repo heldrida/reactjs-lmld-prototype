@@ -534,9 +534,7 @@ header .menu {
         bottom: -30px; } }
 
 .home-content .wrapper {
-  padding-left: 60px;
-  padding-right: 60px;
-  margin: 0 auto;
+  margin: 0 60px;
   max-width: 1200px; }
   .home-content .wrapper .logo-home {
     height: 60vh;
@@ -551,7 +549,8 @@ header .menu {
     max-width: 1200px;
     height: 60vh;
     position: fixed;
-    z-index: 10; }
+    z-index: 10;
+    pointer-events: none; }
     .home-content .wrapper .yellow-hello .block {
       background-color: #FFD000;
       width: 100%;

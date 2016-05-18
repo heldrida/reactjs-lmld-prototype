@@ -199,8 +199,26 @@ class Thumbnail extends React.Component {
 			this.headerLogo = document.querySelector('header .logo-container');
 
 			// Open the Modal
-			let cssBefore = { css: { width: this.pos.width, height: this.pos.height, position: 'absolute', top: 0, left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - (offset * 2))) } };
-			let cssAfter = { css : { width: window.innerWidth, height: window.innerHeight, top: -this.pos.top, left: -(this.props.align === 'left' ? this.pos.left : offset), position: 'absolute' } };
+			let cssBefore = {
+								css: {
+										width: this.pos.width,
+										height: this.pos.height,
+										position: 'absolute',
+										top: 0,
+										left: (this.props.align === 'left' ? 0 : (window.innerWidth - this.pos.width - (offset * 2)))
+									}
+							};
+
+			let cssAfter = {
+								css: {
+										width: window.innerWidth,
+										height: window.innerHeight,
+										top: -this.pos.top,
+										left: -(this.props.align === 'left' ? this.pos.left : offset),
+										position: 'absolute'
+									}
+							};
+
 			const onStartCallback = () => {
 				this.props.setNoScroll(true);
 			};
