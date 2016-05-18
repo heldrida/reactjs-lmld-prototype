@@ -2,9 +2,9 @@
 
 import React from 'react';
 import _ from 'lodash';
-import ProjectBlock from '../components/Thumbnail';
+import Thumbnail from '../components/Thumbnail';
 
-class ProjectsThumbnail extends ProjectBlock {
+class ProjectsThumbnail extends Thumbnail {
 
 	constructor(props) {
 
