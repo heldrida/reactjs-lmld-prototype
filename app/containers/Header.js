@@ -9,13 +9,48 @@ class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			menuOpen: false
+			menuOpen: false,
+			showBackground: false
 		};
+	}
+
+	componentWillMount() {
+		this.setEventListeners();
+		this.hasBackground();
 	}
 
 	componentDidMount() {
 		this.menu = document.querySelector('.menu');
 		this.container = document.querySelector('.menu .container');
+	}
+
+	setEventListeners() {
+		// Handle hash change
+		window.addEventListener('hashchange', e => this.onHashChangeHandler(e), false);
+	}
+
+	onHashChangeHandler() {
+
+		this.hasBackground();
+
+	}
+
+	hasBackground() {
+
+		if (window.location.hash.split('/')[1].length === 0) {
+
+			this.setState({
+				showBackground: false
+			});
+
+		} else {
+
+			this.setState({
+				showBackground: true
+			});
+
+		}
+
 	}
 
 	menuClick() {
@@ -41,7 +76,7 @@ class Header extends React.Component {
 		let text = this.state.menuOpen ? 'menu open' : 'menu close';
 
 		return (
-			<header>
+			<header className={ this.state.showBackground ? 'bg' : '' }>
 				<div className='wrapper'>
 					<div className={'col col-l'}>
 						<Logo hideMainContentHandler={this.props.hideMainContentHandler} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
