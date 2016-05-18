@@ -52,6 +52,22 @@ const ProjectList = {
 			home: 2,
 			date: 20160501
 		}
+	},
+	'sporty-henri-box': {
+		home: true,
+		urlHash: 'sporty-henri-box',
+		title: 'Sporty Henri box',
+		description: 'Digital Identity',
+		component: ProjectFloom, // pseudo component
+		className: {
+			home: null,
+			projects: 'sporty-henri-box'
+		},
+		posterImg: require('../../src/images/thumbnails/sporty-genri-thumb4.jpg'),
+		order: {
+			home: 2,
+			date: 20150305
+		}
 	}
 };
 

@@ -177,13 +177,20 @@ class Thumbnail extends React.Component {
 			this.headerBg = document.querySelector('header');
 			this.headerLogo = document.querySelector('header .logo-container');
 
+			// Add to the calculation the projects container (for projects)
+			console.log('this.pos', this.pos);
+			let pc = document.querySelector('.projects-content');
+			let pcOffset = pc ? window.getComputedStyle(pc, null).getPropertyValue('margin-top') : 0;
+			pcOffset = parseInt(pcOffset, 0);
+
+
 			// Open the Modal
 			let cssBefore = {
 								css: {
 										width: this.pos.width,
 										height: this.pos.height,
 										position: 'absolute',
-										top: 0,
+										top: -pcOffset,
 										left: this.pos.left - offset
 									}
 							};
@@ -192,7 +199,7 @@ class Thumbnail extends React.Component {
 								css: {
 										width: window.innerWidth,
 										height: window.innerHeight,
-										top: -this.pos.top,
+										top: -(this.pos.top),
 										position: 'absolute',
 										left: -offset
 									}
