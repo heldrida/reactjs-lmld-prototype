@@ -38,13 +38,13 @@ const ProjectList = {
 		}
 	},
 	'sporty-henri': {
-		home: false,
+		home: true,
 		urlHash: 'sporty-henri',
 		title: 'Sporty Henri',
 		description: 'Digital Identity',
 		component: ProjectFloom,
 		className: {
-			home: null,
+			home: 'thumb3',
 			projects: 'sporty-henri'
 		},
 		posterImg: require('../../src/images/thumbnails/sporty-henri.jpg'),
@@ -70,7 +70,7 @@ const ProjectList = {
 		}
 	},
 	field: {
-		home: true,
+		home: false,
 		urlHash: 'field',
 		title: 'Field',
 		description: 'Digital Identity',
@@ -86,7 +86,7 @@ const ProjectList = {
 		}
 	},
 	louboutinv3: {
-		home: true,
+		home: false,
 		urlHash: 'louboutinv3',
 		title: 'Christian Louboutin',
 		description: 'Digital Identity',
@@ -102,7 +102,7 @@ const ProjectList = {
 		}
 	},
 	'louboutin-beauty': {
-		home: true,
+		home: false,
 		urlHash: 'louboutin-beauty',
 		title: 'Louboutin Beauty',
 		description: 'Digital Identity',
@@ -118,7 +118,7 @@ const ProjectList = {
 		}
 	},
 	louboutinize: {
-		home: true,
+		home: false,
 		urlHash: 'louboutinize',
 		title: 'Louboutinize',
 		description: 'iPhone App',
@@ -134,7 +134,7 @@ const ProjectList = {
 		}
 	},
 	'monsieur-london': {
-		home: true,
+		home: false,
 		urlHash: 'monsieur-london',
 		title: 'Monsieur London',
 		description: 'Ecommerce',
@@ -150,7 +150,7 @@ const ProjectList = {
 		}
 	},
 	'barnaby-roper': {
-		home: true,
+		home: false,
 		urlHash: 'barnaby-roper',
 		title: 'Barnaby Roper',
 		description: 'Digital Identity',
@@ -166,7 +166,7 @@ const ProjectList = {
 		}
 	},
 	caratime: {
-		home: true,
+		home: false,
 		urlHash: 'caratime',
 		title: 'Caratime',
 		description: 'Ecommerce',
@@ -182,7 +182,7 @@ const ProjectList = {
 		}
 	},
 	couturelab: {
-		home: true,
+		home: false,
 		urlHash: 'couturelab',
 		title: 'Couturelab',
 		description: 'Ecommerce',
@@ -198,7 +198,7 @@ const ProjectList = {
 		}
 	},
 	harbour: {
-		home: true,
+		home: false,
 		urlHash: 'harbour',
 		title: 'Harbour',
 		description: 'Digital Identity',
@@ -214,7 +214,7 @@ const ProjectList = {
 		}
 	},
 	w152: {
-		home: true,
+		home: false,
 		urlHash: 'w152',
 		title: 'Industrial Facility w152',
 		description: 'Mini Site',
@@ -230,7 +230,7 @@ const ProjectList = {
 		}
 	},
 	institut: {
-		home: true,
+		home: false,
 		urlHash: 'institut',
 		title: 'Institut des Mutations',
 		description: 'Identity',
@@ -246,7 +246,7 @@ const ProjectList = {
 		}
 	},
 	juun: {
-		home: true,
+		home: false,
 		urlHash: 'Juun',
 		title: 'Juun',
 		description: 'Project Management System',
@@ -262,7 +262,7 @@ const ProjectList = {
 		}
 	},
 	'lm-logo': {
-		home: true,
+		home: false,
 		urlHash: 'lm-logo',
 		title: 'La Moulade',
 		description: 'Interactive Identity',
@@ -278,7 +278,7 @@ const ProjectList = {
 		}
 	},
 	orogo: {
-		home: true,
+		home: false,
 		urlHash: 'orogo',
 		title: 'Orogo',
 		description: 'Iphone/Android App Design',
@@ -294,7 +294,7 @@ const ProjectList = {
 		}
 	},
 	postmatter: {
-		home: true,
+		home: false,
 		urlHash: 'postmatter',
 		title: 'Postmatter',
 		description: 'Front-End Development',
@@ -310,7 +310,7 @@ const ProjectList = {
 		}
 	},
 	'serge-betsen': {
-		home: true,
+		home: false,
 		urlHash: 'serge-betsen',
 		title: 'Serge Betsen',
 		description: 'Digital Identity',
@@ -326,7 +326,7 @@ const ProjectList = {
 		}
 	},
 	simplytellit: {
-		home: true,
+		home: false,
 		urlHash: 'simplytellit',
 		title: 'SimplyTellit',
 		description: 'Iphone App',
