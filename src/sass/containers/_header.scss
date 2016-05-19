@@ -17,6 +17,11 @@ header {
       width: 50%;
       display: inline-block;
     }
+    .col-l {
+      .logo-container {
+        cursor: pointer;
+      }
+    }
     .col-r {
       text-align: right;
     }

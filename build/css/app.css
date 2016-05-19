@@ -121,6 +121,8 @@ header {
       vertical-align: middle;
       width: 50%;
       display: inline-block; }
+    header .wrapper .col-l .logo-container {
+      cursor: pointer; }
     header .wrapper .col-r {
       text-align: right; }
 
