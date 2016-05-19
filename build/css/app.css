@@ -484,7 +484,8 @@ header .menu {
         letter-spacing: 2px; }
   .content .home-content .wrapper {
     padding-left: 40px;
-    padding-right: 40px; }
+    padding-right: 40px;
+    margin: 0; }
     .content .home-content .wrapper .home-shapes .shape1 {
       top: 60px;
       left: auto;
@@ -501,6 +502,17 @@ header .menu {
         height: 304px; }
     .content .home-content .wrapper .yellow-hello {
       width: calc(100% - 80px); }
+  .content .home-content .projects .thumbnail .block {
+    width: 100%; }
+    .content .home-content .projects .thumbnail .block .title-container {
+      font-size: 20px;
+      top: 350px;
+      text-align: left; }
+      .content .home-content .projects .thumbnail .block .title-container h4, .content .home-content .projects .thumbnail .block .title-container p {
+        display: block;
+        line-height: 30px; }
+      .content .home-content .projects .thumbnail .block .title-container .separator {
+        display: none; }
   .content .home-content .studio {
     padding: 60px 30px 0 30px; }
     .content .home-content .studio .text {
@@ -514,10 +526,12 @@ header .menu {
     .content .home-content .studio .studio2 {
       width: 100%;
       margin-top: 30px; }
-  .content .thumbnail .block {
-    width: 80%; }
-    .content .thumbnail .block .title-container {
-      font-size: 20px; }
+  .content .projects-content .wrapper {
+    margin-left: 40px;
+    margin-right: 40px; }
+    .content .projects-content .wrapper .thumbnail {
+      width: 100%;
+      margin-bottom: 40px; }
   footer {
     padding-left: 30px;
     padding-right: 30px;
@@ -584,15 +598,15 @@ header .menu {
     display: block;
     width: 60%; }
 
-.lm-2016 .project-container {
+.project-container {
   width: 100%;
   height: auto;
   min-height: 100vh; }
-  .lm-2016 .project-container .poster {
+  .project-container .poster {
     width: 100vw;
     height: 100vh;
     z-index: 1; }
-  .lm-2016 .project-container .content {
+  .project-container .content {
     width: 100%;
     z-index: 2;
     background-color: #ccc;
@@ -601,7 +615,7 @@ header .menu {
     line-height: 33px;
     padding: 50px;
     box-sizing: border-box; }
-  .lm-2016 .project-container .go-back {
+  .project-container .go-back {
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 1px;
@@ -610,25 +624,25 @@ header .menu {
     right: 0;
     padding: 20px; }
 
-.lm-2016 .projects-content {
+.projects-content {
   margin-top: 30vh; }
-  .lm-2016 .projects-content .wrapper {
+  .projects-content .wrapper {
     margin-left: 60px;
     margin-right: 60px; }
-  .lm-2016 .projects-content .thumbnail {
+  .projects-content .thumbnail {
     display: inline-block;
-    width: calc(50% - 20px);
+    width: calc(50% - 30px);
     height: auto;
-    margin-bottom: 120px; }
-    .lm-2016 .projects-content .thumbnail .title-container {
+    margin-bottom: 180px; }
+    .projects-content .thumbnail .title-container {
       position: static;
       margin-top: 30px; }
-    .lm-2016 .projects-content .thumbnail > .block {
+    .projects-content .thumbnail > .block {
       width: 100%; }
-      .lm-2016 .projects-content .thumbnail > .block .content {
+      .projects-content .thumbnail > .block .content {
         position: static; }
-    .lm-2016 .projects-content .thumbnail:nth-child(odd) {
-      margin-right: 40px; }
+    .projects-content .thumbnail:nth-child(odd) {
+      margin-right: 60px; }
 
 .about-us-content {
   margin-top: 260px;

@@ -25,6 +25,7 @@
       .wrapper {
         padding-left: 40px;
         padding-right: 40px;
+        margin: 0;
         .home-shapes {
           .shape1 {
             top: 60px;
@@ -50,6 +51,25 @@
           width: calc(100% - 80px);
         }
       }
+      .projects {
+        .thumbnail {
+          .block {
+            width: 100%;
+            .title-container {
+              font-size: 20px;
+              top: 350px;
+              text-align: left;
+              h4, p {
+                display: block;
+                line-height: 30px;
+              }
+              .separator {
+                display: none;
+              }
+            }
+          }
+        }
+      }
       .studio {
         padding: 60px 30px 0 30px;
         .text {
@@ -68,11 +88,13 @@
         }
       }
     }
-    .thumbnail {
-      .block {
-        width: 80%;
-        .title-container {
-          font-size: 20px;
+    .projects-content {
+      .wrapper {
+        margin-left: 40px;
+        margin-right: 40px;
+        .thumbnail {
+          width: 100%;
+          margin-bottom: 40px;
         }
       }
     }

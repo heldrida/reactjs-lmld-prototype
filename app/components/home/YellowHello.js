@@ -36,7 +36,7 @@ class YellowHello extends React.Component {
     });
 
     if ((window.innerWidth < 600)) {
-      tl.to(this.yellowHelloBlock, 0.6, { width: '80%', y: -60 });
+      tl.to(this.yellowHelloBlock, 0.6, { width: '100%', y: -60 });
     } else {
       tl.to(this.yellowHelloBlock, 0.6, { width: '60%', y: -60 });
     }

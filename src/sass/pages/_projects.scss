@@ -1,63 +1,61 @@
-.lm-2016 {
-	.project-container {
-	  width: 100%;
-	  height: auto;
-	  min-height: 100vh;
-	  .poster {
-	    width: 100vw;
-	    height: 100vh;
-	    z-index: 1;
-	  }
-	  .content {
-	    width: 100%;
-	    z-index: 2;
-	    background-color: #ccc;
-	    color: #fff;
-	    font-size: 24px;
-	    line-height: 33px;
-	    padding: 50px;
-	    box-sizing: border-box;
-	  }
-	  .go-back {
-	    font-size: 24px;
-	    line-height: 32px;
-	    letter-spacing: 1px;
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    padding: 20px;
-	  }
-	}
+.project-container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  .poster {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  .content {
+    width: 100%;
+    z-index: 2;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 24px;
+    line-height: 33px;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .go-back {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+  }
+}
 
-	.projects-content {
-	  margin-top: 30vh;
-	  .wrapper {
-	    margin-left: 60px;
-	    margin-right: 60px;
-	  }
-	  .thumbnail {
-	  	$commonMargin: 20;
-	  	display: inline-block;
-	  	width: calc(50% - #{$commonMargin}px);
-	  	height: auto;
-	  	margin-bottom: #{$commonMargin * 6}px;
-	  	.title-container {
-	  		position: static;
-		  	margin-top: 30px;
-	  	}
-	  	> .block {
-	  		width: 100%;
+.projects-content {
+  margin-top: 30vh;
+  .wrapper {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .thumbnail {
+    $commonMargin: 30;
+    display: inline-block;
+    width: calc(50% - #{$commonMargin}px);
+    height: auto;
+    margin-bottom: #{$commonMargin * 6}px;
+    .title-container {
+      position: static;
+      margin-top: 30px;
+    }
+    > .block {
+      width: 100%;
 
-	  		.content {
-	  			position: static;
-	  		}
-	  	}
-	  	&:nth-child(odd) {
-	  		margin-right: #{$commonMargin * 2}px;
-	  	}
-	  	&:nth-child(even) {
+      .content {
+        position: static;
+      }
+    }
+    &:nth-child(odd) {
+      margin-right: #{$commonMargin * 2}px;
+    }
+    &:nth-child(even) {
 
-	  	}
-	  }
-	}
+    }
+  }
 }
