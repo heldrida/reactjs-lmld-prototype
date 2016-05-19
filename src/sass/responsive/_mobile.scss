@@ -95,6 +95,18 @@
         .thumbnail {
           width: 100%;
           margin-bottom: 40px;
+          .title-container {
+            font-size: 20px;
+            text-align: left;
+            margin-top: 20px;
+            h4, p {
+              display: block;
+              line-height: 30px;
+            }
+            .separator {
+              display: none;
+            }
+          }
         }
       }
     }
