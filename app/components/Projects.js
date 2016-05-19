@@ -46,7 +46,8 @@ class Projects extends React.Component {
 											posterImg={obj.posterImg}
 											title={obj.title}
 											description={obj.description}
-											className={obj.className.projects} />
+											className={obj.className.projects}
+											setNoScroll={this.props.setNoScroll} />
 					)}
 				</div>
 			</div>
