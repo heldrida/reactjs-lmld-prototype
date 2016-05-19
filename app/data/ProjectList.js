@@ -55,7 +55,7 @@ const ProjectList = {
 	},
 	// dummy 
 	'sporty-henri-box': {
-		home: true,
+		home: false,
 		urlHash: 'sporty-henri-box',
 		title: 'Sporty Henri box',
 		description: 'Digital Identity',
