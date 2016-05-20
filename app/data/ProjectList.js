@@ -1,6 +1,7 @@
 'use strict';
 
 import LouboutinV3 from '../components/projects/LouboutinV3';
+import LouboutinV4 from '../components/projects/LouboutinV4';
 import ProjectField from '../components/projects/ProjectField.js';
 import ProjectFloom from '../components/projects/ProjectFloom.js';
 
@@ -10,10 +11,10 @@ const ProjectList = {
 		urlHash: 'louboutinv4',
 		title: 'Christian Louboutin',
 		description: 'Digital Identity',
-		component: LouboutinV3,
+		component: LouboutinV4,
 		className: {
 			home: 'thumb1',
-			projects: 'louboutinv3'
+			projects: 'louboutinv4'
 		},
 		posterImg: require('../../src/images/thumbnails/louboutin-v3-1.jpg'),
 		order: {

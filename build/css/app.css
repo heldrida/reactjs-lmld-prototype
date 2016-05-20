@@ -559,6 +559,10 @@ header .menu {
         left: auto;
         bottom: -30px; } }
 
+@media screen and (min-width: 1320px) {
+  .content .home-content .wrapper {
+    margin: 0 auto; } }
+
 .home-content .wrapper {
   margin: 0 60px;
   max-width: 1200px; }
