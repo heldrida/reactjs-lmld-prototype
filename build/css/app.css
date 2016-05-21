@@ -105,15 +105,11 @@ h6 {
   line-height: 38px; }
 
 header {
-  width: calc(100% - 120px);
+  width: calc(100% - 180px);
   position: fixed;
-  z-index: 9999;
-  background-color: transparent;
   top: 0;
   left: 0;
-  padding: 20px 60px 20px; }
-  header.bg {
-    background-color: rgba(255, 255, 255, 0.95) !important; }
+  padding: 20px 90px 20px; }
   header .wrapper {
     max-width: 1200px;
     margin: 0 auto; }

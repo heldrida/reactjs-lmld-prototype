@@ -1,6 +1,6 @@
 .home-content {
   .wrapper {
-    margin: 0 60px;
+    margin: 0 90px;
     max-width: 1200px;
     .logo-home {
       height: 60vh;
@@ -13,7 +13,7 @@
       }
     }
     .yellow-hello {
-      width: calc(100% - 120px);
+      width: calc(100% - 180px);
       max-width: 1200px;
       height: 60vh;
       position: fixed;
@@ -38,7 +38,7 @@
   .studio {
     background-color: $darkGrey;
     min-height: 600px;
-    padding: 60px 60px 0 60px;
+    padding: 60px 90px 0 90px;
     .text {
       font-family: 'Larsseit';
       font-weight: 100;

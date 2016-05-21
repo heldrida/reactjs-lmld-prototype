@@ -31,8 +31,8 @@
 .projects-content {
   margin-top: 30vh;
   .wrapper {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin: 0 90px;
+    max-width: 1200px;
   }
   .thumbnail {
     $commonMargin: 30;
