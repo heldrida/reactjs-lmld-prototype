@@ -26,7 +26,6 @@ class ProjectsThumbnail extends Thumbnail {
 
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els.block);
-			this.headerBg = document.querySelector('header');
 			this.headerLogo = document.querySelector('header .logo-container');
 
 			// Add to the calculation the projects container (for projects)
@@ -82,10 +81,6 @@ class ProjectsThumbnail extends Thumbnail {
 
 				// refactor to treat only modal elements
 				this.updateHash();
-
-				// show header elements
-				this.headerBg.classList.add('bg');
-				this.headerLogo.style.opacity = 1;
 
 			};
 			const onReverseCompleteCallback = () => {

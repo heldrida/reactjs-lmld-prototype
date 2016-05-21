@@ -38,7 +38,6 @@ class Thumbnail extends React.Component {
 		this.defaultLocationHashName = '';
 
 		// header elements
-		this.headerBg = null;
 		this.headerLogo = null;
 
 	}
@@ -129,13 +128,6 @@ class Thumbnail extends React.Component {
 
 	closeBlock(callback = false) {
 
-		// hide header elements (if on homepage)
-		// todo: use the router lib to detect proper location
-		if (this.props.location.pathname === '/') {
-			this.headerBg.classList.remove('bg');
-			this.headerLogo.style.opacity = 0;
-		}
-
 		setTimeout(() => {
 			if (this.els.block) {
 				this.resetBlock();
@@ -174,7 +166,6 @@ class Thumbnail extends React.Component {
 
 			// Calculate DOM position
 			this.pos = this.calcElementPosition(this.els.block);
-			this.headerBg = document.querySelector('header');
 			this.headerLogo = document.querySelector('header .logo-container');
 
 			// Open the Modal
@@ -210,10 +201,6 @@ class Thumbnail extends React.Component {
 
 				// refactor to treat only modal elements
 				this.updateHash();
-
-				// show header elements
-				this.headerBg.classList.add('bg');
-				this.headerLogo.style.opacity = 1;
 
 			};
 			const onReverseCompleteCallback = () => {

@@ -41,10 +41,8 @@ class LogoHome extends Logo {
 			onReverseComplete: null
 		});
 
-		tl.set(this.header, { backgroundColor: 'transparent' });
 		tl.to(this.mainLogo, 0.1, { opacity: 1 });
 		tl.to(this.homeLogo, 0.1, { opacity: 0 });
-		tl.set(this.header, { backgroundColor: 'rgba(255, 255, 255, 0.95)' });
 
 		// declare timeline to controller
 		let sc1 = new window.ScrollMagic.Scene({
