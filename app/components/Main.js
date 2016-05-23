@@ -201,25 +201,37 @@ class Main extends React.Component {
 
 		if (this.cachedScrollMagicScenes[key]) {
 
-			/*
 			this.scrollMagicMainController.removeScene(this.cachedScrollMagicScenes[key]);
 			this.cachedScrollMagicScenes[key] = null;
-
-			console.log("!!! this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-
-			delete this.cachedScrollMagicScenes[key];
-
-			console.log(">>>>!!! >> this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-			*/
 
 			for (let scene of this.cachedScrollMagicScenes[key]) {
 
 				// console.log("#### SCENE : ", scene);
-				// scene.removePin(true);
-				// scene.removeTween();
-				// scene.removeIndicators();
-				// scene.destroy();
-				// scene.remove();
+				scene.removePin(true);
+				scene.removeTween();
+				scene.removeIndicators();
+				scene.destroy();
+				scene.remove();
+
+				this.scrollMagicMainController.removeScene(scene);
+
+			}
+
+			// console.log("!!! this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+
+			// delete this.cachedScrollMagicScenes[key];
+
+			// console.log(">>>>!!! >> this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+
+			/*
+			for (let scene of this.cachedScrollMagicScenes[key]) {
+
+				// console.log("#### SCENE : ", scene);
+				scene.removePin(true);
+				scene.removeTween();
+				scene.removeIndicators();
+				scene.destroy();
+				scene.remove();
 
 				this.scrollMagicMainController.removeScene(scene);
 
@@ -231,6 +243,8 @@ class Main extends React.Component {
 			console.log("@ @ @ @ > > this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
 
 			this.scrollMagicMainController.update(true);
+			*/
+
 			/*
 			this.scrollMagicMainController.destroy(true);
 

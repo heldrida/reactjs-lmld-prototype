@@ -114,7 +114,6 @@ class Header extends React.Component {
 
 	getMenuTween() {
 
-		/*
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({
 			onStart: null,
@@ -128,8 +127,10 @@ class Header extends React.Component {
 				//ease: window.Power2.easeOut
 			}
 		});
-		*/
 
+		return tl;
+
+		/*
 		return window.TweenLite.fromTo(this.trMenu, 1, {
 			css: {
 				right: 0
@@ -139,6 +140,7 @@ class Header extends React.Component {
 				right: this.calcMenuRightSidebarPos()
 			}
 		});
+		*/
 
 	}
 
@@ -149,7 +151,7 @@ class Header extends React.Component {
 		if (window.location.hash.split('/')[1] === '') {
 
 			console.log("going to call createHomeScrollMagicScenes A!");
-			//scenes = this.createHomeScrollMagicScenes();
+			scenes = this.createHomeScrollMagicScenes();
 
 		} else {
 

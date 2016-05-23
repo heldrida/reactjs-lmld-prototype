@@ -65,24 +65,6 @@ class LogoHome extends Logo {
 			.setTween(titleFadeTween);
 			//.addIndicators({name: "tl 2"});
 
-		/* start wip: refactor the headerjs magic scene for the home logo
-		let tweenTrMenu = window.TweenLite.fromTo(this.trMenu, 1, {
-			css: {
-				right: 0
-			}
-		}, {
-			css: {
-				right: -45
-			}
-		});
-		let sc3 = new window.ScrollMagic.Scene({
-				triggerHook: 'onLeave',
-				duration: '20%'
-			})
-			.addIndicators({name: "createHomeScrollMagicScenes scene", colorEnd: "#F00"})
-			.setTween(tweenTrMenu);
-		 end ip: refactor the headerjs magic scene for the home logo */
-
 		setTimeout(() => {
 			this.props.addToScrollMagicController({ logoHome: [sc1, sc2] });
 		}, 0);
