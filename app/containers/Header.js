@@ -28,11 +28,39 @@ class Header extends React.Component {
 	// initialise scroll magic scenes
 	this.createScrollMagicScenes();
 
+	this.setEventListeners();
+
   }
 
 	componentWillUnmount() {
 		// Destroy scroll magic scene instances
 		this.props.removeSceneFromScrollMagicController('navbar');
+	}
+
+	setEventListeners() {
+
+		window.addEventListener('hashchange', e => this.onHashChange(e), false);
+
+	}
+
+	onHashChange(e) {
+
+		// todo: re-factor to not reset if the hash change
+		// is not from home to X or X to home
+
+		this.reInitScrollMagicScenes();
+
+	}
+
+	reInitScrollMagicScenes() {
+
+		// the animations on home are different from the other pages
+		// reset first
+		this.props.removeSceneFromScrollMagicController('navbar');
+
+		// reinit
+		this.createScrollMagicScenes();
+
 	}
 
 	menuClick() {
@@ -59,12 +87,17 @@ class Header extends React.Component {
 
 	}
 
-	getMenuTween() {
+	calcMenuRightSidebarPos() {
 
-		// propertie helper
 		// get the current padding value dynamically
 		let xOffset = window.getComputedStyle(this.header).getPropertyValue('padding-left');
 		xOffset = parseInt(xOffset, 10);
+
+		return -(this.trMenu.offsetWidth + ((xOffset / 2) - this.trMenu.offsetWidth / 2));
+
+	}
+
+	getMenuTween() {
 
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({
@@ -73,9 +106,10 @@ class Header extends React.Component {
 			onReverseComplete: null
 		});
 
-		tl.to(this.trMenu, 10, {
+		tl.to(this.trMenu, 1, {
 			css: {
-				right: (this.trMenu.offsetWidth - xOffset)
+				right: this.calcMenuRightSidebarPos()
+				//ease: window.Power2.easeOut
 			}
 		});
 
@@ -85,6 +119,28 @@ class Header extends React.Component {
 
 	createScrollMagicScenes() {
 
+		let scenes;
+
+		if (window.location.hash.split('/')[1] === '') {
+
+			scenes = this.createHomeScrollMagicScenes();
+
+		} else {
+
+			scenes = this.createDefaultScrollMagicScenes();
+
+		}
+
+		setTimeout(() => {
+			this.props.addToScrollMagicController({ navbar: [scenes] });
+		}, 0);
+
+	}
+
+	createHomeScrollMagicScenes() {
+
+		let arr = [];
+
 		// Tween for moving the menu to the right sidebar/gap
 		let tweenMenu = this.getMenuTween();
 
@@ -92,25 +148,17 @@ class Header extends React.Component {
 		let sc1 = new window.ScrollMagic.Scene({
 				triggerElement: this.homeLogo,
 				triggerHook: 'onLeave',
-				duration: '1px'
+				duration: '20%'
 			})
 			.setTween(tweenMenu);
-			//.addIndicators({name: "tl 1"});
 
-		// title fade tween
-		// let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
+		arr.push(sc1);
 
-		// declare tween to controller
-		// let sc2 = new window.ScrollMagic.Scene({
-		// 		triggerHook: 'onLeave',
-		// 		duration: '25%'
-		// 	})
-		// 	.setTween(titleFadeTween);
-		// 	//.addIndicators({name: "tl 2"});
+		return arr;
 
-		setTimeout(() => {
-			this.props.addToScrollMagicController({ navbar: [sc1] });
-		}, 0);
+	}
+
+	createDefaultScrollMagicScenes() {
 
 	}
 
