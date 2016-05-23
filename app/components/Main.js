@@ -10,7 +10,7 @@ class Main extends React.Component {
 
 	constructor(props, context) {
 		super(props, context);
-
+		console.log(props);
 		this.state = {
 			loadComponent: null,
 			hideMainContent: false
@@ -206,8 +206,8 @@ class Main extends React.Component {
 					component={Header}
 					hideMainContentHandler={this.hideMainContentHandler.bind(this)}
 					setNoScroll={this.setNoScroll.bind(this)}
-					addToScrollMagicController={this.props.addToScrollMagicController}
-					removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController}
+					addToScrollMagicController={this.addToScrollMagicController.bind(this)}
+					removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)}
 				/>
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">

@@ -14,33 +14,106 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
+
+	// set properties
     this.menu = document.querySelector('.menu');
     this.container = document.querySelector('.menu .container');
-  }
+	this.header = document.querySelector('header');
+	this.trMenu = this.header.querySelector('.tr-menu');
+	this.mainLogo = document.querySelector('header .logo-container');
+	this.mainLogoTitle = this.mainLogo.querySelector('.title');
+	this.homeLogo = document.querySelector('.content .logo-container');
+	//this.homeLogoTitle = this.homeLogo.querySelector('.title');
 
-  menuClick() {
-
-    this.setState({
-      menuOpen: !this.state.menuOpen
-    });
-
-    if (this.menu.classList.contains('close')) {
-
-      window.TweenLite.to(this.container, 1, { css: { display: 'block' }, onComplete: () => {
-          this.props.setNoScroll(true);
-        }
-      });
-
-    } else {
-
-      window.TweenLite.to(this.container, 1, { css: { display: 'none' }, onStart: () => {
-          this.props.setNoScroll(false);
-        }
-      });
-
-    }
+	// initialise scroll magic scenes
+	this.createScrollMagicScenes();
 
   }
+
+	componentWillUnmount() {
+		// Destroy scroll magic scene instances
+		this.props.removeSceneFromScrollMagicController('navbar');
+	}
+
+	menuClick() {
+
+		this.setState({
+			menuOpen: !this.state.menuOpen
+		});
+
+		if (this.menu.classList.contains('close')) {
+
+			window.TweenLite.to(this.container, 1, { css: { display: 'block' }, onComplete: () => {
+					this.props.setNoScroll(true);
+				}
+			});
+
+			} else {
+
+			window.TweenLite.to(this.container, 1, { css: { display: 'none' }, onStart: () => {
+					this.props.setNoScroll(false);
+				}
+			});
+
+		}
+
+	}
+
+	getMenuTween() {
+
+		// propertie helper
+		// get the current padding value dynamically
+		let xOffset = window.getComputedStyle(this.header).getPropertyValue('padding-left');
+		xOffset = parseInt(xOffset, 10);
+
+		// Logo switcher timeline
+		let tl = new window.TimelineLite({
+			onStart: null,
+			onComplete: null,
+			onReverseComplete: null
+		});
+
+		tl.to(this.trMenu, 10, {
+			css: {
+				right: (this.trMenu.offsetWidth - xOffset)
+			}
+		});
+
+		return tl;
+
+	}
+
+	createScrollMagicScenes() {
+
+		// Tween for moving the menu to the right sidebar/gap
+		let tweenMenu = this.getMenuTween();
+
+		// declare timeline to controller
+		let sc1 = new window.ScrollMagic.Scene({
+				triggerElement: this.homeLogo,
+				triggerHook: 'onLeave',
+				duration: '1px'
+			})
+			.setTween(tweenMenu);
+			//.addIndicators({name: "tl 1"});
+
+		// title fade tween
+		// let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
+
+		// declare tween to controller
+		// let sc2 = new window.ScrollMagic.Scene({
+		// 		triggerHook: 'onLeave',
+		// 		duration: '25%'
+		// 	})
+		// 	.setTween(titleFadeTween);
+		// 	//.addIndicators({name: "tl 2"});
+
+		setTimeout(() => {
+			this.props.addToScrollMagicController({ navbar: [sc1] });
+		}, 0);
+
+	}
+
 
   render() {
 
