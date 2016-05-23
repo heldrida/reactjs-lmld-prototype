@@ -202,7 +202,13 @@ class Main extends React.Component {
 	render() {
 		return(
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
-				<Header component={Header} hideMainContentHandler={this.hideMainContentHandler.bind(this)} setNoScroll={this.setNoScroll.bind(this)} />
+				<Header
+					component={Header}
+					hideMainContentHandler={this.hideMainContentHandler.bind(this)}
+					setNoScroll={this.setNoScroll.bind(this)}
+					addToScrollMagicController={this.props.addToScrollMagicController}
+					removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController}
+				/>
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this), addToScrollMagicController: this.addToScrollMagicController.bind(this),

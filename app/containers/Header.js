@@ -28,7 +28,7 @@ class Header extends React.Component {
 
       window.TweenLite.to(this.container, 1, { css: { display: 'block' }, onComplete: () => {
           this.props.setNoScroll(true);
-        } 
+        }
       });
 
     } else {

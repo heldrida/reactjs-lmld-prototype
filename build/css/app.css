@@ -109,7 +109,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px 90px 20px; }
+  padding: 20px 90px 20px;
+  z-index: 999; }
   header .wrapper {
     max-width: 1200px;
     margin: 0 auto; }
@@ -121,9 +122,6 @@ header {
       cursor: pointer; }
     header .wrapper .col-r {
       text-align: right; }
-
-.home header .logo-container {
-  opacity: 0; }
 
 .logo-container {
   display: inline-block;

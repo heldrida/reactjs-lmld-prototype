@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import LogoHome from '../components/home/LogoHome';
 import YellowHello from '../components/home/YellowHello';
 import HomeShapes from '../components/home/Shapes';
 import Thumbnail from '../components/Thumbnail';
@@ -22,7 +21,7 @@ class Home extends React.Component {
 	}
 
 	componentDidMount() {
-		this.homeLogo = document.querySelector('.logo-home');
+		//this.homeLogo = document.querySelector('.logo-home');
 		this.yellowHello = document.querySelector('.yellow-hello');
 
 		this.noLagOnMobile();
@@ -61,7 +60,6 @@ class Home extends React.Component {
 					<div className='trigger1'></div>
 					<div className='logo-home'>
 						<HomeShapes />
-						<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					</div>
 					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					<div className={'projects'}>
