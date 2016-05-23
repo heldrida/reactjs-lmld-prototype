@@ -560,7 +560,7 @@ header .menu {
     margin: 0 auto; } }
 
 .home-content .wrapper {
-  margin: 0 60px;
+  margin: 0 90px;
   max-width: 1200px; }
   .home-content .wrapper .logo-home {
     height: 60vh;
@@ -571,7 +571,7 @@ header .menu {
       position: absolute;
       bottom: 0; }
   .home-content .wrapper .yellow-hello {
-    width: calc(100% - 120px);
+    width: calc(100% - 180px);
     max-width: 1200px;
     height: 60vh;
     position: fixed;
@@ -590,7 +590,7 @@ header .menu {
 .home-content .studio {
   background-color: #1E1E1E;
   min-height: 600px;
-  padding: 60px 60px 0 60px; }
+  padding: 60px 90px 0 90px; }
   .home-content .studio .text {
     font-family: 'Larsseit';
     font-weight: 100;
@@ -636,8 +636,8 @@ header .menu {
 .projects-content {
   margin-top: 30vh; }
   .projects-content .wrapper {
-    margin-left: 60px;
-    margin-right: 60px; }
+    margin: 0 90px;
+    max-width: 1200px; }
   .projects-content .thumbnail {
     display: inline-block;
     width: calc(50% - 30px);

@@ -108,11 +108,13 @@ class Main extends React.Component {
 		};
 
 		let calcWdith = () => {
+			let w;
 			if ((window.innerWidth < 600)) {
-				return window.innerWidth - 80;
+				w = window.innerWidth - 80;
 			} else {
-				return window.innerWidth - 120;
+				w = window.innerWidth - 120;
 			}
+			return w;
 		};
 
 		let calcHeight = () => {
