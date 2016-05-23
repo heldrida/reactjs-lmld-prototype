@@ -32,6 +32,17 @@ class Header extends React.Component {
 
   }
 
+  	/*
+  	shouldComponentUpdate() {
+  		console.log('header.js shouldComponentUpdate');
+  		return true;
+  	}
+  	*/
+
+  	componentWillUpdate() {
+		this.createScrollMagicScenes();
+  	}
+
 	componentWillUnmount() {
 		// Destroy scroll magic scene instances
 		this.props.removeSceneFromScrollMagicController('navbar');
@@ -44,22 +55,26 @@ class Header extends React.Component {
 	}
 
 	onHashChange(e) {
+		console.log('onHashChange called!');
 
 		// todo: re-factor to not reset if the hash change
 		// is not from home to X or X to home
-
 		this.reInitScrollMagicScenes();
 
 	}
 
 	reInitScrollMagicScenes() {
 
+		console.log('reInitScrollMagicScenes called!');
+
 		// the animations on home are different from the other pages
 		// reset first
 		this.props.removeSceneFromScrollMagicController('navbar');
 
-		// reinit
-		this.createScrollMagicScenes();
+		setTimeout(() => {
+			// reinit
+			//this.createScrollMagicScenes();
+		});
 
 	}
 
@@ -99,6 +114,7 @@ class Header extends React.Component {
 
 	getMenuTween() {
 
+		/*
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({
 			onStart: null,
@@ -112,8 +128,17 @@ class Header extends React.Component {
 				//ease: window.Power2.easeOut
 			}
 		});
+		*/
 
-		return tl;
+		return window.TweenLite.fromTo(this.trMenu, 1, {
+			css: {
+				right: 0
+			}
+		}, {
+			css: {
+				right: this.calcMenuRightSidebarPos()
+			}
+		});
 
 	}
 
@@ -123,16 +148,19 @@ class Header extends React.Component {
 
 		if (window.location.hash.split('/')[1] === '') {
 
-			scenes = this.createHomeScrollMagicScenes();
+			console.log("going to call createHomeScrollMagicScenes A!");
+			//scenes = this.createHomeScrollMagicScenes();
 
 		} else {
+
+			console.log("going to call createDefaultScrollMagicScenes B!");
 
 			scenes = this.createDefaultScrollMagicScenes();
 
 		}
 
 		setTimeout(() => {
-			this.props.addToScrollMagicController({ navbar: [scenes] });
+			this.props.addToScrollMagicController({ navbar: scenes });
 		}, 0);
 
 	}
@@ -150,6 +178,7 @@ class Header extends React.Component {
 				triggerHook: 'onLeave',
 				duration: '20%'
 			})
+			.addIndicators({name: "createHomeScrollMagicScenes scene", colorEnd: "#F00"})
 			.setTween(tweenMenu);
 
 		arr.push(sc1);
@@ -159,6 +188,33 @@ class Header extends React.Component {
 	}
 
 	createDefaultScrollMagicScenes() {
+
+		let arr = [];
+
+		// Tween for moving the menu to the right sidebar/gap
+		let tweenMenu = this.getMenuTween();
+
+		// declare timeline to controller
+		let sc1 = new window.ScrollMagic.Scene({
+				triggerElement: document.body,
+				triggerHook: 'onLeave',
+				duration: '25%'
+				//offset: 500
+			})
+			.addIndicators({name: "createDefaultScrollMagicScenes scene", colorEnd: "#00F"})
+			.setTween(tweenMenu);
+
+		sc1.on('remove', () => {
+			console.log("sc1 ----------------- >>>> SCENE was removed! Event triggered!");
+		});
+
+		sc1.on('destroy', () => {
+			console.log("sc1 ----------------- >>>> SCENE was destroyed! Event triggered!");
+		});
+
+		arr.push(sc1);
+
+		return arr;
 
 	}
 

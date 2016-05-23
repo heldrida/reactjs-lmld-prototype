@@ -173,6 +173,7 @@ class Main extends React.Component {
 	}
 
 	addToScrollMagicController(obj) {
+		console.log("this.cachedScrollMagicScenes initial:", this.cachedScrollMagicScenes);
 
 		// cache scene by name
 		for (let o in obj) {
@@ -187,16 +188,63 @@ class Main extends React.Component {
 			}
 
 		}
+		console.log("this.cachedScrollMagicScenes end:", this.cachedScrollMagicScenes);
 
 	}
 
 	removeSceneFromScrollMagicController(key) {
 
+		console.log("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+		console.log("removeSceneFromScrollMagicController key: " + key);
+		console.log('removeSceneFromScrollMagicController called!');
+		console.log("this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+
 		if (this.cachedScrollMagicScenes[key]) {
+
+			/*
 			this.scrollMagicMainController.removeScene(this.cachedScrollMagicScenes[key]);
 			this.cachedScrollMagicScenes[key] = null;
+
+			console.log("!!! this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+
+			delete this.cachedScrollMagicScenes[key];
+
+			console.log(">>>>!!! >> this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+			*/
+
+			for (let scene of this.cachedScrollMagicScenes[key]) {
+
+				// console.log("#### SCENE : ", scene);
+				// scene.removePin(true);
+				// scene.removeTween();
+				// scene.removeIndicators();
+				// scene.destroy();
+				// scene.remove();
+
+				this.scrollMagicMainController.removeScene(scene);
+
+			}
+
+			this.cachedScrollMagicScenes[key] = null;
+			delete this.cachedScrollMagicScenes[key];
+
+			console.log("@ @ @ @ > > this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
+
+			this.scrollMagicMainController.update(true);
+			/*
+			this.scrollMagicMainController.destroy(true);
+
+			setTimeout(() => {
+				this.initScrollMagicController();
+			}, 0);
+			*/
+
 		}
 
+	}
+
+	initScrollMagicController() {
+		this.scrollMagicMainController = new window.ScrollMagic.Controller({ loglevel: 3 });
 	}
 
 	render() {
