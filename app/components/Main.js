@@ -27,7 +27,11 @@ class Main extends React.Component {
 	}
 
 	componentWillMount() {
-
+		// fix scroll magic instances when user reloads the page
+		// and the scroll position is not at the top
+		setTimeout(() => {
+			window.scrollTo(0, 0);
+		}, 0);
 	}
 
 	componentDidMount() {
