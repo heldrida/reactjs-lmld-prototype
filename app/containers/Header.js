@@ -206,6 +206,7 @@ class Header extends React.Component {
 			//.addIndicators({name: "createDefaultScrollMagicScenes scene", colorEnd: "#00F"})
 			.setTween(tweenMenu);
 
+		/*
 		sc1.on('remove', () => {
 			console.log("sc1 ----------------- >>>> SCENE was removed! Event triggered!");
 		});
@@ -213,6 +214,7 @@ class Header extends React.Component {
 		sc1.on('destroy', () => {
 			console.log("sc1 ----------------- >>>> SCENE was destroyed! Event triggered!");
 		});
+		*/
 
 		arr.push(sc1);
 
@@ -229,7 +231,10 @@ class Header extends React.Component {
       <header>
         <div className='wrapper'>
           <div className={'col col-l'}>
-            <Logo hideMainContentHandler={this.props.hideMainContentHandler} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+            <Logo hideMainContentHandler={this.props.hideMainContentHandler}
+            showTitle={false}
+            addToScrollMagicController={this.props.addToScrollMagicController}
+            removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
           </div>
           <div className={'col col-r'}>
             <div className={'tr-menu'} onClick={this.menuClick.bind(this)}>

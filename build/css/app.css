@@ -127,7 +127,8 @@ header {
   display: inline-block;
   width: auto;
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .logo-container .images {
     width: 180px;
     height: 52px;
