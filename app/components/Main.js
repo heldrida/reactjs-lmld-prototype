@@ -3,9 +3,7 @@
 import React from 'react';
 import Footer from '../containers/Footer';
 import Header from '../containers/Header';
-import HeaderHome from '../containers/HeaderHome';
 import BackBlock from '../components/BackBlock';
-import { Router, Link, History } from 'react-router';
 
 class Main extends React.Component {
 
@@ -209,16 +207,11 @@ class Main extends React.Component {
 
 		return(
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
-				{ this.isHome() === 'home' ? (
-					<HeaderHome hideMainContentHandler={this.hideMainContentHandler.bind(this)}
+				{ this.isHome() !== 'home' && (
+					<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
 					setNoScroll={this.setNoScroll.bind(this)}
 					addToScrollMagicController={this.addToScrollMagicController.bind(this)}
 					removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
-				) : (
-					<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
-							setNoScroll={this.setNoScroll.bind(this)}
-							addToScrollMagicController={this.addToScrollMagicController.bind(this)}
-							removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
 				)}
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
