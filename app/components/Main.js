@@ -125,8 +125,6 @@ class Main extends React.Component {
 			onReverseComplete: onReverseCompleteCallback
 		});
 
-		tl.to(mainLogo, 0.3, { css: { opacity: 0 } }, 0);
-
 		tl.to(content, 0.6, { css: { opacity: 0 }, onComplete: () => {
 				window.location.hash = '/';
 				//this.setNoScroll(false);
@@ -207,12 +205,10 @@ class Main extends React.Component {
 
 		return(
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
-				{ this.isHome() !== 'home' && (
-					<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
-					setNoScroll={this.setNoScroll.bind(this)}
-					addToScrollMagicController={this.addToScrollMagicController.bind(this)}
-					removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
-				)}
+				<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
+				setNoScroll={this.setNoScroll.bind(this)}
+				addToScrollMagicController={this.addToScrollMagicController.bind(this)}
+				removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this), addToScrollMagicController: this.addToScrollMagicController.bind(this),

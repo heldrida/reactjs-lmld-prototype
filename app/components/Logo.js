@@ -28,7 +28,6 @@ class LogoContainer extends React.Component {
 		this.props.removeSceneFromScrollMagicController('logoDefault');
 	}
 
-
 	createScrollMagicScenes() {
 
 		// Logo switcher timeline

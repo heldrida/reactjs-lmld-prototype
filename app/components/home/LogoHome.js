@@ -12,9 +12,10 @@ class LogoHome extends Logo {
 
 		this.header = document.querySelector('header');
 		this.mainLogo = document.querySelector('header .logo-container');
-		this.mainLogoTitle = this.mainLogo.querySelector('.title');
 		this.homeLogo = document.querySelector('.content .logo-container');
 		this.homeLogoTitle = this.homeLogo.querySelector('.title');
+		this.signature = this.homeLogo.querySelector('.signature');
+		this.abstractLogo = this.homeLogo.querySelector('.abstract');
 		this.mainLogo.style.opacity = 0;
 		this.trMenu = this.header.querySelector('.tr-menu');
 
@@ -35,6 +36,24 @@ class LogoHome extends Logo {
 
 	createScrollMagicScenes() {
 
+		const calcLogoLeftSidebarPos = () => {
+			// get the current padding value dynamically
+			let xOffset = window.getComputedStyle(this.header).getPropertyValue('padding-left');
+			xOffset = parseInt(xOffset, 10);
+
+			//return (xOffset / 2) - (this.abstractLogo.offsetWidth / 2);
+			return this.homeLogo.offsetWidth - ((xOffset / 2) - this.abstractLogo.offsetWidth / 2);
+		};
+
+		const calcLogoVAlign = () => {
+
+			let y = this.trMenu.getBoundingClientRect().top;
+
+			return y - (this.abstractLogo.offsetHeight / 2);
+		};
+
+		let logoYOffset = this.homeLogo.getBoundingClientRect().top;
+
 		// Logo switcher timeline
 		let tl = new window.TimelineLite({
 			onStart: null,
@@ -42,31 +61,65 @@ class LogoHome extends Logo {
 			onReverseComplete: null
 		});
 
-		tl.to(this.mainLogo, 0.1, { opacity: 1 });
-		tl.to(this.homeLogo, 0.1, { opacity: 0 });
+		tl.to(this.homeLogoTitle, 0.5, {
+			css: {
+				opacity: 0
+			}
+		}, 0);
+
+		tl.to(this.signature, 1, {
+			css: {
+				opacity: 0
+			}
+		}, "+=0.5");
+
+		tl.to(this.abstractLogo, 10, {
+			css: {
+				right: calcLogoLeftSidebarPos(),
+				top: calcLogoVAlign()
+			}
+		}, "-=0.4");
+
+		tl.to(this.mainLogo, 0.1, {
+			css: {
+				opacity: 1
+			}
+		});
+
+		tl.to(this.homeLogo, 0.1, {
+			css: {
+				opacity: 0
+			}
+		});
 
 		// declare timeline to controller
 		let sc1 = new window.ScrollMagic.Scene({
-				triggerElement: this.homeLogo,
+				triggerElement: document.body,
 				triggerHook: 'onLeave',
-				duration: '1px'
+				duration: logoYOffset
 			})
 			.setTween(tl);
-			//.addIndicators({name: "tl 1"});
 
-		// title fade tween
-		let titleFadeTween = window.TweenLite.to(this.homeLogoTitle, 0.5, { opacity: 0 });
+		/*
+		let tweenMainLogo = new window.TimelineLite({
+			onStart: null,
+			onComplete: null,
+			onReverseComplete: null
+		});
 
-		// declare tween to controller
+		tweenMainLogo.to(this.mainLogo, 0.1, { opacity: 1 });
+		tweenMainLogo.to(this.homeLogo, 0.1, { opacity: 0 });
+
 		let sc2 = new window.ScrollMagic.Scene({
+				triggerElement: this.mainLogo,
 				triggerHook: 'onLeave',
-				duration: '25%'
+				duration: "1px"
 			})
-			.setTween(titleFadeTween);
-			//.addIndicators({name: "tl 2"});
+			.setTween(tweenMainLogo);
+		*/
 
 		setTimeout(() => {
-			this.props.addToScrollMagicController({ logoHome: [sc1, sc2] });
+			this.props.addToScrollMagicController({ logoHome: [sc1] });
 		}, 0);
 
 	}
