@@ -114,7 +114,7 @@ class Main extends React.Component {
 			if ((window.innerWidth < 600)) {
 				w = window.innerWidth - 80;
 			} else {
-				w = window.innerWidth - 120;
+				w = window.innerWidth - (90 * 2);
 			}
 			return w;
 		};
