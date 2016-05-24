@@ -44,8 +44,7 @@ class LogoHome extends Logo {
 			let xOffset = window.getComputedStyle(this.header).getPropertyValue('padding-left');
 			xOffset = parseInt(xOffset, 10);
 
-			//return (xOffset / 2) - (this.abstractLogo.offsetWidth / 2);
-			return this.homeLogo.offsetWidth - ((xOffset / 2) - this.abstractLogo.offsetWidth / 2);
+			return this.homeLogo.querySelector('.images').offsetWidth + ((xOffset / 2) - this.abstractLogo.offsetWidth / 2); //- ((xOffset / 2) - this.abstractLogo.offsetWidth / 2);
 		};
 
 		const calcLogoVAlign = () => {
@@ -102,24 +101,6 @@ class LogoHome extends Logo {
 				duration: logoYOffset
 			})
 			.setTween(tl);
-
-		/*
-		let tweenMainLogo = new window.TimelineLite({
-			onStart: null,
-			onComplete: null,
-			onReverseComplete: null
-		});
-
-		tweenMainLogo.to(this.mainLogo, 0.1, { opacity: 1 });
-		tweenMainLogo.to(this.homeLogo, 0.1, { opacity: 0 });
-
-		let sc2 = new window.ScrollMagic.Scene({
-				triggerElement: this.mainLogo,
-				triggerHook: 'onLeave',
-				duration: "1px"
-			})
-			.setTween(tweenMainLogo);
-		*/
 
 		setTimeout(() => {
 			this.props.addToScrollMagicController({ logoHome: [sc1] });

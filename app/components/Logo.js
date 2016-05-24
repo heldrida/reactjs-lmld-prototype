@@ -53,7 +53,7 @@ class LogoContainer extends React.Component {
 		let xOffset = window.getComputedStyle(this.header).getPropertyValue('padding-left');
 		xOffset = parseInt(xOffset, 10);
 
-		return -(this.container.offsetWidth);
+		return -(this.container.querySelector('.images').offsetWidth);
 	}
 
 	calcLogoLeftSidebarPos() {
