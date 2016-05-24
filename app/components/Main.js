@@ -3,6 +3,7 @@
 import React from 'react';
 import Footer from '../containers/Footer';
 import Header from '../containers/Header';
+import HeaderHome from '../containers/HeaderHome';
 import BackBlock from '../components/BackBlock';
 import { Router, Link, History } from 'react-router';
 
@@ -10,9 +11,8 @@ class Main extends React.Component {
 
 	constructor(props, context) {
 		super(props, context);
-		console.log(props);
+
 		this.state = {
-			loadComponent: null,
 			hideMainContent: false
 		};
 
@@ -173,7 +173,6 @@ class Main extends React.Component {
 	}
 
 	addToScrollMagicController(obj) {
-		console.log("this.cachedScrollMagicScenes initial:", this.cachedScrollMagicScenes);
 
 		// cache scene by name
 		for (let o in obj) {
@@ -188,70 +187,15 @@ class Main extends React.Component {
 			}
 
 		}
-		console.log("this.cachedScrollMagicScenes end:", this.cachedScrollMagicScenes);
 
 	}
 
 	removeSceneFromScrollMagicController(key) {
 
-		console.log("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
-		console.log("removeSceneFromScrollMagicController key: " + key);
-		console.log('removeSceneFromScrollMagicController called!');
-		console.log("this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-
 		if (this.cachedScrollMagicScenes[key]) {
 
 			this.scrollMagicMainController.removeScene(this.cachedScrollMagicScenes[key]);
 			this.cachedScrollMagicScenes[key] = null;
-
-			for (let scene of this.cachedScrollMagicScenes[key]) {
-
-				// console.log("#### SCENE : ", scene);
-				scene.removePin(true);
-				scene.removeTween();
-				scene.removeIndicators();
-				scene.destroy();
-				scene.remove();
-
-				this.scrollMagicMainController.removeScene(scene);
-
-			}
-
-			// console.log("!!! this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-
-			// delete this.cachedScrollMagicScenes[key];
-
-			// console.log(">>>>!!! >> this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-
-			/*
-			for (let scene of this.cachedScrollMagicScenes[key]) {
-
-				// console.log("#### SCENE : ", scene);
-				scene.removePin(true);
-				scene.removeTween();
-				scene.removeIndicators();
-				scene.destroy();
-				scene.remove();
-
-				this.scrollMagicMainController.removeScene(scene);
-
-			}
-
-			this.cachedScrollMagicScenes[key] = null;
-			delete this.cachedScrollMagicScenes[key];
-
-			console.log("@ @ @ @ > > this.cachedScrollMagicScenes[key]", this.cachedScrollMagicScenes[key]);
-
-			this.scrollMagicMainController.update(true);
-			*/
-
-			/*
-			this.scrollMagicMainController.destroy(true);
-
-			setTimeout(() => {
-				this.initScrollMagicController();
-			}, 0);
-			*/
 
 		}
 
@@ -262,20 +206,24 @@ class Main extends React.Component {
 	}
 
 	render() {
+
 		return(
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
-				<Header
-					component={Header}
-					hideMainContentHandler={this.hideMainContentHandler.bind(this)}
+				{ this.isHome() === 'home' ? (
+					<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
+							setNoScroll={this.setNoScroll.bind(this)}
+							addToScrollMagicController={this.addToScrollMagicController.bind(this)}
+							removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
+				) : (
+					<HeaderHome hideMainContentHandler={this.hideMainContentHandler.bind(this)}
 					setNoScroll={this.setNoScroll.bind(this)}
 					addToScrollMagicController={this.addToScrollMagicController.bind(this)}
-					removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)}
-				/>
+					removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
+				)}
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
 					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this), addToScrollMagicController: this.addToScrollMagicController.bind(this),
 						removeSceneFromScrollMagicController: this.removeSceneFromScrollMagicController.bind(this) })}
-					{this.state.loadComponent ? <this.state.loadComponent /> : null}
 				</div>
 				<Footer isHome={this.isHome()} />
 			</div>

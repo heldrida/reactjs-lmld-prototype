@@ -59,7 +59,7 @@ class Header extends React.Component {
 
 		// todo: re-factor to not reset if the hash change
 		// is not from home to X or X to home
-		this.reInitScrollMagicScenes();
+		// this.reInitScrollMagicScenes();
 
 	}
 
@@ -180,7 +180,7 @@ class Header extends React.Component {
 				triggerHook: 'onLeave',
 				duration: '20%'
 			})
-			.addIndicators({name: "createHomeScrollMagicScenes scene", colorEnd: "#F00"})
+			//.addIndicators({name: "createHomeScrollMagicScenes scene", colorEnd: "#F00"})
 			.setTween(tweenMenu);
 
 		arr.push(sc1);
@@ -203,7 +203,7 @@ class Header extends React.Component {
 				duration: '25%'
 				//offset: 500
 			})
-			.addIndicators({name: "createDefaultScrollMagicScenes scene", colorEnd: "#00F"})
+			//.addIndicators({name: "createDefaultScrollMagicScenes scene", colorEnd: "#00F"})
 			.setTween(tweenMenu);
 
 		sc1.on('remove', () => {
