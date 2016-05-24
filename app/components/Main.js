@@ -210,15 +210,15 @@ class Main extends React.Component {
 		return(
 			<div className={'main' + ' ' + this.isHome() + ' ' + (this.state.hideMainContent ? 'hidden' : '')}>
 				{ this.isHome() === 'home' ? (
-					<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
-							setNoScroll={this.setNoScroll.bind(this)}
-							addToScrollMagicController={this.addToScrollMagicController.bind(this)}
-							removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
-				) : (
 					<HeaderHome hideMainContentHandler={this.hideMainContentHandler.bind(this)}
 					setNoScroll={this.setNoScroll.bind(this)}
 					addToScrollMagicController={this.addToScrollMagicController.bind(this)}
 					removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
+				) : (
+					<Header hideMainContentHandler={this.hideMainContentHandler.bind(this)}
+							setNoScroll={this.setNoScroll.bind(this)}
+							addToScrollMagicController={this.addToScrollMagicController.bind(this)}
+							removeSceneFromScrollMagicController={this.removeSceneFromScrollMagicController.bind(this)} />
 				)}
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">

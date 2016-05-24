@@ -2,6 +2,7 @@
 
 import React from 'react';
 import LogoHome from '../components/home/LogoHome';
+import LogoHomeTop from '../components/home/LogoHomeTop';
 import YellowHello from '../components/home/YellowHello';
 import HomeShapes from '../components/home/Shapes';
 import Thumbnail from '../components/Thumbnail';
