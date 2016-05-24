@@ -22,9 +22,11 @@ class LogoHome extends Logo {
 		// initialise the scroll magic
 		// todo: move this to ES6 module `import`
 		// currently injected on the html index file
-		setTimeout(() => {
-			this.createScrollMagicScenes();
-		}, 0);
+		if (!this.props.isOnScrollMagicCache('logoHome')) {
+			setTimeout(() => {
+				this.createScrollMagicScenes();
+			}, 0);
+		}
 	}
 
 	componentWillUnmount() {

@@ -32,13 +32,6 @@ class Header extends React.Component {
 
   }
 
-  	/*
-  	shouldComponentUpdate() {
-  		console.log('header.js shouldComponentUpdate');
-  		return true;
-  	}
-  	*/
-
   	componentWillUpdate() {
 		if (!this.props.isOnScrollMagicCache('navbar')) {
 			setTimeout(() => {
@@ -213,16 +206,6 @@ class Header extends React.Component {
 			})
 			//.addIndicators({name: "createDefaultScrollMagicScenes scene", colorEnd: "#00F"})
 			.setTween(tweenMenu);
-
-		/*
-		sc1.on('remove', () => {
-			console.log("sc1 ----------------- >>>> SCENE was removed! Event triggered!");
-		});
-
-		sc1.on('destroy', () => {
-			console.log("sc1 ----------------- >>>> SCENE was destroyed! Event triggered!");
-		});
-		*/
 
 		arr.push(sc1);
 

@@ -200,7 +200,7 @@ class Main extends React.Component {
 	}
 
 	isOnScrollMagicCache(key) {
-		return (typeof this.cachedScrollMagicScenes[key] !== 'undefined') && Object.keys(this.cachedScrollMagicScenes[key]).length;
+		return (typeof this.cachedScrollMagicScenes[key] !== 'undefined') && this.cachedScrollMagicScenes[key] !== null && Object.keys(this.cachedScrollMagicScenes[key]).length;
 	}
 
 	initScrollMagicController() {
@@ -220,8 +220,14 @@ class Main extends React.Component {
 				/>
 				<BackBlock ref={this.setElement.bind(this, 'backBlock')} />
 				<div className="content">
-					{React.cloneElement(this.props.children, { setNoScroll: this.setNoScroll.bind(this), addToScrollMagicController: this.addToScrollMagicController.bind(this),
-						removeSceneFromScrollMagicController: this.removeSceneFromScrollMagicController.bind(this) })}
+					{
+						React.cloneElement(this.props.children, {
+								setNoScroll: this.setNoScroll.bind(this),
+								addToScrollMagicController: this.addToScrollMagicController.bind(this),
+								removeSceneFromScrollMagicController: this.removeSceneFromScrollMagicController.bind(this),
+								isOnScrollMagicCache: this.isOnScrollMagicCache.bind(this)
+							})
+					}
 				</div>
 				<Footer isHome={this.isHome()} />
 			</div>

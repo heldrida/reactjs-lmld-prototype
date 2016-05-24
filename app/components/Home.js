@@ -62,7 +62,12 @@ class Home extends React.Component {
 					<div className='trigger1'></div>
 					<div className='logo-home'>
 						<HomeShapes />
-						<LogoHome showTitle={true} addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
+						<LogoHome
+							showTitle={true}
+							addToScrollMagicController={this.props.addToScrollMagicController}
+							removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController}
+							isOnScrollMagicCache={this.props.isOnScrollMagicCache}
+						/>
 					</div>
 					<YellowHello addToScrollMagicController={this.props.addToScrollMagicController} removeSceneFromScrollMagicController={this.props.removeSceneFromScrollMagicController} />
 					<div className={'projects'}>
