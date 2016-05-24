@@ -148,6 +148,7 @@ class Header extends React.Component {
 
 		let scenes;
 
+		/*
 		if (window.location.hash.split('/')[1] === '') {
 
 			console.log("going to call createHomeScrollMagicScenes A!");
@@ -160,6 +161,9 @@ class Header extends React.Component {
 			scenes = this.createDefaultScrollMagicScenes();
 
 		}
+		*/
+
+		scenes = this.createDefaultScrollMagicScenes();
 
 		setTimeout(() => {
 			this.props.addToScrollMagicController({ navbar: scenes });

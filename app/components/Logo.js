@@ -93,14 +93,14 @@ class LogoContainer extends React.Component {
 				left: this.calcContainerLeftSidebarPos()
 				//ease: window.Power2.easeOut
 			}
-		}, 0);
+		}, 0.25);
 
 		tl.to(this.abstractLogo, 0.6, {
 			css: {
 				right: this.calcLogoLeftSidebarPos(),
 				top: this.calcLogoVAlign()
 			}
-		}, 0.2);
+		}, 0.25);
 
 		return tl;
 
