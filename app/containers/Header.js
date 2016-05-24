@@ -40,7 +40,11 @@ class Header extends React.Component {
   	*/
 
   	componentWillUpdate() {
-		this.createScrollMagicScenes();
+		if (!this.props.isOnScrollMagicCache('navbar')) {
+			setTimeout(() => {
+				this.createScrollMagicScenes();
+			}, 0);
+		}
   	}
 
 	componentWillUnmount() {
